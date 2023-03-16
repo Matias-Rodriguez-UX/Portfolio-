@@ -5,7 +5,6 @@ import Nav from 'react-bootstrap/Nav';
 import MenuIcon from '@mui/icons-material/Menu';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { logo } from '../../../public/logo.png'
 
 
 export default function NavigationBar() {
@@ -29,7 +28,7 @@ export default function NavigationBar() {
   return (
     <Navbar bg="dark" expand="lg" variant="dark" className={scrolled ? "scrolled" : ""}>
       <div className="container">
-        <Navbar.Brand href="#main" style={{ marginRight: '4rem' }}>{logo}</Navbar.Brand>
+        <Navbar.Brand href="#main" style={{ marginRight: '4rem' }}> <div className="logo"></div></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <MenuIcon />
         </Navbar.Toggle>

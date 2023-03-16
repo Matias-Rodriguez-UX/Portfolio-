@@ -8,6 +8,15 @@ nav.navbar {
     background-color: var(--darkGrey) !important
 }
 
+.logo {
+    background-image: url('../../../public/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
 nav.navbar.scrolled {
     padding: 0px 0;
     background-color: var(--darkGrey) !important
