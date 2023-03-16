@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import MenuIcon from '@mui/icons-material/Menu';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { logo } from '../../../public/logo.png'
 
 
 export default function NavigationBar() {
@@ -28,7 +29,7 @@ export default function NavigationBar() {
   return (
     <Navbar bg="dark" expand="lg" variant="dark" className={scrolled ? "scrolled" : ""}>
       <div className="container">
-        <Navbar.Brand href="#home" style={{ marginRight: '4rem' }}><h3 style={{ color: 'var(--fucsia)' }}><strong>mgr</strong></h3></Navbar.Brand>
+        <Navbar.Brand href="#main" style={{ marginRight: '4rem' }}>{logo}</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <MenuIcon />
         </Navbar.Toggle>
@@ -41,9 +42,9 @@ export default function NavigationBar() {
             <Nav.Link href="#formation" className={activeLink === 'formation' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('formation')} >Formation</Nav.Link>
             <Nav.Link href="#certificates" className={activeLink === 'certificates' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('certificates')} >Certificates</Nav.Link>
             <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contacts')} >Contact</Nav.Link>
-            <div className="d-flex mr-auto ml-4">
+            <div className="d-flex mr-auto">
               <Nav.Link href="#contact" className="navbar-link social-media"><LinkedInIcon fontSize="large" /></Nav.Link>
-              <Nav.Link href="#contact" className="navbar-link social-media" ><GitHubIcon fontSize="large" /></Nav.Link>
+              <Nav.Link href="#contact" className="me-4 navbar-link social-media" ><GitHubIcon fontSize="large" /></Nav.Link>
             </div>
           </Nav>
         </Navbar.Collapse>
