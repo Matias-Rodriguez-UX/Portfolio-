@@ -1,7 +1,41 @@
 .about {
     margin-top: -4rem;
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     background-color: var(--darkGrey);
     color: var(--whiteDirty);
+}
+
+.image-profile {
+    margin-top: 1rem;
+    background-image: url('../../../public/IMG-20200101-WA0036.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 10%;
+    border: 2px solid var(--fucsia);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 16px 0px;
+}
+
+ul.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 300px));
+    gap: 0 1.5rem;
+    overflow: hidden;
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+ul.skills-list li {
+    position: relative;
+    margin-bottom: 0.6rem;
+    font-family: var(--font-mono);
+}
+
+ul.skills-list li::before {
+    content: "\2022";
+    color: var(--tourquise);
+    margin-right: 2rem;
 }
