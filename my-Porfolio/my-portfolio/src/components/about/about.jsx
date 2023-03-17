@@ -23,7 +23,7 @@ export default function About() {
                             <p>Here are a few technologies I’ve been working with recently:</p>
 
                             <ul className="skills-list">
-                                <li>JavaScript (ES6+)</li>
+                                <li>JavaScript</li>
                                 <li>TypeScript</li>
                                 <li>React</li>
                                 <li>Bootstrap</li>
