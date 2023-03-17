@@ -1,0 +1,5 @@
+.projects {
+    background-color: var(--whiteDirty);
+    height: 60vh;
+    font-family: var(--font-sans);
+}

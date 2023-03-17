@@ -7,7 +7,7 @@ export default function About() {
     return (
         <section className="about" id="about">
             <div className="container d-flex flex-column">
-                <h1 className="mt-4 mb-4">About me</h1>
+                <h2 className="mt-4 mb-4">About me</h2>
                 <Row className="gap-2">
                     <Col xs={12} md={7} xl={8}>
                         <div className="text-description">
