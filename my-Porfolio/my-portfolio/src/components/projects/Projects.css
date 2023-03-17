@@ -1,5 +1,67 @@
+:root {
+    --street: '../../../public/logo-sa-color.png';
+    --alura: '../../../public/Alura.png';
+    --poke: '../../../public/poke-removebg-preview.png';
+    --unlp: '../../../public/UNLP.png';
+    --eest1: '../../../public/EEST1.png';
+    --altamira: '../../../public/logo altamira.png';
+    --lacardeuse: '../../../public/La Cardeuse.png';
+    --dewey: '../../../public/dewey.png';
+}
+
+
 .projects {
     background-color: var(--whiteDirty);
     height: 60vh;
     font-family: var(--font-sans);
+}
+
+.images-projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+}
+
+.project-img1 {
+    background-image: url('../../../public/logo-sa-color.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.project-img2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.project-img3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.project-img4 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.project-img5 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.project-img6 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.project-img7 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.project-img8 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.project-img1 {
+    height: 200px;
+    height: 300px;
+    background-image: var(--street);
 }
