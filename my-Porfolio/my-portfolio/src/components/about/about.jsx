@@ -34,7 +34,7 @@ export default function About() {
                             </ul>
                         </div>
                     </Col>
-                    <Col xs={12} md={4} xl={3} className="mt-5">
+                    <Col xs={12} md={4} xl={3} className="mt-2">
                         <div className="image-profile">
                         </div>
                     </Col>

@@ -1,6 +1,121 @@
+.modal-project {
+    top: 5rem;
+    width: 90% !important;
+    max-width: none !important;
+    font-family: var(--font-sans);
+    color: var(--darkGrey)
+}
+
 .images-proyect {
-    border-radius: 1rem;
-    padding: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
     border: 3px solid var(--fucsia);
     box-shadow: rgba(83, 83, 83, 0.2) 0px 8px 16px 0px;
+}
+
+.project-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.project-info {
+    padding-top: 1rem;
+}
+
+.project-info h4 {
+    margin-top: 1.5rem;
+}
+
+.list-option-tech {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 5rem;
+}
+
+.list-option-tech li::before {
+    content: "\2022";
+    color: var(--tourquise);
+    margin-right: 2rem;
+}
+
+.list-links a {
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+}
+
+.list-links li {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--darkGrey);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+}
+
+@media only screen and (max-width: 480px) {
+    .project-container {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .all-images {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .list-option-tech {
+        max-height: 7rem;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .project-container {
+        flex-direction: column-reverse;
+    }
+
+    .all-images {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    .project-container {
+        flex-direction: column-reverse;
+    }
+
+    .all-images {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .project-container {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .project-container {
+        flex-direction: row;
+    }
 }

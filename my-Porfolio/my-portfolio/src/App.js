@@ -14,6 +14,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import About from './components/about/about';
 
+
 function App() {
   return (
     <div className="App">

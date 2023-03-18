@@ -4,16 +4,16 @@
     width: 100%;
     background-color: var(--darkGrey);
     color: var(--whiteDirty);
+    font-family: var(--font-sans);
 }
 
 .image-profile {
-    margin-top: 1rem;
     background-image: url('../../../public/IMG-20200101-WA0036.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 18rem;
-    height: 18rem;
+    width: 20rem;
+    height: 20rem;
     border-radius: 10%;
     border: 2px solid var(--fucsia);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 16px 0px;
@@ -101,4 +101,10 @@ ul.skills-list li::before {
     }
 }
 
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+    .image-profile {
+        margin-left: 1rem;
+        width: 20rem;
+        height: 20rem;
+    }
+}
