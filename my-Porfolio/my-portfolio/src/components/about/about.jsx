@@ -1,6 +1,5 @@
 import React from "react";
 import './about.css'
-import { Parallax, Background } from 'react-parallax';
 import { Row, Col } from "react-bootstrap";
 
 export default function About() {

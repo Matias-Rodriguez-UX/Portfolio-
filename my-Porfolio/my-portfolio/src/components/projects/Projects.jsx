@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Modal } from "react-bootstrap";
 import './Projects.css'
 import dataProjects from "./dataProjetcs";
 import ModalProject from "./ModalProject";

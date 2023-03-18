@@ -1,0 +1,17 @@
+.works-section {
+    padding-bottom: 4rem;
+    height: auto;
+    background-color: var(--darkGrey);
+    font-family: var(--font-sans);
+    color: var(--whiteDirty);
+}
+
+.info-work {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    font-family: var(--font-mono);
+    font-weight: 300;
+    height: auto;
+    border: 2px solid var(--tourquise);
+    border-radius: 1rem;
+}
