@@ -1,0 +1,7 @@
+.formation-section {
+    margin-top: 2rem;
+    background-color: var(--whiteDirty);
+    height: auto;
+    font-family: var(--font-sans);
+    padding-bottom: 4rem;
+}

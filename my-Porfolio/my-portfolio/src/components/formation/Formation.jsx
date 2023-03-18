@@ -1,7 +1,13 @@
 import React from "react";
+import './Formation.css'
 
-export default function Navbar() {
+export default function Formation() {
     return (
-        <div>Navbar</div>
+        <section className="formation-section" id="formation">
+            <div className="container">
+                <h1>Formation</h1>
+            </div>
+
+        </section>
     )
 }
