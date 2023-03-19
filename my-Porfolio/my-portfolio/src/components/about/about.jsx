@@ -9,11 +9,7 @@ export default function About() {
                 <h2 className="mt-4 mb-4">About me</h2>
                 <Row className="gap-2">
                     <Col xs={12} md={7} xl={8}>
-                        <div className="text-description op-class"
-                            data-scroll
-                            data-scroll-class="fadeIn"
-                            data-scroll-repeat="true"
-                            data-scroll-speed="4">
+                        <div className="text-description">
                             <p className="text-justify">
                                 Hello! My name is Matias and I enjoy creating things that live on the internet. My interest in web development started back in 2020, since the covid-19 pandemic, where I began to rethink my current job. I found in remote work and by objectives a way to enjoy the workday.
                                 <br />
@@ -38,10 +34,7 @@ export default function About() {
                         </div>
                     </Col>
                     <Col xs={12} md={4} xl={3} className="mt-2">
-                        <div className="image-profile op-class" data-scroll
-                            data-scroll-class="fadeIn"
-                            data-scroll-repeat="true"
-                            data-scroll-speed="4">
+                        <div className="image-profile">
                         </div>
                     </Col>
                 </Row>

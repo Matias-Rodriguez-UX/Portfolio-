@@ -40,10 +40,9 @@ export default function NavigationBar() {
             <Nav.Link href="#works" className={activeLink === 'works' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('works')} >Works</Nav.Link>
             <Nav.Link href="#formation" className={activeLink === 'formation' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('formation')} >Formation</Nav.Link>
             <Nav.Link href="#certificates" className={activeLink === 'certificates' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('certificates')} >Certificates</Nav.Link>
-            <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contacts')} >Contact</Nav.Link>
             <div className="d-flex mr-auto">
-              <Nav.Link href="#contact" className="navbar-link social-media"><LinkedInIcon fontSize="large" /></Nav.Link>
-              <Nav.Link href="#contact" className="me-4 navbar-link social-media" ><GitHubIcon fontSize="large" /></Nav.Link>
+              <Nav.Link href="https://www.linkedin.com/in/matias-g-rodriguez/" className="navbar-link social-media"><LinkedInIcon fontSize="large" /></Nav.Link>
+              <Nav.Link href="https://github.com/Matias-Rodriguez-UX" className="me-4 navbar-link social-media" ><GitHubIcon fontSize="large" /></Nav.Link>
             </div>
           </Nav>
         </Navbar.Collapse>

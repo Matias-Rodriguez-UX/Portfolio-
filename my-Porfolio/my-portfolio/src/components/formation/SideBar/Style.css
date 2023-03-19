@@ -19,8 +19,8 @@
 }
 
 .nav-display {
-    width: '280px';
-    height: 'auto';
+    width: 280px !important;
+    height: auto;
     background-color: var(--darkGrey);
     padding: 2rem;
     display: flex;
@@ -41,6 +41,6 @@
 
 @media only screen and (max-width: 480px) {
     .nav-display {
-        width: 100vw;
+        width: 100% !important;
     }
 }

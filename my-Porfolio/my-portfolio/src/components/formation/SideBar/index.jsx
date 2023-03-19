@@ -23,7 +23,7 @@ export default function SideBar({ setCurrentPage }) {
     return (
         <>
 
-            <Nav variant="pills" className="nav-display" style={{ width: '280px', height: 'auto' }}>
+            <Nav variant="pills" className="nav-display" >
                 <Nav.Item onClick={() => setCurrentPage('fullstack')} className="nav-item-display">
                     <NavbarLink to="#fullstack">
                         <a href="#fullstack" className="inactive">

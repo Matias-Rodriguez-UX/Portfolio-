@@ -5,7 +5,6 @@ import Projects from './components/projects/Projects'
 import Formation from './components/formation/Formation'
 import Certificates from './components/certificates/Certificates'
 import Works from './components/works/Works'
-import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fontsource/roboto/300.css';
@@ -26,16 +25,15 @@ function App() {
 
   return (
     <BrowserRouter>
+      <NavigationBar />
       <LocomotiveScrollProvider options={options} containerRef={ref}>
         <div className="App" data-scroll-container ref={ref}>
-          <NavigationBar data-scroll-section />
-          <Main data-scroll-section data-scroll data-scroll-speed="4" />
+          <Main data-scroll-section data-scroll />
           <About data-scroll-section />
           <Projects data-scroll-section />
           <Works data-scroll-section />
           <Formation data-scroll-section />
           <Certificates data-scroll-section />
-          <Contact data-scroll-section />
           <Footer data-scroll-section />
         </div>
       </LocomotiveScrollProvider>

@@ -4,6 +4,7 @@
     height: auto;
     font-family: var(--font-sans);
     padding-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .formation-system-section {
@@ -13,25 +14,30 @@
     justify-content: space-between;
 }
 
+.formation-section-1 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap !important;
+}
+
 .sideBar-col {
-    columns: 3;
+    width: 30%;
 }
 
 .formation-col {
-    columns: 9;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 480px) {
     .formation-section-1 {
-        display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        gap: 2rem;
     }
 
     .sideBar-col {
-        width: 100vw !important;
         display: flex;
         flex-direction: column;
         margin-right: 0;
