@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Contact() {
+export default function HighSchool() {
     return (
-        <div>Contact</div>
+        <div>High School</div>
     )
 }

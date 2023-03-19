@@ -4,13 +4,17 @@ import './Works.css'
 
 export default function Works() {
     return (
-        <section className="works-section" id="works">
+        <section className="works-section" id="works" >
             <div className="container pt-4">
                 <h1>Works</h1>
 
-                <Row>
+                <Row >
                     <Col sm={12} xs={12} md={6} lg={6} xl={6} xxl={6}>
-                        <div className="info-work">
+                        <div className="info-work op-class"
+                            data-scroll
+                            data-scroll-class="fadeIn"
+                            data-scroll-repeat="true"
+                            data-scroll-speed="2">
                             <h3>Full-Stack Teaching Assistant Web Developer Fullstack</h3>
                             <h5>Henry · Part-time</h5>
                             <h6>Jan 2023 - Present </h6>
@@ -27,7 +31,11 @@ export default function Works() {
                         </div>
                     </Col>
                     <Col sm={12} xs={12} md={6} lg={6} xl={6} xxl={6}>
-                        <div className="info-work">
+                        <div className="info-work op-class"
+                            data-scroll
+                            data-scroll-class="fadeIn"
+                            data-scroll-repeat="true"
+                            data-scroll-speed="2">
                             <h3>Professor</h3>
                             <h5>Technical high school · Full-time</h5>
                             <h6>Mar 2015 - Present · 8 yrs 1 mo</h6>
@@ -51,7 +59,11 @@ export default function Works() {
                 </Row>
                 <Row>
                     <Col sm={12} xs={12} md={6} lg={6} xl={6} xxl={6}>
-                        <div className="info-work">
+                        <div className="info-work op-class"
+                            data-scroll
+                            data-scroll-class="fadeIn"
+                            data-scroll-repeat="true"
+                            data-scroll-speed="2">
                             <h3>Corporate sales assistants</h3>
                             <h5>Grupo Peñaflor</h5>
                             <h6>Nov 2012 - Dec 2013 · 1 yr 2 mos</h6>
@@ -66,7 +78,11 @@ export default function Works() {
                         </div>
                     </Col>
                     <Col sm={12} xs={12} md={6} lg={6} xl={6} xxl={6}>
-                        <div className="info-work">
+                        <div className="info-work op-class"
+                            data-scroll
+                            data-scroll-class="fadeIn"
+                            data-scroll-repeat="true"
+                            data-scroll-speed="2">
                             <h3>Industrial Designer</h3>
                             <h5>La Cardeuse S.A. · Full-time</h5>
                             <h6>Apr 2010 - Aug 2011 · 1 yr 5 mos</h6>
