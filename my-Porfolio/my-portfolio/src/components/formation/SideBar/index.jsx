@@ -5,10 +5,9 @@ import './Style.css'
 
 
 export default function SideBar({ setCurrentPage }) {
+    const location = useLocation();
 
     function NavbarLink({ to, children }) {
-        const location = useLocation();
-
         return (
             <Nav.Link
                 as={Link}
@@ -19,7 +18,7 @@ export default function SideBar({ setCurrentPage }) {
             </Nav.Link>
         );
     }
-
+    console.log(location.hash)
     return (
         <>
 

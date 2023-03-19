@@ -12,31 +12,36 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import About from './components/about/about';
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
-import { useRef } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 function App() {
-  const ref = useRef(null);
+  const scrollOptions = {
+    duration: 1000, // duración de la animación
+    delay: 0, // retraso antes de que comience la animación
+    smooth: "easeInOutQuart" // efecto de suavizado
+  };
 
-  const options = {
-    smooth: true,
+  const scrollToTop = () => {
+    scroll.scrollToTop(scrollOptions);
+  };
+
+  function scrollToSection(pos) {
+    scroll.scrollTo(pos, scrollOptions); // 500 es la posición en píxeles de la sección
   }
 
   return (
     <BrowserRouter>
-      <NavigationBar />
-      <LocomotiveScrollProvider options={options} containerRef={ref}>
-        <div className="App" data-scroll-container ref={ref}>
-          <Main data-scroll-section data-scroll />
-          <About data-scroll-section />
-          <Projects data-scroll-section />
-          <Works data-scroll-section />
-          <Formation data-scroll-section />
-          <Certificates data-scroll-section />
-          <Footer data-scroll-section />
-        </div>
-      </LocomotiveScrollProvider>
+      <div className="App">
+        <NavigationBar scrollToTop={scrollToTop} scrollToSection={scrollToSection} />
+        <Main />
+        <About />
+        <Projects />
+        <Works />
+        <Formation />
+        <Certificates />
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

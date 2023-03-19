@@ -5,7 +5,7 @@ nav.navbar {
     top: 0;
     z-index: 9999;
     transition: 0.32s ease-in-out;
-    background-color: var(--darkGrey) !important
+    background-color: var(--blackMed) !important
 }
 
 .logo {
@@ -19,7 +19,7 @@ nav.navbar {
 
 nav.navbar.scrolled {
     padding: 0px 0;
-    background-color: var(--darkGrey) !important
+    background-color: var(--blackMed) !important
 }
 
 nav.navbar a.navbar-brand {
