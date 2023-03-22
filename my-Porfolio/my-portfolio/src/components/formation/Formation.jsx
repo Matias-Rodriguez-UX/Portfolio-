@@ -11,9 +11,9 @@ export default function Formation() {
     const [currentPage, setCurrentPage] = useState('fullstack')
 
     return (
-        <section className="formation-section" id="formation">
+        <section className="formation-section" id="education">
             <div className="container ">
-                <h1>Formation</h1>
+                <h1>Education</h1>
                 <div className="row mt-4 formation-section-1">
                     <SideBar className='sideBar-col'
                         setCurrentPage={setCurrentPage}

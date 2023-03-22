@@ -42,7 +42,7 @@ export default function NavigationBar({ scrollToTop, scrollToSection }) {
             <Nav.Link className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')} >About</Nav.Link>
             <Nav.Link className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')} >Projects</Nav.Link>
             <Nav.Link className={activeLink === 'works' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('works')} >Works</Nav.Link>
-            <Nav.Link className={activeLink === 'formation' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('formation')} >Formation</Nav.Link>
+            <Nav.Link className={activeLink === 'education' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('education')} >Education</Nav.Link>
             <Nav.Link className={activeLink === 'certificates' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('certificates')} >Certificates</Nav.Link>
             <div className="d-flex mr-auto">
               <Nav.Link href="https://www.linkedin.com/in/matias-g-rodriguez/" target="_blank" rel="noreferrer" className="navbar-link social-media"><LinkedInIcon fontSize="large" /></Nav.Link>
