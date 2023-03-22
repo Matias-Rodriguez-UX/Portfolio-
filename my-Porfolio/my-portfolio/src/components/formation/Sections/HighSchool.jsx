@@ -1,11 +1,14 @@
 import React from "react";
+import { useTranslation } from 'react-i18next'
 
 export default function HighSchool() {
+    const [t, i18n] = useTranslation("global")
+
     return (
         <section className="container formation-system-section">
-            <h4><strong>Title: </strong>Personal and professional computer technician</h4>
-            <h5><strong>Institution: </strong>E.E.S.T Nº 3 Nicola Tesla</h5>
-            <h6><strong>Date: </strong>From March 2001 to December 2003</h6>
+            <h4><strong>{t("technical.titleS")}</strong>{t("technical.title")}</h4>
+            <h5><strong>{t("technical.institutionS")}</strong>{t("technical.institution")}</h5>
+            <h6><strong>{t("technical.dateS")}</strong>{t("technical.date")}</h6>
         </section>
     )
 }

@@ -1,22 +1,34 @@
 import React, { useState } from "react";
 import './Projects.css'
 import dataProjects from "./dataProjetcs";
+import dataProjectsEs from "./dataProjetcsES";
 import ModalProject from "./ModalProject";
+import { useTranslation } from 'react-i18next'
 
 export default function Projects() {
     const [data, setData] = useState({})
     const [showModal, setShowModal] = useState(false)
+    const [t, i18n] = useTranslation("global")
+
+    console.log(i18n.language === "es")
 
     function handleClick(id) {
-        let findData = dataProjects.find(el => el.id === id)
-        setData(findData)
+        let findData
+        if (i18n.language === "es") {
+            findData = dataProjectsEs.find(el => el.id === id)
+            console.log(findData)
+            setData(findData)
+        } else {
+            findData = dataProjects.find(el => el.id === id)
+            setData(findData)
+        }
         setShowModal(true)
     }
 
     return (
         <section className="projects" id="projects">
             <div className="container mt-4">
-                <h1>Projects</h1>
+                <h1>{t("projects.title")}</h1>
                 <div className="images-projects">
                     <div onClick={() => handleClick(1)} className="project-img1"></div>
                     <div onClick={() => handleClick(2)} className="project-img2"></div>

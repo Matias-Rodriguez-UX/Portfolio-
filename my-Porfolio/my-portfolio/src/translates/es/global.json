@@ -1,0 +1,129 @@
+{
+    "navbar": {
+        "main": "Inicio",
+        "about": "Sobre mi",
+        "porjects": "Proyectos",
+        "works": "Trabajos",
+        "education": "Educacion",
+        "certificates": "Certificados"
+    },
+    "main": {
+        "intro": "Soy Matías, tengo un perfil de Full Stack Developer, orientado al Front-End dado mi experiencia y formación en diseño Industrial y UX/UI. La experiencia ganada en docencia, industria y ventas me hizo una persona flexible, curiosa y empática...",
+        "tagline": "Bienvenidos a mi Portfolio",
+        "button-cv": "CV (ESP)"
+    },
+    "about": {
+        "title": "Sobre Mi",
+        "description1": "¡Hola! Mi nombre es Matias Rodriguez y disfruto creando cosas que viven en internet. Mi interés por el desarrollo web comenzó allá por el 2020, a partir de la pandemia del covid-19, cuando comencé a replantearme mi trabajo actual. Encontré en el trabajo remoto y por objetivos una manera de disfrutar la jornada laboral.",
+        "description2": "Utilizando mi carrera de base, Diseño Industrial, y mi formación como técnico informático como motores del proyecto de futuro, decidí comenzar este nuevo camino",
+        "description3": "Llevo dos años formándome, tomando cursos de UX/UI, lógica de programación, bootcamps de desarrollo web, y finalmente realizando proyectos completos desde el Back-End hasta el Front-End",
+        "description4": "Aquí hay algunas tecnologías con las que he estado trabajando recientemente:"
+    },
+    "projects": {
+        "title": "Proyectos"
+    },
+    "projectsModal": {
+        "description": "Descripción",
+        "whatIdo": "Cual fue mi participación?",
+        "tech": "Tecnologías utilizadas",
+        "date": "Fecha de realización",
+        "links": "El proyecto no tiene links"
+    },
+    "works": {
+        "title": "Experiencia Laboral",
+        "work1": {
+            "position": "Full-Stack Teaching Assistant Web Developer Fullstack",
+            "companie": "Henry · Part-time",
+            "date": "Ene 2023 - Actualmente",
+            "from": "Argentina · Remoto",
+            "description": "Teaching Assistant (TA) para estudiantes Henry Bootcamp",
+            "main": "Tareas Principales",
+            "task1": "Coordinar grupos de estudiantes en la experiencia del Bootcamp en Full Stack developer",
+            "task2": "Guiar a los estudiantes en los primeros pasos en el Bootcamp",
+            "task3": "Asistir en dudas y consultas de código durante las calses",
+            "task4": "Sugerir ideas para mejorar el bootcamp",
+            "task5": "Promover la colaboración y el trabajo en equipo de los estudiantes"
+        },
+        "work2": {
+            "position": "Profesor",
+            "companie": "Escuelas Técnicas y Privadas · Full-time",
+            "date": "Mar 2015 - Present · 8 yrs 1 mo",
+            "from": "Necochea, Buenos Aires, Argentina · On-site",
+            "description": "Profesor de educación secundaria en distintas Escuelas",
+            "main": "Contenidos impartidos:",
+            "task1": "Dibujo en 2D asistido por Computadora (autocad)",
+            "task2": "Modelado en 3D (rhinoceros)",
+            "task3": "Hojas de Cálculo (excel)",
+            "task4": "Programación y pensamiento computacional",
+            "task5": "Tornería",
+            "task6": "Proceso de transformación de los materiales",
+            "task7": "Soldadura",
+            "task8": "Carpintería",
+            "task9": "Diseño Web"
+        },
+        "work3": {
+            "position": "Asistente de ventas",
+            "companie": "Grupo Peñaflor · Full-time",
+            "date": "Nov 2012 - Dic 2013 · 1 año 2 meses",
+            "from": "Vicente Lopez, Buenos Aires, Argentina · On-site",
+            "description": "Sommelier asesor para clientes por medio del canal de beneficios para empleados ",
+            "main": "Tareas Principales: ",
+            "task1": "Gestionar las ventas realizadas a través del canal de venta directa que la empresa contaba como beneficios para empleados.",
+            "task2": "Asesorar y guiar en el proceso de la compra a usuarios y clientes de las distintas plataformas"
+        },
+        "work4": {
+            "position": "Diseñador Industrial",
+            "companie": "La Cardeuse S.A. · Full-time",
+            "date": "Abr 2010 - Ago 2011 · 1 año 5 meses",
+            "from": "Lanus, Buenos Aires, Argentina · On-site",
+            "description": "Encargado del area de diseño y desarrollo de la empresa",
+            "main": "Tareas principales:",
+            "task1": "Desarrollar de nuevos productos",
+            "task2": "Actualizar las líneas existentes",
+            "task3": "Implementar nuevas telas y técnologías en el proceso productivo",
+            "task4": "Crear y mantener un sistema de mejora continua"
+        }
+    },
+    "education": {
+        "title": "Educación",
+        "boot": "Bootcamp",
+        "uni": "Universidad",
+        "tech": "Secundaria Técnica",
+        "spe": "Tramo Formación"
+    },
+    "bootcamp": {
+        "titleS": "Titulo: ",
+        "title": "Desarrollador Web Full Stack",
+        "institutionS": "Institución: ",
+        "institution": "Henry",
+        "dateS": "Fechas: ",
+        "date": "Desde Agosto 2022 hasta Marzo 2023"
+    },
+    "university": {
+        "titleS": "Titulo: ",
+        "title": "Diseñador Industrial",
+        "institutionS": "Institución ",
+        "institution": "UNLP",
+        "dateS": "Fecha: ",
+        "date": "Desde Marzo 2004 hasta Diciembre 2010"
+    },
+    "technical": {
+        "titleS": "Titulo: ",
+        "title": "Técnico en computación Personal y profesional",
+        "institutionS": "Institución: ",
+        "institution": "E.E.S.T Nº 3",
+        "dateS": "Fecha: ",
+        "date": "Desde Marzo 2001 hasta Diciembre 2003"
+    },
+    "spe": {
+        "titleS": "Titulo: ",
+        "title": " Pedagogical training section for medium and higher level",
+        "institutionS": "Institution: ",
+        "institution": "SUETRA",
+        "dateS": "Date: ",
+        "date": "Desde Marzo 2015 hasta Diciembre 2017"
+    },
+    "certificates": {
+        "title": "Certificados"
+    }
+}

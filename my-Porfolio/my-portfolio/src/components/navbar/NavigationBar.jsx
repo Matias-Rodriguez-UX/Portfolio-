@@ -5,9 +5,11 @@ import Nav from 'react-bootstrap/Nav';
 import MenuIcon from '@mui/icons-material/Menu';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { useTranslation } from 'react-i18next'
 
 
 export default function NavigationBar({ scrollToTop, scrollToSection }) {
+  const [t, i18n] = useTranslation("global")
   const [activeLink, setActiveLink] = useState('main')
   const [scrolled, setScrolled] = useState(false)
 
@@ -38,15 +40,19 @@ export default function NavigationBar({ scrollToTop, scrollToSection }) {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto align-items-center">
-            <Nav.Link className={activeLink === 'main' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('main')} >Main</Nav.Link>
-            <Nav.Link className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')} >About</Nav.Link>
-            <Nav.Link className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')} >Projects</Nav.Link>
-            <Nav.Link className={activeLink === 'works' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('works')} >Works</Nav.Link>
-            <Nav.Link className={activeLink === 'education' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('education')} >Education</Nav.Link>
-            <Nav.Link className={activeLink === 'certificates' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('certificates')} >Certificates</Nav.Link>
+            <Nav.Link className={activeLink === 'main' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('main')} >{t("navbar.main")}</Nav.Link>
+            <Nav.Link className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')} >{t("navbar.about")}</Nav.Link>
+            <Nav.Link className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')} >{t("navbar.porjects")}</Nav.Link>
+            <Nav.Link className={activeLink === 'works' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('works')} >{t("navbar.works")}</Nav.Link>
+            <Nav.Link className={activeLink === 'education' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('education')} >{t("navbar.education")}</Nav.Link>
+            <Nav.Link className={activeLink === 'certificates' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('certificates')} >{t("navbar.certificates")}</Nav.Link>
             <div className="d-flex mr-auto">
               <Nav.Link href="https://www.linkedin.com/in/matias-g-rodriguez/" target="_blank" rel="noreferrer" className="navbar-link social-media"><LinkedInIcon fontSize="large" /></Nav.Link>
               <Nav.Link href="https://github.com/Matias-Rodriguez-UX" target="_blank" rel="noreferrer" className="me-4 navbar-link social-media" ><GitHubIcon fontSize="large" /></Nav.Link>
+            </div>
+            <div className="d-flex align-items-center justify-content-center mr-auto gap-3 lenguajes mt-2" style={{ color: "var(--whiteDirty)", cursor: "pointer" }}>
+              <h5 className={i18n.language === "es" ? "" : "text-muted"} onClick={() => i18n.changeLanguage("es")}>ES</h5>
+              <h5 className={i18n.language === "en" ? "" : "text-muted"} onClick={() => i18n.changeLanguage("en")}>EN</h5>
             </div>
           </Nav>
         </Navbar.Collapse>

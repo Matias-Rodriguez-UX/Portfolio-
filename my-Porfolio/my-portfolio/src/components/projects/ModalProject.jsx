@@ -1,9 +1,12 @@
 import React from "react";
 import { Button, Col, Modal, Row } from "react-bootstrap";
 import './ModalProject.css'
+import { useTranslation } from 'react-i18next'
 
 
 export default function ModalProject({ data, show, onHide }) {
+    const [t, i18n] = useTranslation("global")
+
     return (
         <Modal show={show} onHide={onHide} dialogClassName="modal-project"
             aria-labelledby="example-custom-modal-styling-title">
@@ -27,11 +30,11 @@ export default function ModalProject({ data, show, onHide }) {
 
                         <Col xs={12} md={12} lg={8}>
                             <div className="info-project">
-                                <h4>Description</h4>
+                                <h4>{t("projectsModal.description")}</h4>
                                 <p className="text-justify" style={{ maxWidth: '90%' }} >{`${data.description}`}</p>
-                                <h4>How did I get involved in the project?</h4>
+                                <h4>{t("projectsModal.whatIdo")}</h4>
                                 <p className="text-justify" style={{ maxWidth: '90%' }} >{`${data.whatIdo}`}</p>
-                                <h4>Technologies used</h4>
+                                <h4>{t("projectsModal.tech")}</h4>
                                 <ul className="list-option-tech">
                                     {data.tecnologies.length && data.tecnologies.map((el, index) =>
                                         <li key={index}>{el}</li>
@@ -43,9 +46,9 @@ export default function ModalProject({ data, show, onHide }) {
                                         <a key={index} href={el} target="_blank" rel="noreferrer">
                                             <li key={index}>{el}</li>
                                         </a>
-                                    ) : <p>The project doesn't have links</p>}
+                                    ) : <p>{t("projectsModal.links")}</p>}
                                 </ul>
-                                <h4>Creation date</h4>
+                                <h4>{t("projectsModal.date")}</h4>
                                 <p>{data.date}</p>
                             </div>
                         </Col>

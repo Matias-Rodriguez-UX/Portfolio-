@@ -1,7 +1,7 @@
 {
     "navbar": {
         "main": "Main",
-        "About": "About",
+        "about": "About",
         "porjects": "Projects",
         "works": "Works",
         "education": "Education",
@@ -11,5 +11,119 @@
         "intro": "I'm Matías. I have a Full Stack Developer profile with background in Industrial and UX/UI Design. Currently, I am a teacher in technical high schools, but I also have work experience in the productive industry and sales...",
         "tagline": "Welcome to my Portfolio",
         "button-cv": "Resume (ESP)"
+    },
+    "about": {
+        "title": "About Me",
+        "description1": "Hello! My name is Matias Rodriguez and I enjoy creating things that live on the internet. My interest in web development started back in 2020, since the covid-19 pandemic, where I began to rethink my current job. I found in remote work and by objectives a way to enjoy the workday.",
+        "description2": "Using my basic career, Industrial Design, and my training as a computer technician, as engines of the future project.",
+        "description3": "I have been training for two years now, taking UX/UI courses, programming logic, web development bootcamps, and finally carrying out complete projects from the Back-End to the Front-End.",
+        "description4": "Here are a few technologies I’ve been working with recently:"
+    },
+    "projects": {
+        "title": "Projects"
+    },
+    "projectsModal": {
+        "description": "Description",
+        "whatIdo": "How did I get involved in the project?",
+        "tech": "Used technology",
+        "date": "Creation date",
+        "links": "The project doesn't have links"
+    },
+    "works": {
+        "title": "Works experience",
+        "work1": {
+            "position": "Full-Stack Teaching Assistant Web Developer Fullstack",
+            "companie": "Henry · Part-time",
+            "date": "Jan 2023 - Present",
+            "from": "Argentina · Remote",
+            "description": "Teaching Assistant (TA) for students at Henry Bootcamp",
+            "main": "Main tasks:",
+            "task1": "Coordinate a group of new joining students throughout the whole bootcamp experience",
+            "task2": "Guide students in the first steps of the course and clarify their doubts",
+            "task3": "Provide assistance in solving exercises and encourage group teamwork (Pair Programming).",
+            "task4": "Suggest ideas to improve the Bootcamp processes.",
+            "task5": "Promote collaboration and build community within the students"
+        },
+        "work2": {
+            "position": "Professor",
+            "companie": "Technical high school · Full-time",
+            "date": "Mar 2015 - Present · 8 yrs 1 mo",
+            "from": "Necochea, Buenos Aires, Argentina · On-site",
+            "description": "Teacher of technical secondary schools dictating subjects such as",
+            "main": "Main tasks:",
+            "task1": "Technical drawing (autocad)",
+            "task2": "3d modeling (rhinoceros)",
+            "task3": "Spreadsheets (excel)",
+            "task4": "Programming and computational thinking",
+            "task5": "Turnery",
+            "task6": "Process of transformation of materials",
+            "task7": "Welding",
+            "task8": "Carpentry",
+            "task9": "Web Design"
+        },
+        "work3": {
+            "position": "Corporate sales assistants",
+            "companie": "Grupo Peñaflor · Full-time",
+            "date": "Nov 2012 - Dec 2013 · 1 yr 2 mos",
+            "from": "Vicente Lopez, Buenos Aires, Argentina · On-site",
+            "description": "Direct Sales Advisor for Employee Benefits Channel",
+            "main": "Main tasks:",
+            "task1": "Manage sales made through the direct sales channel that the company had as an employee benefit",
+            "task2": "Advise and guide users and clients of the different platforms in the purchasing process"
+        },
+        "work4": {
+            "position": "Industrial Designer",
+            "companie": "La Cardeuse S.A. · Full-time",
+            "date": "Apr 2010 - Aug 2011 · 1 yr 5 mos",
+            "from": "Lanus, Buenos Aires, Argentina · On-site",
+            "description": "Head of the Design and Development area of ​​new products",
+            "main": "Main tasks:",
+            "task1": "Develop new products",
+            "task2": "Update the company's current product lines",
+            "task3": "Implement new fabrics and techniques",
+            "task4": "SCreate and maintain a continuous improvement system"
+        }
+    },
+    "education": {
+        "title": "Education",
+        "boot": "Bootcamp",
+        "uni": "University",
+        "tech": "Technical High School",
+        "spe": "Specialization"
+    },
+    "bootcamp": {
+        "titleS": "Title: ",
+        "title": "Full Stack Web Developer",
+        "institutionS": "Institution: ",
+        "institution": "Henry",
+        "dateS": "Date: ",
+        "date": "from August 2022 to March 2023"
+    },
+    "university": {
+        "titleS": "Title: ",
+        "title": "Industrial Designer",
+        "institutionS": "Institution: ",
+        "institution": "UNLP",
+        "dateS": "Date: ",
+        "date": "From March 2004 to December 2010"
+    },
+    "technical": {
+        "titleS": "Title: ",
+        "title": "Personal and professional computer technician",
+        "institutionS": "Institution: ",
+        "institution": "E.E.S.T Nº 3",
+        "dateS": "Date: ",
+        "date": "From March 2001 to December 2003"
+    },
+    "spe": {
+        "titleS": "Title: ",
+        "title": " Pedagogical training section for medium and higher level",
+        "institutionS": "Institution: ",
+        "institution": "SUETRA",
+        "dateS": "Date: ",
+        "date": "From March 2015 to December 2017"
+    },
+    "certificates": {
+        "title": "Certificates"
     }
 }

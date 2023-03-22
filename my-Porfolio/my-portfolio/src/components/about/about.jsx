@@ -1,26 +1,30 @@
 import React from "react";
 import './about.css'
 import { Row, Col } from "react-bootstrap";
+import { useTranslation } from 'react-i18next'
 
 export default function About() {
+    const [t, i18n] = useTranslation("global")
+
     return (
         <section className="about" id="about">
             <div className="container d-flex flex-column">
-                <h2 className="mt-4 mb-4">About me</h2>
+                <h2 className="mt-4 mb-4">{t("about.title")}</h2>
                 <Row className="gap-2">
                     <Col xs={12} md={7} xl={8}>
                         <div className="text-description">
                             <p className="text-justify">
-                                Hello! My name is Matias Rodriguez and I enjoy creating things that live on the internet. My interest in web development started back in 2020, since the covid-19 pandemic, where I began to rethink my current job. I found in remote work and by objectives a way to enjoy the workday.
-                                <br />
-                                <br />
-                                Using my basic career, Industrial Design, and my training as a computer technician, as engines of the future project.
-                                <br />
-                                <br />
-                                I have been training for two years now, taking UX/UI courses, programming logic, web development bootcamps, and finally carrying out complete projects from the Back-End to the Front-End.
+                                {t("about.description1")}
                             </p>
-                            <p>Here are a few technologies I’ve been working with recently:</p>
-
+                            <p className="text-justify">
+                                {t("about.description2")}
+                            </p>
+                            <p className="text-justify">
+                                {t("about.description3")}
+                            </p>
+                            <p className="text-justify">
+                                {t("about.description4")}
+                            </p>
                             <ul className="skills-list">
                                 <li>JavaScript</li>
                                 <li>TypeScript</li>
