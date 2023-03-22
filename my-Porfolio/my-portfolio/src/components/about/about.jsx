@@ -11,7 +11,7 @@ export default function About() {
                     <Col xs={12} md={7} xl={8}>
                         <div className="text-description">
                             <p className="text-justify">
-                                Hello! My name is Matias and I enjoy creating things that live on the internet. My interest in web development started back in 2020, since the covid-19 pandemic, where I began to rethink my current job. I found in remote work and by objectives a way to enjoy the workday.
+                                Hello! My name is Matias Rodriguez and I enjoy creating things that live on the internet. My interest in web development started back in 2020, since the covid-19 pandemic, where I began to rethink my current job. I found in remote work and by objectives a way to enjoy the workday.
                                 <br />
                                 <br />
                                 Using my basic career, Industrial Design, and my training as a computer technician, as engines of the future project.
