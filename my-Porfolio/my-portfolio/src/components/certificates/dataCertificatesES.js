@@ -90,6 +90,20 @@ const dataCerticatesES = [
         discipline: ['Programming'],
         link: ["https://learndigital.withgoogle.com/link/1nur091p2ww"]
     },
+    {
+        id: 14,
+        name: "EF SET Certificate",
+        organization: "EF Standard English Test (EF SET)",
+        discipline: ['Programming'],
+        link: ["https://www.efset.org/cert/Mnr2yY"]
+    },
+    {
+        id: 15,
+        name: "Fundamentos de Scrum",
+        organization: "Alaimo Labs",
+        discipline: ['Programming'],
+        link: ["https://drive.google.com/file/d/13G-hfSosz7e7htYk-IOTNd9HfRMT6cIn/view?usp=sharing"]
+    },
 ]
 
 export default dataCerticatesES
