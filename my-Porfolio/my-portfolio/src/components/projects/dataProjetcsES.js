@@ -79,6 +79,16 @@ const dataProjectsEs = [
         date: "2010",
         links: []
     },
+    {
+        id: 9,
+        name: "Dall-E MgR",
+        description: "Generador de Imagenes por texto con Inteligencia Artificial",
+        whatIdo: "Creé una aplicación, utilizando algunas de herramientas más demandadas en la actualidad como Node.js, Express.js, MongoDB y React.js (MERN), Tailwind, el framework CSS más popular en la actualidad, Modelo DALL-E de OpenAI,  Un modelo de aprendizaje profundo que genera imágenes a partir de la entrada de texto, Cloudinary, como servicio de almacenamiento de imágenes basado en la nube. El Backend fue deployado en Render y el Frontend en Vercel",
+        images: ['https://res.cloudinary.com/dcbax1feo/image/upload/v1680802349/assets/OpenAi/portada_AI_mfgjuv.png', 'https://res.cloudinary.com/dcbax1feo/image/upload/v1680802344/assets/OpenAi/crear_AI_uhcb4s.png'],
+        tecnologies: ['Node.js', 'Express.js', 'MongoDB', 'React.js', 'Tailwind', 'OpenAI', 'Cloudinary', 'Render', 'Vercel'],
+        date: "2023",
+        links: ['https://dalle-clone-mgr.vercel.app/']
+    },
 ]
 
 export default dataProjectsEs

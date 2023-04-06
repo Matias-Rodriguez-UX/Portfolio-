@@ -162,6 +162,23 @@
     filter: grayscale(100%);
 }
 
+.project-img9 {
+    grid-area: 2 / 4 / 3 / 5;
+    background-image: url('../../../public/OpenAI_Logo.svg.png') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8rem;
+    width: 14rem;
+    height: 10rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 3px solid var(--fucsia);
+    box-shadow: rgba(83, 83, 83, 0.2) 0px 8px 16px 0px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
 .project-img1:hover,
 .project-img2:hover,
 .project-img3:hover,
@@ -169,7 +186,8 @@
 .project-img5:hover,
 .project-img6:hover,
 .project-img7:hover,
-.project-img8:hover {
+.project-img8:hover,
+.project-img9:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transform: translateY(-5px) scale(1.05);
     filter: none;
@@ -193,7 +211,8 @@
     .project-img5,
     .project-img6,
     .project-img7,
-    .project-img8 {
+    .project-img8,
+    .project-img9 {
         background-size: 5rem;
         width: 8rem;
         height: 6rem;
@@ -223,7 +242,8 @@
     .project-img5,
     .project-img6,
     .project-img7,
-    .project-img8 {
+    .project-img8,
+    .project-img9 {
         background-size: 5rem;
         width: 8rem;
         height: 6rem;
@@ -244,7 +264,8 @@
     .project-img5,
     .project-img6,
     .project-img7,
-    .project-img8 {
+    .project-img8,
+    .project-img9 {
         background-size: 8rem;
         width: 12rem;
         height: 10rem;
@@ -265,7 +286,8 @@
     .project-img5,
     .project-img6,
     .project-img7,
-    .project-img8 {
+    .project-img8,
+    .project-img9 {
         background-size: 10rem;
         width: 14rem;
         height: 12rem;
@@ -294,7 +316,8 @@
     .project-img5,
     .project-img6,
     .project-img7,
-    .project-img8 {
+    .project-img8,
+    .project-img9 {
         background-size: 10rem;
         width: 14rem;
         height: 12rem;

@@ -38,6 +38,7 @@ export default function Projects() {
                     <div onClick={() => handleClick(6)} className="project-img6"></div>
                     <div onClick={() => handleClick(7)} className="project-img7"></div>
                     <div onClick={() => handleClick(8)} className="project-img8"></div>
+                    <div onClick={() => handleClick(9)} className="project-img9"></div>
                 </div>
             </div>
             {data.name &&
