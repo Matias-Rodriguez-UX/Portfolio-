@@ -23,7 +23,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    column-gap: 3rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
 }
 
 .project-img1 {
@@ -193,6 +194,7 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        gap: 2rem;
     }
 
     .project-img1,
