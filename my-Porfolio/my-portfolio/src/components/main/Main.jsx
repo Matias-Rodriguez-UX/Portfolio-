@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import { Row, Col } from 'react-bootstrap'
 import React, { useEffect, useState } from "react";
-import documento from '../../CV-Matias-Rodriguez-2023.pdf'
+import documento from '../../CV-Matias-Rodriguez-ESP.pdf'
 import './Main.css'
 import { useTranslation } from 'react-i18next'
 
