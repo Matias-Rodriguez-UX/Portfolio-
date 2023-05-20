@@ -10,7 +10,11 @@
     "main": {
         "intro": "Full Stack Developer with preference to frontend and background in Industrial and UX/UI Design. Currently, I am a teacher in technical high schools, but I also have work experience in the productive industry and sales...",
         "tagline": "Welcome to my Portfolio",
-        "button-cv": "Resume (ESP)"
+        "button-cv": "Resume",
+        "about": "About Me",
+        "projects": "Projects",
+        "work": "Work experience",
+        "education": "Education"
     },
     "about": {
         "title": "About Me",

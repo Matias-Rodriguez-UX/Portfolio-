@@ -10,7 +10,11 @@
     "main": {
         "intro": "Desarrollador Full Stack, orientado al Front-End dado mi experiencia y formación en diseño Industrial y UX/UI. Mis años en docencia, industria y ventas me hizo una persona flexible, curiosa y empática...",
         "tagline": "Bienvenidos a mi Portfolio",
-        "button-cv": "CV (ESP)"
+        "button-cv": "CV",
+        "about": "Sobre mi",
+        "projects": "Proyectos",
+        "work": "Experiencia Laboral",
+        "education": "Educación"
     },
     "about": {
         "title": "Sobre Mi",

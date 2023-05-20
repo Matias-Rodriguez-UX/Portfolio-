@@ -1,11 +1,13 @@
 nav.navbar {
     padding: 12px 0;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0;
     z-index: 9999;
     transition: 0.32s ease-in-out;
-    background-color: var(--blackMed) !important
+    background-color: var(--blackMed) !important;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .logo {
@@ -48,11 +50,17 @@ span.navbar-text {
     display: flex;
     align-items: center;
 }
+.lenguajes{
+    margin-left: 2rem;
+}
 
 @media only screen and (max-width: 600px) {
     nav.navbar .navbar-nav .nav-link.navbar-link {
-        margin-top: .5rem;
-        margin-bottom: .5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .lenguajes{
+        margin-left: 0;
     }
 
 }

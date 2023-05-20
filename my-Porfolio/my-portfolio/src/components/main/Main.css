@@ -95,6 +95,30 @@
     transition: 0.3s ease-in-out;
     font-family: var(--font-mono);
 }
+.grph1:hover {
+    background-image: url('../../../public/IMG-20200101-WA0036.jpg'), linear-gradient(to bottom right, #46a2ac72, #a2a2a281);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+}
+.grph2:hover {
+    background-image: url('https://res.cloudinary.com/dcbax1feo/image/upload/v1684591142/assets/Main/fahim-muntashir-aCeVa_v7OYg-unsplash_hnhlj5.jpg'), linear-gradient(to bottom right, #46a2ac72, #a2a2a281);
+    background-size:cover;
+    background-position: center;
+    background-blend-mode: screen;
+}
+.grph3:hover {
+    background-image: url('https://res.cloudinary.com/dcbax1feo/image/upload/v1684591147/assets/Main/scott-graham-5fNmWej4tAA-unsplash_1_vearkw.jpg'), linear-gradient(to bottom right, #46a2ac72, #a2a2a281);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+}
+.grph4:hover {
+    background-image: url('https://res.cloudinary.com/dcbax1feo/image/upload/v1684591143/assets/Main/unseen-studio-s9CC2SKySJM-unsplash_vs2ia1.jpg'), linear-gradient(to bottom right, #46a2ac72, #a2a2a281);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+}
 
 .grph2 {
     text-decoration: none;

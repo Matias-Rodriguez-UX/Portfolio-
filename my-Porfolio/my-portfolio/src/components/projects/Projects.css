@@ -170,6 +170,21 @@
     cursor: pointer;
     filter: grayscale(100%);
 }
+.project-img10 {
+    background-image: url('https://res.cloudinary.com/dcbax1feo/image/upload/v1684591949/assets/TMS/logo_-_dark_myf3zb.jpg') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8rem;
+    width: 14rem;
+    height: 10rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 3px solid var(--fucsia);
+    box-shadow: rgba(83, 83, 83, 0.2) 0px 8px 16px 0px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
 
 .project-img1:hover,
 .project-img2:hover,
@@ -179,7 +194,8 @@
 .project-img6:hover,
 .project-img7:hover,
 .project-img8:hover,
-.project-img9:hover {
+.project-img9:hover,
+.project-img10:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transform: translateY(-5px) scale(1.05);
     filter: none;
@@ -205,7 +221,8 @@
     .project-img6,
     .project-img7,
     .project-img8,
-    .project-img9 {
+    .project-img9,
+    .project-img10 {
         background-size: 5rem;
         width: 8rem;
         height: 6rem;
@@ -236,7 +253,8 @@
     .project-img6,
     .project-img7,
     .project-img8,
-    .project-img9 {
+    .project-img9,
+    .project-img10  {
         background-size: 5rem;
         width: 8rem;
         height: 6rem;
@@ -258,7 +276,8 @@
     .project-img6,
     .project-img7,
     .project-img8,
-    .project-img9 {
+    .project-img9,
+    .project-img10  {
         background-size: 8rem;
         width: 12rem;
         height: 10rem;
@@ -280,7 +299,8 @@
     .project-img6,
     .project-img7,
     .project-img8,
-    .project-img9 {
+    .project-img9,
+    .project-img10  {
         background-size: 10rem;
         width: 14rem;
         height: 12rem;
@@ -310,7 +330,8 @@
     .project-img6,
     .project-img7,
     .project-img8,
-    .project-img9 {
+    .project-img9,
+    .project-img10  {
         background-size: 10rem;
         width: 14rem;
         height: 12rem;
