@@ -12,8 +12,7 @@ export default function Certificates() {
     return (
         <section className="certificates" id="certificates">
             <div className="container mt-4 pt-4">
-                <h1 className="">{t("certificates.title")}</h1>
-                <div></div>
+                <h2 className="section-title">{t("certificates.title")}</h2>
                 <div className="certificates-links">
                     {i18n.language === "es" ? dataCerticatesES.map((el, index) =>
                         <a href={el.link} target="_blank" rel="noreferrer" className="align-middle links-to-certificates" key={index}>{el.name}</a>

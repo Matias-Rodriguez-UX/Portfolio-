@@ -1,4 +1,39 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// CASE STUDY — optional fields. Add any of these to a project and the modal
+// switches from the simple layout to the rich case-study layout automatically
+// (omit a field and that section just doesn't render — fully backward compatible).
+// Mirror the same fields in dataProjetcsES.js for the Spanish version.
+//
+//   context:   "One short paragraph — what it is and who it's for",
+//   challenge: "1–2 sentences — the real problem/constraint you tackled",
+//   process:   ["Key decision or step", "Another", "..."],   // bullets
+//   result:    "What shipped + impact/metric if you have one",
+//   images:    [{ src: "https://...", caption: "What this shows" }],  // captions optional
+//
+// See the TMS Engineering and Dall-E MgR entries below for worked examples.
+// ─────────────────────────────────────────────────────────────────────────────
 const dataProjects = [
+  {
+    id: 11,
+    name: "Batuta — Metabase Q",
+    context:
+      "Batuta is the cybersecurity SaaS platform by Metabase Q. As Frontend Engineer & UX/UI Designer I own its end-to-end frontend experience — from defining the UX in Figma to shipping accessible, high-performance interfaces in production.",
+    challenge:
+      "Turn complex security workflows into interfaces that are fast, consistent and genuinely usable, while keeping a growing multi-module platform coherent.",
+    process: [
+      "Define requirements, user flows and technical constraints together with product and engineering",
+      "Design and maintain a scalable UI / design system in Figma for consistency across the platform",
+      "Build high-performance, accessible interfaces in React, TypeScript, Tailwind and Material UI",
+      "Drive product discussions and feature prioritization, improving usability across modules",
+    ],
+    result:
+      "Owning both UX and implementation closed design-to-development gaps, standardized components for a more consistent UI, and sped up feature-delivery cycles.",
+    images: [],
+    tecnologies: ["React", "TypeScript", "Tailwind", "Material UI", "Figma"],
+    date: "2023 - Present",
+    links: ["https://www.batuta.com/batuta-the-next-chapter-in-the-evolution-of-metabase-q/"],
+    category: "work",
+  },
   {
     id: 10,
     name: "TMS Engineering",
@@ -6,10 +41,22 @@ const dataProjects = [
       "Redesign of the company's logo, fonts and website in web and mobile format",
     whatIdo:
       "Comprehensive design work was done, including logo, signatures for mailing, client presentation, web page in PC and mobile format. Worked with React, Gatsby and deployed on netlify",
+    context:
+      "A full brand and web redesign for an engineering consultancy — logo, typography and a responsive marketing site in both desktop and mobile formats.",
+    challenge:
+      "Refresh the company's identity and ship a fast, smooth site that feels as polished on mobile as on desktop.",
+    process: [
+      "Redesigned the logo, mailing signatures and client presentation into one cohesive identity",
+      "Built the responsive site in React + Gatsby, styled with SCSS",
+      "Added Locomotive Scroll for smooth, interactive navigation; served media through Cloudinary",
+      "Deployed on Netlify",
+    ],
+    result:
+      "A live, responsive corporate site for TMS Ingeniería.",
     images: [
-      "https://res.cloudinary.com/dcbax1feo/image/upload/v1684589523/assets/TMS/TMSportada_bldwvl.jpg",
-      "https://res.cloudinary.com/dcbax1feo/image/upload/v1684589523/assets/TMS/TMSmain_ckarjr.jpg",
-      "https://res.cloudinary.com/dcbax1feo/image/upload/v1684589523/assets/TMS/TMScuerpo_v07edf.jpg",
+      { src: "https://res.cloudinary.com/dcbax1feo/image/upload/v1684589523/assets/TMS/TMSportada_bldwvl.jpg", caption: "Landing / cover" },
+      { src: "https://res.cloudinary.com/dcbax1feo/image/upload/v1684589523/assets/TMS/TMSmain_ckarjr.jpg", caption: "Main section" },
+      { src: "https://res.cloudinary.com/dcbax1feo/image/upload/v1684589523/assets/TMS/TMScuerpo_v07edf.jpg", caption: "Content section" },
     ],
     tecnologies: [
       "React.js",
@@ -29,9 +76,21 @@ const dataProjects = [
     description: "Artificial intelligence image generator.",
     whatIdo:
       "I created an application, using some of today's most demanded tools like Node.js, Express.js, MongoDB and React.js (MERN), Tailwind, today's most popular CSS framework, OpenAI's DALL-E Model, a deep learning model that generates images from text input, Cloudinary, as a cloud-based image storage service. The Backend was deployed in Render and the Frontend in Vercel",
+    context:
+      "A full-stack AI image generator: type a prompt and get an image. Built end-to-end to explore OpenAI's DALL·E model on a modern MERN stack.",
+    challenge:
+      "Wire a deep-learning image model into a responsive web app — handling generation, cloud storage and a clean create flow.",
+    process: [
+      "Built the MERN stack from scratch: Node.js + Express API, MongoDB persistence, React front end",
+      "Integrated OpenAI's DALL·E model to generate images from text prompts",
+      "Stored generated images on Cloudinary; styled the interface with Tailwind",
+      "Split the deployment: backend on Render, frontend on Vercel",
+    ],
+    result:
+      "A working, deployed image generator — try it live.",
     images: [
-      "https://res.cloudinary.com/dcbax1feo/image/upload/v1680802349/assets/OpenAi/portada_AI_mfgjuv.png",
-      "https://res.cloudinary.com/dcbax1feo/image/upload/v1680802344/assets/OpenAi/crear_AI_uhcb4s.png",
+      { src: "https://res.cloudinary.com/dcbax1feo/image/upload/v1680802349/assets/OpenAi/portada_AI_mfgjuv.png", caption: "Home / generated gallery" },
+      { src: "https://res.cloudinary.com/dcbax1feo/image/upload/v1680802344/assets/OpenAi/crear_AI_uhcb4s.png", caption: "Create flow — prompt to image" },
     ],
     tecnologies: [
       "Node.js",

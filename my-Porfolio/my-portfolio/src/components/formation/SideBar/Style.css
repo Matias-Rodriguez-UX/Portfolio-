@@ -1,20 +1,21 @@
-.new-class-Nav-A a {
-    color: var(--darkGrey) !important;
-    text-decoration: none !important;
-    font-weight: 500 !important;
-}
-
+/* Active item: dark ink on the Pulse Cyan surface (8.5:1, AA). The link element
+   itself carries the class now (no inner <a>), and the icon follows currentColor. */
 .new-class-Nav-A {
     background-color: var(--tourquise) !important;
+    color: var(--darkGrey) !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
 }
 
-.new-class-Nav-I a {
+/* Inactive item: off-white on the dark panel (13.7:1), Pulse Cyan on hover/focus. */
+.new-class-Nav-I {
     color: var(--whiteDirty) !important;
     font-weight: 500 !important;
     text-decoration: none !important;
 }
 
-.new-class-Nav-I:hover a {
+.new-class-Nav-I:hover,
+.new-class-Nav-I:focus-visible {
     color: var(--tourquise) !important;
 }
 

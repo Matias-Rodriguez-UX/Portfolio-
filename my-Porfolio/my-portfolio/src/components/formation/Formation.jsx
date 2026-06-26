@@ -9,14 +9,14 @@ import { useTranslation } from "react-i18next";
 
 export default function Formation() {
   const [currentPage, setCurrentPage] = useState("fullstack");
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
 
   return (
     <section className="formation-section" id="education">
       <div className="container">
-        <h1>{t("education.title")}</h1>
+        <h2 className="section-title">{t("education.title")}</h2>
         <div className="row mt-4 formation-section-1">
-          <SideBar className="sideBar-col" setCurrentPage={setCurrentPage} />
+          <SideBar className="sideBar-col" setCurrentPage={setCurrentPage} currentPage={currentPage} />
           <div className="container formation-col">
             {currentPage === "fullstack" && <Bootcamp />}
             {currentPage === "university" && <University />}

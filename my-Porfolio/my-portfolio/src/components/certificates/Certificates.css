@@ -36,7 +36,7 @@
 }
 
 .links-to-certificates:hover {
-    background-color: var(--fucsia);
+    background-color: var(--fucsia-deep);
     border: 2px solid var(--whiteDirty);
     color: var(--whiteDirty);
     transform: translateY(-5px) scale(1.05);

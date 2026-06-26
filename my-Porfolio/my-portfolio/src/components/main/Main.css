@@ -21,12 +21,22 @@
 
 .banner h1 {
     color: var(--darkGrey);
-    font-size: 5rem;
+    font-size: clamp(2.75rem, 7vw, 5rem);
     font-weight: 700;
-    letter-spacing: 0.8px;
-    line-height: 1;
-    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
     display: block;
+    text-wrap: balance;
+}
+
+/* Static headline: size to content (no typewriter space to reserve) */
+.text-h1-title {
+    margin-bottom: 0.5rem;
+}
+
+.banner-intro {
+    margin-bottom: 2rem;
 }
 
 
@@ -37,15 +47,17 @@
     letter-spacing: 0.8px;
     line-height: 1.5em;
     width: 96%;
+    max-width: 60ch;
+    text-wrap: pretty;
 }
 
 .banner-button {
     text-decoration: none;
     max-width: 250px;
     padding: 1rem 2rem;
-    border: 2px solid var(--fucsia);
+    border: 2px solid var(--fucsia-deep);
     border-radius: 0.5rem;
-    color: var(--fucsia);
+    color: var(--fucsia-deep);
     font-weight: 700;
     font-size: 1.2rem;
     margin-top: 4rem;
@@ -65,7 +77,7 @@
 }
 
 .banner-button:hover {
-    background-color: var(--fucsia);
+    background-color: var(--fucsia-deep);
     color: var(--whiteDirty);
     border-radius: 0.5rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -166,26 +178,26 @@
 .grph1:hover,
 .grph2:hover,
 .grph3:hover,
-.grph4:hover {
+.grph4:hover,
+.grph1:focus-visible,
+.grph2:focus-visible,
+.grph3:focus-visible,
+.grph4:focus-visible,
+.grph1:active,
+.grph2:active,
+.grph3:active,
+.grph4:active {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transform: translateY(-5px) scale(1.05);
 }
 
 @media only screen and (min-width: 768px) {
-    .text-h1-title {
-        height: 16rem;
-    }
-
     .banner-button {
         margin-top: 1.5rem;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    .text-h1-title {
-        height: 10rem;
-    }
-
     .banner p {
         font-size: 1rem;
     }
@@ -203,69 +215,61 @@
     .banner-button {
         margin-top: 1.5rem;
         border: none;
-        background-color: var(--fucsia);
+        background-color: var(--fucsia-deep);
         color: var(--whiteDirty);
         border-radius: 0.5rem;
         padding: 0.5rem 1rem;
     }
 
+    /* Mobile: reflow the 5x5 desktop mosaic into a touch-sized 2x2 grid below
+       the hero copy. Keeps the four brand-colored tiles, labels, and lift —
+       just rethought for a small screen instead of hidden. */
     .graphics {
-        display: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-auto-rows: 1fr;
+        gap: 0.75rem;
+        height: auto;
+        margin-top: 2.5rem;
+    }
+
+    .grph1,
+    .grph2,
+    .grph3,
+    .grph4 {
+        grid-area: auto;
+        min-height: 7rem;
+        backdrop-filter: none;
+    }
+
+    /* Tame the wild desktop radii so they read as deliberate at small size,
+       while keeping each tile's asymmetric character. */
+    .grph1 {
+        border-radius: 0 1rem 0 1.5rem;
+    }
+
+    .grph2 {
+        border-radius: 1.5rem 0 0.75rem 0;
+    }
+
+    .grph3 {
+        border-radius: 0 0.75rem 0 1rem;
+    }
+
+    .grph4 {
+        border-radius: 1rem 0 1.75rem 0.75rem;
     }
 }
 
 @media only screen and (min-width: 960px) {
-    .banner h1 {
-        font-size: 5rem;
-        font-weight: 700;
-        letter-spacing: 0.8px;
-        line-height: 1;
-        margin-bottom: 1.25rem;
-    }
-
-    .text-h1-title {
-        height: 16rem;
-    }
-
     .banner-button {
         margin-top: 1.5rem;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    .banner h1 {
-        font-size: 5rem;
-        font-weight: 700;
-        letter-spacing: 0.8px;
-        line-height: 1;
-        margin-bottom: 1.25rem;
-    }
-
-    .text-h1-title {
-        height: 12rem;
-    }
-
     .banner-button {
         margin-top: 1.5rem;
     }
-}
-
-
-
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-
-    50% {
-        transform: translateY(20px);
-    }
-
-    100% {
-        transform: translateY(-20px);
-    }
-}
-
-.txt-rotate>.wrap {
-    border-right: 0.08em solid #666;
 }

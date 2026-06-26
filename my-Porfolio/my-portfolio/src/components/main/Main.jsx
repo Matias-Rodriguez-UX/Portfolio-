@@ -1,6 +1,5 @@
-import { Container } from "@mui/material";
 import { Row, Col } from "react-bootstrap";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import documento from "../../CV-Matias-Rodriguez-ESP.pdf";
 import documentoIn from "../../CV-Matias-Rodriguez-ENG.pdf";
 import "./Main.css";
@@ -8,57 +7,17 @@ import { useTranslation } from "react-i18next";
 
 export default function Main() {
   const [t, i18n] = useTranslation("global");
-  const [loop, setLoop] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Industrial Designer", "Web Developer", "UX/UI Designer"];
-  const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 1000;
-
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text]);
-
-  const tick = () => {
-    let i = loop % toRotate.length;
-    let fullText = toRotate[i];
-    let updateText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-    setText(updateText);
-    if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
-    }
-    if (!isDeleting && updateText === fullText) {
-      setIsDeleting(true);
-      setDelta(period);
-    } else if (isDeleting && updateText === "") {
-      setIsDeleting(false);
-      setLoop(loop + 1);
-      setDelta(500);
-    }
-  };
 
   return (
     <section className="banner" id="main">
-      <Container>
+      <div className="container">
         <Row className="align-items-center">
           <Col xs={12} md={7} xl={8}>
             <span className="tagline">{t("main.tagline")}</span>
             <div className="text-h1-title">
-              <h1>
-                {`Hi I'm `}
-                <br></br>
-                <span className="wrap"> {text}</span>
-              </h1>
+              <h1>{t("main.headline")}</h1>
             </div>
-            <p> {t("main.intro")}</p>
+            <p className="banner-intro">{t("main.intro")}</p>
             <a
               href={i18n.language === "es" ? documento : documentoIn}
               className="banner-button"
@@ -71,7 +30,8 @@ export default function Main() {
                 width="30"
                 height="30"
                 fill="currentColor"
-                class="bi bi-download"
+                className="bi bi-download"
+                aria-hidden="true"
                 viewBox="0 0 16 16"
               >
                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
@@ -120,7 +80,7 @@ export default function Main() {
             </div>
           </Col>
         </Row>
-      </Container>
+      </div>
     </section>
   );
 }

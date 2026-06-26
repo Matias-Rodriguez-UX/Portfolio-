@@ -10,34 +10,44 @@ export default function Projects() {
   const [showModal, setShowModal] = useState(false);
   const [t, i18n] = useTranslation("global");
 
+  // Display order is intentional (newest / most representative first) and each
+  // id maps to its own .project-img{id} class carrying the brand logo.
+  const projectOrder = [
+    { id: 11, name: "Batuta — Metabase Q" },
+    { id: 10, name: "TMS Engineering" },
+    { id: 9, name: "Dall-E MgR" },
+    { id: 1, name: "StreetArt Wine Club" },
+    { id: 2, name: "Alura" },
+    { id: 3, name: "Pokemon" },
+    { id: 4, name: "Altamira" },
+    { id: 5, name: "Dewey" },
+    { id: 6, name: "La Cardeuse" },
+    { id: 7, name: "76treinta Wine Club" },
+    { id: 8, name: "Nomade" },
+  ];
+
   function handleClick(id) {
-    let findData;
-    if (i18n.language === "es") {
-      findData = dataProjectsEs.find((el) => el.id === id);
-      console.log(findData);
-      setData(findData);
-    } else {
-      findData = dataProjects.find((el) => el.id === id);
-      setData(findData);
-    }
+    const source = i18n.language === "es" ? dataProjectsEs : dataProjects;
+    const findData = source.find((el) => el.id === id);
+    setData(findData);
     setShowModal(true);
   }
 
   return (
     <section className="projects" id="projects">
       <div className="container mt-4">
-        <h1>{t("projects.title")}</h1>
+        <h2 className="section-title">{t("projects.title")}</h2>
         <div className="images-projects">
-          <div onClick={() => handleClick(10)} className="project-img10"></div>
-          <div onClick={() => handleClick(9)} className="project-img9"></div>
-          <div onClick={() => handleClick(1)} className="project-img1"></div>
-          <div onClick={() => handleClick(2)} className="project-img2"></div>
-          <div onClick={() => handleClick(3)} className="project-img3"></div>
-          <div onClick={() => handleClick(4)} className="project-img4"></div>
-          <div onClick={() => handleClick(5)} className="project-img5"></div>
-          <div onClick={() => handleClick(6)} className="project-img6"></div>
-          <div onClick={() => handleClick(7)} className="project-img7"></div>
-          <div onClick={() => handleClick(8)} className="project-img8"></div>
+          {projectOrder.map(({ id, name }) => (
+            <button
+              key={id}
+              type="button"
+              className={`project-img${id}`}
+              onClick={() => handleClick(id)}
+              aria-haspopup="dialog"
+              aria-label={t("projects.cardLabel", { name })}
+            ></button>
+          ))}
         </div>
       </div>
       {data.name && (

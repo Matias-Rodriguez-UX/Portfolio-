@@ -8,8 +8,9 @@
         "certificates": "Certificados"
     },
     "main": {
-        "intro": "Desarrollador Full Stack, orientado al Front-End dado mi experiencia y formación en diseño Industrial y UX/UI. Mis años en docencia, industria y ventas me hizo una persona flexible, curiosa y empática...",
-        "tagline": "Bienvenidos a mi Portfolio",
+        "intro": "Frontend Engineer orientado al producto, con más de 3 años construyendo aplicaciones web escalables y centradas en el usuario en ciberseguridad y SaaS. Combino ingeniería, diseño UX/UI y visión de producto para llevar funcionalidades de punta a punta — del descubrimiento a la entrega.",
+        "headline": "Hola, soy Matías Rodríguez.",
+        "tagline": "Frontend Engineer & UX/UI Designer",
         "button-cv": "CV",
         "about": "Sobre mi",
         "projects": "Proyectos",
@@ -18,75 +19,101 @@
     },
     "about": {
         "title": "Sobre Mi",
-        "description1": "¡Hola! Mi nombre es Matias Rodriguez y disfruto creando cosas que viven en internet. Mi interés por el desarrollo web comenzó allá por el 2020, a partir de la pandemia del covid-19, cuando comencé a replantearme mi trabajo actual. Encontré en el trabajo remoto y por objetivos una manera de disfrutar la jornada laboral.",
-        "description2": "Utilizando mi carrera de base, Diseño Industrial, y mi formación como técnico informático como motores del proyecto de futuro, decidí comenzar este nuevo camino",
-        "description3": "Llevo dos años formándome, tomando cursos de UX/UI, lógica de programación, bootcamps de desarrollo web, y finalmente realizando proyectos completos desde el Back-End hasta el Front-End",
-        "description4": "Aquí hay algunas tecnologías con las que he estado trabajando recientemente:"
+        "description1": "¡Hola! Soy Matías. Me gustan los problemas que viven entre disciplinas — donde una interfaz más clara, mejor código y una decisión de producto más afilada terminan siendo la misma decisión.",
+        "description2": "Hoy soy responsable del frontend de extremo a extremo de una plataforma SaaS de ciberseguridad en Metabase Q: desde definir la UX en Figma hasta entregar interfaces accesibles y de alto rendimiento en React.",
+        "description3": "Lo interesante es el recorrido: empecé como Diseñador Industrial y di clases técnicas durante años antes de pasarme al software en 2020. Cada paso afinó mi manera de resolver problemas y de diseñar para personas reales.",
+        "description4": "Aquí hay algunas tecnologías con las que he estado trabajando recientemente:",
+        "stack": {
+            "frontend": "Frontend",
+            "backend": "Backend · nivel funcional",
+            "design": "Diseño & UX/UI",
+            "tools": "Herramientas",
+            "core": "Cómo trabajo",
+            "coreItems": ["Visión de producto", "Diseño UX/UI", "Design Systems", "Arquitectura Frontend", "Colaboración cross-funcional", "Resolución de problemas", "Mentoring"]
+        }
     },
     "projects": {
-        "title": "Proyectos"
+        "title": "Proyectos",
+        "cardLabel": "Ver detalles del proyecto {{name}}"
+    },
+    "a11y": {
+        "linkedin": "Matias Rodriguez en LinkedIn",
+        "github": "Matias Rodriguez en GitHub",
+        "langEs": "Cambiar a español",
+        "langEn": "Switch to English",
+        "openMenu": "Abrir menú de navegación",
+        "profileAlt": "Retrato de Matias Rodriguez",
+        "logoAlt": "Logo de Matias Rodriguez",
+        "certImage": "Certificado de {{title}}",
+        "screenshot": "Captura de {{name}} {{index}}"
     },
     "projectsModal": {
         "description": "Descripción",
         "whatIdo": "Cual fue mi participación?",
         "tech": "Tecnologías utilizadas",
         "date": "Fecha de realización",
-        "links": "El proyecto no tiene links"
+        "linksTitle": "Enlaces",
+        "links": "El proyecto no tiene links",
+        "context": "Resumen",
+        "challenge": "El reto",
+        "process": "Proceso y decisiones",
+        "result": "Resultado",
+        "viewLive": "Ver en vivo",
+        "close": "Cerrar"
     },
     "works": {
         "title": "Experiencia Laboral",
-        "work1": {
-            "position": "Full-Stack Teaching Assistant Web Developer Fullstack",
-            "companie": "Henry · Part-time",
-            "date": "Ene 2023 - Actualmente",
-            "from": "Argentina · Remoto",
-            "description": "Teaching Assistant (TA) para estudiantes Henry Bootcamp",
-            "main": "Tareas Principales",
-            "task1": "Coordinar grupos de estudiantes en la experiencia del Bootcamp en Full Stack developer",
-            "task2": "Guiar a los estudiantes en los primeros pasos en el Bootcamp",
-            "task3": "Asistir en dudas y consultas de código durante las calses",
-            "task4": "Sugerir ideas para mejorar el bootcamp",
-            "task5": "Promover la colaboración y el trabajo en equipo de los estudiantes"
-        },
-        "work2": {
-            "position": "Profesor",
-            "companie": "Escuelas Técnicas y Privadas · Full-time",
-            "date": "Mar 2015 - Present · 8 yrs 1 mo",
-            "from": "Necochea, Buenos Aires, Argentina · On-site",
-            "description": "Profesor de educación secundaria en distintas Escuelas",
-            "main": "Contenidos impartidos:",
-            "task1": "Dibujo en 2D asistido por Computadora (autocad)",
-            "task2": "Modelado en 3D (rhinoceros)",
-            "task3": "Hojas de Cálculo (excel)",
-            "task4": "Programación y pensamiento computacional",
-            "task5": "Tornería",
-            "task6": "Proceso de transformación de los materiales",
-            "task7": "Soldadura",
-            "task8": "Carpintería",
-            "task9": "Diseño Web"
-        },
-        "work3": {
-            "position": "Asistente de ventas",
-            "companie": "Grupo Peñaflor · Full-time",
-            "date": "Nov 2012 - Dic 2013 · 1 año 2 meses",
-            "from": "Vicente Lopez, Buenos Aires, Argentina · On-site",
-            "description": "Sommelier asesor para clientes por medio del canal de beneficios para empleados ",
-            "main": "Tareas Principales: ",
-            "task1": "Gestionar las ventas realizadas a través del canal de venta directa que la empresa contaba como beneficios para empleados.",
-            "task2": "Asesorar y guiar en el proceso de la compra a usuarios y clientes de las distintas plataformas"
-        },
-        "work4": {
-            "position": "Diseñador Industrial",
-            "companie": "La Cardeuse S.A. · Full-time",
-            "date": "Abr 2010 - Ago 2011 · 1 año 5 meses",
-            "from": "Lanus, Buenos Aires, Argentina · On-site",
-            "description": "Encargado del area de diseño y desarrollo de la empresa",
-            "main": "Tareas principales:",
-            "task1": "Desarrollar de nuevos productos",
-            "task2": "Actualizar las líneas existentes",
-            "task3": "Implementar nuevas telas y técnologías en el proceso productivo",
-            "task4": "Crear y mantener un sistema de mejora continua"
-        }
+        "items": [
+            {
+                "position": "Frontend Engineer & UX/UI Designer",
+                "company": "Metabase Q · SaaS de Ciberseguridad",
+                "date": "Ago 2023 - Presente",
+                "from": "Argentina · Remoto",
+                "description": "Soy responsable de la experiencia frontend de extremo a extremo de funcionalidades clave, desde la definición de UX hasta la implementación.",
+                "tasks": [
+                    "Diseño y mantengo un sistema de UI / diseño escalable en Figma, asegurando consistencia en toda la plataforma",
+                    "Desarrollo interfaces accesibles y de alto rendimiento con React, Tailwind y Material UI",
+                    "Colaboro con los equipos de producto e ingeniería para definir requerimientos, flujos de usuario y restricciones técnicas",
+                    "Participo en las discusiones de producto y la toma de decisiones, aportando a la priorización de features y mejoras de UX",
+                    "Acerco diseño e ingeniería, reduciendo la fricción de implementación y los ciclos de iteración"
+                ]
+            },
+            {
+                "position": "Frontend Developer (Freelance)",
+                "company": "TMS Ingeniería",
+                "date": "Abr 2023 - May 2023",
+                "from": "Argentina · Remoto",
+                "description": "Diseñé y desarrollé una plataforma corporativa para una consultora de ingeniería.",
+                "tasks": [
+                    "Construí una UI responsive con React, Redux y MUI",
+                    "Implementé navegación fluida y experiencias interactivas"
+                ]
+            },
+            {
+                "position": "Full Stack Teaching Assistant",
+                "company": "Henry Bootcamp · Part-time",
+                "date": "Feb 2023 - Jun 2023",
+                "from": "Argentina · Remoto",
+                "description": "Acompañé a estudiantes a lo largo de un bootcamp de desarrollo full stack.",
+                "tasks": [
+                    "Guié a los estudiantes en sus primeros pasos y resolví dudas durante todo el programa",
+                    "Lideré sesiones grupales de resolución de problemas y pair programming",
+                    "Mejoré el rendimiento de los estudiantes con guía estructurada y construcción de comunidad"
+                ]
+            },
+            {
+                "position": "Profesor Técnico",
+                "company": "EEST Nº1 · Full-time",
+                "date": "2015 - Presente",
+                "from": "Necochea, Buenos Aires, Argentina · Presencial",
+                "description": "Profesor en escuelas técnicas secundarias.",
+                "tasks": [
+                    "Enseño programación, pensamiento computacional y herramientas técnicas",
+                    "Diseño contenido educativo y talleres prácticos",
+                    "Fomento el pensamiento analítico y la resolución de problemas"
+                ]
+            }
+        ]
     },
     "education": {
         "title": "Educación",

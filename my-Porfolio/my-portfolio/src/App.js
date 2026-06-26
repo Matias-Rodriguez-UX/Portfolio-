@@ -1,4 +1,6 @@
 import './App.css';
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import NavigationBar from './components/navbar/NavigationBar'
 import Main from './components/main/Main'
 import Projects from './components/projects/Projects'
@@ -6,7 +8,7 @@ import Formation from './components/formation/Formation'
 import Certificates from './components/certificates/Certificates'
 import Works from './components/works/Works'
 import Footer from './components/footer/Footer'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/bootstrap-custom.scss';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -16,6 +18,13 @@ import { BrowserRouter } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 
 function App() {
+  const { i18n } = useTranslation("global");
+
+  // Keep <html lang> in sync with the active language for screen readers.
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   const scrollOptions = {
     duration: 1000, // duración de la animación
     delay: 0, // retraso antes de que comience la animación
@@ -31,7 +40,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <div className="App">
         <NavigationBar scrollToTop={scrollToTop} scrollToSection={scrollToSection} />
         <Main />

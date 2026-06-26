@@ -1,14 +1,47 @@
 const dataProjectsEs = [
   {
+    id: 11,
+    name: "Batuta — Metabase Q",
+    context:
+      "Batuta es la plataforma SaaS de ciberseguridad de Metabase Q. Como Frontend Engineer & UX/UI Designer soy responsable de su experiencia frontend de extremo a extremo — desde definir la UX en Figma hasta entregar interfaces accesibles y de alto rendimiento en producción.",
+    challenge:
+      "Convertir flujos complejos de ciberseguridad en interfaces rápidas, consistentes y realmente usables, manteniendo coherente una plataforma que crece a través de muchos módulos.",
+    process: [
+      "Defino requerimientos, flujos de usuario y restricciones técnicas junto a producto e ingeniería",
+      "Diseño y mantengo un sistema de UI / diseño escalable en Figma para dar consistencia a toda la plataforma",
+      "Construyo interfaces accesibles y de alto rendimiento en React, TypeScript, Tailwind y Material UI",
+      "Impulso las discusiones de producto y la priorización de features, mejorando la usabilidad en todos los módulos",
+    ],
+    result:
+      "Ser dueño tanto de la UX como de la implementación cerró las brechas entre diseño y desarrollo, estandarizó componentes para una UI más consistente y aceleró los ciclos de entrega de features.",
+    images: [],
+    tecnologies: ["React", "TypeScript", "Tailwind", "Material UI", "Figma"],
+    date: "2023 - Presente",
+    links: ["https://www.batuta.com/batuta-the-next-chapter-in-the-evolution-of-metabase-q/"],
+    category: "trabajo",
+  },
+  {
     id: 10,
     name: "TMS ingeniría",
     description: "Diseño de logo, Gráfica y Pagina web responsive",
     whatIdo:
       "Rediseño integral de la marca, cambiando logo, firmas de mailing, presentación a clientes y creación desde 0 de pagina web responsive. La pagina fue desarrollada con Gatsby y React, deployada en Netlify",
+    context:
+      "Rediseño integral de marca y web para una consultora de ingeniería — logo, tipografía y un sitio responsive en formato escritorio y mobile.",
+    challenge:
+      "Renovar la identidad de la empresa y entregar un sitio rápido y fluido, tan cuidado en mobile como en desktop.",
+    process: [
+      "Rediseñé el logo, las firmas de mailing y la presentación a clientes en una identidad coherente",
+      "Construí el sitio responsive en React + Gatsby, con estilos en SCSS",
+      "Sumé Locomotive Scroll para una navegación suave e interactiva; serví la media con Cloudinary",
+      "Deploy en Netlify",
+    ],
+    result:
+      "Un sitio corporativo en vivo y responsive para TMS Ingeniería.",
     images: [
-      "https://res.cloudinary.com/dcbax1feo/image/upload/v1684589523/assets/TMS/TMSportada_bldwvl.jpg",
-      "https://res.cloudinary.com/dcbax1feo/image/upload/v1684589523/assets/TMS/TMSmain_ckarjr.jpg",
-      "https://res.cloudinary.com/dcbax1feo/image/upload/v1684589523/assets/TMS/TMScuerpo_v07edf.jpg",
+      { src: "https://res.cloudinary.com/dcbax1feo/image/upload/v1684589523/assets/TMS/TMSportada_bldwvl.jpg", caption: "Portada" },
+      { src: "https://res.cloudinary.com/dcbax1feo/image/upload/v1684589523/assets/TMS/TMSmain_ckarjr.jpg", caption: "Sección principal" },
+      { src: "https://res.cloudinary.com/dcbax1feo/image/upload/v1684589523/assets/TMS/TMScuerpo_v07edf.jpg", caption: "Cuerpo del sitio" },
     ],
     tecnologies: [
       "React.js",
@@ -28,9 +61,21 @@ const dataProjectsEs = [
     description: "Generador de Imagenes por texto con Inteligencia Artificial",
     whatIdo:
       "Creé una aplicación, utilizando algunas de herramientas más demandadas en la actualidad como Node.js, Express.js, MongoDB y React.js (MERN), Tailwind, el framework CSS más popular en la actualidad, Modelo DALL-E de OpenAI,  Un modelo de aprendizaje profundo que genera imágenes a partir de la entrada de texto, Cloudinary, como servicio de almacenamiento de imágenes basado en la nube. El Backend fue deployado en Render y el Frontend en Vercel",
+    context:
+      "Un generador de imágenes con IA full-stack: escribís un prompt y obtenés una imagen. Hecho de punta a punta para explorar el modelo DALL·E de OpenAI sobre un stack MERN moderno.",
+    challenge:
+      "Integrar un modelo de imágenes de deep learning en una web responsive — manejando generación, almacenamiento en la nube y un flujo de creación claro.",
+    process: [
+      "Construí el stack MERN desde cero: API Node.js + Express, persistencia en MongoDB, front en React",
+      "Integré el modelo DALL·E de OpenAI para generar imágenes a partir de texto",
+      "Guardé las imágenes generadas en Cloudinary; estilé la interfaz con Tailwind",
+      "Separé el deploy: backend en Render, frontend en Vercel",
+    ],
+    result:
+      "Un generador de imágenes funcional y desplegado — probalo en vivo.",
     images: [
-      "https://res.cloudinary.com/dcbax1feo/image/upload/v1680802349/assets/OpenAi/portada_AI_mfgjuv.png",
-      "https://res.cloudinary.com/dcbax1feo/image/upload/v1680802344/assets/OpenAi/crear_AI_uhcb4s.png",
+      { src: "https://res.cloudinary.com/dcbax1feo/image/upload/v1680802349/assets/OpenAi/portada_AI_mfgjuv.png", caption: "Inicio / galería generada" },
+      { src: "https://res.cloudinary.com/dcbax1feo/image/upload/v1680802344/assets/OpenAi/crear_AI_uhcb4s.png", caption: "Flujo de creación — texto a imagen" },
     ],
     tecnologies: [
       "Node.js",

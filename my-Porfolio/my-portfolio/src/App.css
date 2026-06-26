@@ -2,6 +2,9 @@
   --whiteDirty: #fdfdfd;
   --darkGrey: #2e2b38;
   --fucsia: #ff4dc2;
+  /* Signal Magenta Deep: AA-safe sibling for magenta against the light "paper"
+     surface (4.69:1). Bright --fucsia stays for magenta on dark. ~oklch(0.55 0.21 350) */
+  --fucsia-deep: #cc2e96;
   --tourquise: #61deed;
   --blackMed: #060606;
   --darkGreyAC: #2e2b38a5;
@@ -68,6 +71,53 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
+}
+
+/* Section headings: keep the previous visual weight after demoting to <h2>
+   so there is exactly one <h1> (the hero) per page. */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Visible keyboard focus for every interactive element. Pulse Cyan reinforces
+   the "state / you are here" signal from the design system. */
+a:focus-visible,
+button:focus-visible,
+.project-img1:focus-visible,
+.project-img2:focus-visible,
+.project-img3:focus-visible,
+.project-img4:focus-visible,
+.project-img5:focus-visible,
+.project-img6:focus-visible,
+.project-img7:focus-visible,
+.project-img8:focus-visible,
+.project-img9:focus-visible,
+.project-img10:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid var(--tourquise);
+  outline-offset: 3px;
+}
+
+/* Honour reduced-motion: collapse hover lifts, the typewriter caret and the
+   float keyframes to near-instant while keeping all content visible. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media (min-width:1700px) {
@@ -190,15 +240,3 @@ html.has-scroll-dragging {
   opacity: 1;
   transition: opacity 4s;
 }
-
-/* .footer img {
-  width: 26%;
-}
-
-.footer p {
-  font-weight: 400;
-  font-size: 14px;
-  color: #B8B8B8;
-  letter-spacing: 0.5px;
-  margin-top: 20px;
-} */
