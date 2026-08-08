@@ -1,0 +1,48 @@
+/* ── Tipografía ───────────────────────────────────────────────────────
+   Space Grotesk para display y títulos (tracking negativo).
+   Roboto para cuerpo e interfaz.
+   JetBrains Mono para datos, labels y valores técnicos.
+
+   Las tres se sirven desde node_modules con @fontsource, no desde un CDN:
+   sin request a un tercero, sin salto de fuente al cargar.
+   ──────────────────────────────────────────────────────────────────── */
+:root {
+  --font-display: "Space Grotesk", "Bahnschrift", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", "SF Mono", monospace;
+
+  /* Escala de display — fluida, para no necesitar un breakpoint por título */
+  --text-hero: 700 clamp(2.3rem, 6.2vw, 4.3rem)/1 var(--font-display);
+  --text-h2: 700 clamp(1.85rem, 4vw, 2.9rem)/1.03 var(--font-display);
+  --text-h3: 700 1.12rem/1.28 var(--font-display);
+  --text-h4: 700 .98rem/1.2 var(--font-display);
+
+  /* Lecturas numéricas: peso medio y tracking negativo */
+  --num-xl: 500 clamp(1.5rem, 3.2vw, 2rem)/1 var(--font-display);
+  --num-tracking: -.5px;
+
+  /* Cuerpo */
+  --text-body: 400 15px/1.65 var(--font-body);
+  --text-lead: 400 clamp(1rem, 1.7vw, 1.12rem)/1.6 var(--font-body);
+  --text-sm: 400 .93rem/1.55 var(--font-body);
+  --text-ui: 500 13px/1.3 var(--font-body);
+
+  /* Mono */
+  --text-mono: 400 11px/1.4 var(--font-mono);
+  --text-label: 500 10px/1.3 var(--font-mono);
+  --label-tracking: .6px;
+
+  /* Tracking de titulares, por tamaño */
+  --track-hero: -.035em;
+  --track-h2: -.03em;
+  --track-h3: -.02em;
+}
+
+/* En táctil los micro-labels suben un punto: 10px en mono con mayúsculas
+   se lee bien en monitor y justo en un teléfono. */
+@media (pointer: coarse) {
+  :root {
+    --text-label: 500 11px/1.35 var(--font-mono);
+    --text-mono: 400 12px/1.45 var(--font-mono);
+  }
+}

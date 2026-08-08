@@ -1,0 +1,63 @@
+/* ── Efectos, geometría y movimiento ──────────────────────────────────
+   Tres niveles de desenfoque, cinco de radio, tres curvas y tres
+   duraciones. Nada se mueve ni se redondea distinto sin motivo.
+   ──────────────────────────────────────────────────────────────────── */
+:root {
+  /* Espaciado, base 4px */
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 44px;
+
+  /* Radios */
+  --radius-sm: 7px;      /* chips, controles chicos */
+  --radius-md: 10px;     /* inputs, botones */
+  --radius-lg: 14px;     /* tarjetas */
+  --radius-xl: 20px;     /* paneles */
+  --radius-pill: 999px;
+
+  /* Desenfoque de vidrio */
+  --blur-panel: blur(24px) saturate(115%);
+  --blur-card: blur(10px);
+  --blur-field: blur(7px);
+
+  /* Luz y sombra */
+  --inner-glow: rgba(120, 210, 225, .06);   /* bloom en la esquina superior */
+  --shadow-card: 0 24px 50px -34px rgba(0, 0, 0, .7);
+  --glow-led: 0 0 3px 0 currentColor, 0 0 7px 1px currentColor;
+
+  /* Grano: lo que evita que el vidrio se vea plástico */
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
+
+  /* Movimiento — arrancan rápido y frenan largo, que es lo que se lee
+     como suave. El ease-in-out simétrico se siente mecánico. */
+  --ease-expo: cubic-bezier(.16, 1, .30, 1);      /* entradas y reveals */
+  --ease-quart: cubic-bezier(.25, 1, .50, 1);     /* hover y estados */
+  --ease-quint: cubic-bezier(.83, 0, .17, 1);     /* transiciones grandes */
+  --dur-micro: 160ms;    /* color, opacidad, borde */
+  --dur-state: 280ms;    /* hover con desplazamiento, acordeón */
+  --dur-enter: 720ms;    /* entrada al viewport */
+  --stagger: 70ms;       /* retardo entre hermanos */
+
+  /* Capas — nunca un 999 suelto */
+  --z-ambient: 0;
+  --z-content: 1;
+  --z-nav: 60;
+  --z-toast: 70;
+  --z-skip: 90;
+
+  /* Medidas de página */
+  --col: 1180px;
+  --nav-h: 66px;
+
+  /* Puntos de quiebre, documentados para que se usen siempre los mismos:
+     980 nav a drawer · 900 grillas de 3 a 2 · 760 de 2 a 1 · 620 teléfono */
+}
+
+/* En pantalla chica baja el desenfoque: backdrop-filter es de lo más caro
+   que hay en gama baja y con varias superficies se nota al scrollear. */
+@media (max-width: 620px) {
+  :root {
+    --blur-panel: blur(14px) saturate(112%);
+    --blur-card: blur(7px);
+    --blur-field: blur(5px);
+  }
+}

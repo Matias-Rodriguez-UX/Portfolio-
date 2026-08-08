@@ -1,0 +1,4 @@
+# Vercel compila del lado suyo: subir el build local solo hace la carga lenta.
+build
+node_modules
+.ssr-check
