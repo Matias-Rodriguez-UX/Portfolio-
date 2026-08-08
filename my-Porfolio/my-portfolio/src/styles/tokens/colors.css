@@ -1,0 +1,68 @@
+/* ── Color ────────────────────────────────────────────────────────────
+   Tema único oscuro. La estructura de grupos (canvas, superficies,
+   bordes, texto, acento, semántica) está pensada para que sumar un tema
+   claro más adelante sea redefinir valores, no reescribir componentes.
+
+   Ningún componente escribe un color a mano: si algo no encaja acá,
+   primero se agrega el token.
+   ──────────────────────────────────────────────────────────────────── */
+:root {
+  /* Canvas */
+  --bg: #06090B;                          /* fondo de la app */
+  --dot: rgba(255, 255, 255, .055);       /* retícula de puntos, en reposo */
+  --dot-lit: rgba(141, 232, 243, .5);     /* el mismo punto, encendido */
+  --arc: rgba(97, 222, 237, .06);         /* arcos de radar */
+
+  /* Superficies de vidrio */
+  --glass: rgba(13, 17, 20, .5);          /* panel grande */
+  --glass-2: rgba(19, 24, 28, .62);       /* tarjetas */
+  --glass-solid: rgba(18, 23, 27, .95);   /* opaco: drawer, fallback */
+  --field: rgba(31, 38, 44, .55);         /* inputs, chips, superficie hundida */
+
+  /* Barra de scroll */
+  --scroll-thumb: rgba(255, 255, 255, .13);
+  --scroll-thumb-hover: rgba(97, 222, 237, .42);
+
+  /* Bordes */
+  --border: rgba(255, 255, 255, .055);    /* borde de tarjeta */
+  --border-field: rgba(255, 255, 255, .10);
+  --line: rgba(255, 255, 255, .06);       /* divisores y filas */
+  --highlight: rgba(255, 255, 255, .08);  /* luz interior superior */
+
+  /* Texto — los tres pasan AA sobre todas las superficies de arriba */
+  --text-1: #E8EDEF;                      /* primario   · 16.9:1 sobre --bg */
+  --text-2: #8A9296;                      /* secundario ·  6.3:1 */
+  --text-3: #7D858A;                      /* labels     ·  5.3:1 */
+
+  /* Acento — el cyan propio, no el de la plataforma donde trabajo */
+  --accent: #61DEED;                      /* relleno, estado activo */
+  --accent-text: #8DE8F3;                 /* texto y links sobre oscuro */
+  --accent-ink: #04161A;                  /* texto sobre relleno de acento · 11.6:1 */
+  --accent-fill: rgba(97, 222, 237, .11); /* superficie tenue de acento */
+
+  /* Firma personal — escaso a propósito: cotas y marcas de sección */
+  --signal: #FF4DC2;
+  --signal-fill: rgba(255, 77, 194, .11);
+  --signal-line: rgba(255, 77, 194, .34);
+
+  /* Semántica de estado: verde vigente, ámbar en pausa, rojo error.
+     Cada tono tiene su relleno tenue para superficies y chips. */
+  --ok: #3FB98A;
+  --ok-fill: rgba(63, 185, 138, .10);
+  --warn: #E0A64B;
+  --warn-fill: rgba(224, 166, 75, .12);
+  --danger: #E0687A;
+  --danger-fill: rgba(224, 104, 122, .14);
+}
+
+/* Quien pide más contraste en el sistema operativo recibe bordes sólidos
+   y texto secundario más claro. */
+@media (prefers-contrast: more) {
+  :root {
+    --border: rgba(255, 255, 255, .22);
+    --border-field: rgba(255, 255, 255, .34);
+    --line: rgba(255, 255, 255, .22);
+    --text-2: #B9C1C4;
+    --text-3: #A7AFB3;
+  }
+}

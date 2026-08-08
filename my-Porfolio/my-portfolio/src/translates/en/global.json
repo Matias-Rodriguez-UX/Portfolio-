@@ -1,160 +1,411 @@
 {
-  "navbar": {
-    "main": "Main",
-    "about": "About",
-    "porjects": "Projects",
-    "works": "Works",
-    "education": "Education",
-    "certificates": "Certificates"
-  },
-  "main": {
-    "intro": "Product-oriented Frontend Engineer with 3+ years building scalable, user-centric web apps across cybersecurity and SaaS. I blend engineering, UX/UI design, and product thinking to own features end-to-end — from discovery to delivery.",
-    "headline": "Hi, I'm Matías Rodríguez.",
-    "tagline": "Frontend Engineer & UX/UI Designer",
-    "button-cv": "Resume",
-    "about": "About Me",
-    "projects": "Projects",
-    "work": "Work experience",
-    "education": "Education"
-  },
-  "about": {
-    "title": "About Me",
-    "description1": "Hi! I'm Matías. I like problems that sit between disciplines — where a cleaner interface, better code, and a sharper product decision turn out to be the same decision.",
-    "description2": "Right now I own the end-to-end frontend of a cybersecurity SaaS platform at Metabase Q — from defining the UX in Figma to shipping accessible, high-performance interfaces in React.",
-    "description3": "The path is the interesting part: I started as an Industrial Designer and spent years teaching technical subjects before moving into software in 2020. Each step sharpened how I solve problems and design for real people.",
-    "description4": "Here are a few technologies I’ve been working with recently:",
-    "stack": {
-      "frontend": "Frontend",
-      "backend": "Backend · working knowledge",
-      "design": "Design & UX/UI",
-      "tools": "Tools",
-      "core": "How I work",
-      "coreItems": ["Product Thinking", "UX/UI Design", "Design Systems", "Frontend Architecture", "Cross-functional Collaboration", "Problem Solving", "Mentoring"]
-    }
-  },
-  "projects": {
-    "title": "Projects",
-    "cardLabel": "View {{name}} project details"
+  "meta": {
+    "title": "Matías Rodríguez · Design Engineer",
+    "description": "Design Engineer: I design and build interfaces for complex products, with AI in the workflow and inside the product."
   },
   "a11y": {
-    "linkedin": "Matias Rodriguez on LinkedIn",
-    "github": "Matias Rodriguez on GitHub",
-    "langEs": "Cambiar a español",
-    "langEn": "Switch to English",
-    "openMenu": "Open navigation menu",
-    "profileAlt": "Portrait of Matias Rodriguez",
-    "logoAlt": "Matias Rodriguez logo",
-    "certImage": "{{title}} certificate",
-    "screenshot": "{{name}} screenshot {{index}}"
+    "skip": "Skip to content",
+    "nav": "Main",
+    "menu": "Menu",
+    "lang": "Language",
+    "langEs": "Español",
+    "langEn": "English",
+    "github": "Matías Rodríguez on GitHub",
+    "linkedin": "Matías Rodríguez on LinkedIn"
   },
-  "projectsModal": {
-    "description": "Description",
-    "whatIdo": "How did I get involved in the project?",
-    "tech": "Used technology",
-    "date": "Creation date",
-    "linksTitle": "Links",
-    "links": "The project doesn't have links",
-    "context": "Overview",
-    "challenge": "Challenge",
-    "process": "Process & decisions",
-    "result": "Outcome",
-    "viewLive": "View live",
-    "close": "Close"
+  "nav": {
+    "servicios": "what i do",
+    "comoTrabajo": "how i work",
+    "sistema": "system",
+    "proyectos": "projects",
+    "experiencia": "experience",
+    "formacion": "education",
+    "contacto": "contact"
   },
-  "works": {
-    "title": "Work experience",
+  "hero": {
+    "chips": [
+      "Available",
+      "Argentina, remote",
+      "Design Engineer"
+    ],
+    "titulo": "I design and build interfaces for complex products.",
+    "subtitulo": "I work on the frontend of a cybersecurity SaaS platform. I define experiences in Figma and build them with React and TypeScript. I also develop AI features within the product.",
+    "ctaPrimario": "See the projects",
+    "ctaSecundario": "Get in touch",
+    "ctaCv": "Resume",
+    "cota": "design and development, end to end",
+    "readouts": [
+      {
+        "valor": "3+",
+        "etiqueta": "years in cybersecurity"
+      },
+      {
+        "valor": "11",
+        "etiqueta": "years teaching"
+      },
+      {
+        "valor": "Design",
+        "etiqueta": "+ Engineering",
+        "palabra": true
+      },
+      {
+        "valor": "AI",
+        "etiqueta": "in workflow and product",
+        "palabra": true
+      }
+    ],
+    "pruebaSocialEtiqueta": "Worked with"
+  },
+  "servicios": {
+    "etiqueta": "What I do",
+    "titulo": "I design and build digital products.",
+    "intro": "I work across product, design and frontend. I can take a feature from definition through implementation and iteration.",
     "items": [
       {
-        "position": "Frontend Engineer & UX/UI Designer",
-        "company": "Metabase Q · Cybersecurity SaaS",
-        "date": "Aug 2023 - Present",
-        "from": "Argentina · Remote",
-        "description": "I own the end-to-end frontend experience of key product features, from UX definition to implementation.",
-        "tasks": [
-          "Design and maintain a scalable UI / design system in Figma, ensuring consistency across the platform",
-          "Develop high-performance, accessible interfaces using React, Tailwind and Material UI",
-          "Collaborate with product and engineering teams to define requirements, user flows and technical constraints",
-          "Take part in product discussions and decision-making, contributing to feature prioritization and UX improvements",
-          "Bridge the gap between design and engineering, reducing implementation friction and iteration cycles"
+        "etiqueta": "Frontend development",
+        "titulo": "I take features from definition to production.",
+        "texto": "I map the flow, design it in Figma and build it with React and TypeScript. Working across both sides lets me make design decisions with implementation in mind from the start.",
+        "stack": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "Figma"
         ]
       },
       {
-        "position": "Frontend Developer (Freelance)",
-        "company": "TMS Ingeniería",
-        "date": "Apr 2023 - May 2023",
-        "from": "Argentina · Remote",
-        "description": "Designed and developed a corporate platform for an engineering consultancy.",
-        "tasks": [
-          "Built a responsive UI using React, Redux and MUI",
-          "Implemented smooth navigation and interactive experiences"
+        "etiqueta": "Design systems",
+        "titulo": "I build and maintain design systems.",
+        "texto": "I work with tokens, components and documentation to keep design and implementation consistent.",
+        "stack": [
+          "Figma",
+          "Tailwind",
+          "Material UI",
+          "Tokens"
         ]
       },
       {
-        "position": "Full Stack Teaching Assistant",
-        "company": "Henry Bootcamp · Part-time",
-        "date": "Feb 2023 - Jun 2023",
-        "from": "Argentina · Remote",
-        "description": "Mentored students through a full stack development bootcamp.",
-        "tasks": [
-          "Guided students through their first steps and clarified doubts across the program",
-          "Led group problem-solving sessions and pair programming",
-          "Improved student performance through structured guidance and community building"
+        "etiqueta": "AI features",
+        "titulo": "I design and build AI features inside products.",
+        "texto": "I work on both the user experience and the integration of the feature with the model.",
+        "stack": [
+          "OpenAI",
+          "Claude",
+          "Prompting",
+          "AI UX"
         ]
       },
       {
-        "position": "Technical Teacher",
-        "company": "EEST Nº1 · Full-time",
-        "date": "2015 - Present",
-        "from": "Necochea, Buenos Aires, Argentina · On-site",
-        "description": "Teacher at technical secondary schools.",
-        "tasks": [
-          "Teach programming, computational thinking and technical tools",
-          "Design educational content and hands-on workshops",
-          "Foster analytical thinking and problem-solving skills"
+        "etiqueta": "Information-dense interfaces",
+        "titulo": "I work with dashboards, tables and dense workflows.",
+        "texto": "In these interfaces, information hierarchy, states and clear actions are especially important.",
+        "stack": [
+          "AA accessibility",
+          "Performance",
+          "Data-dense UI"
         ]
       }
     ]
   },
-  "education": {
-    "title": "Education",
-    "boot": "Bootcamp",
-    "uni": "University",
-    "tech": "Technical High School",
-    "spe": "Specialization"
+  "comoTrabajo": {
+    "etiqueta": "How I work",
+    "titulo": "Design and code, with AI in the process.",
+    "intro": "Design Engineer is the title that fits my work best. I work across design and frontend, from defining an experience to implementing it. AI is also part of my day-to-day workflow.",
+    "bloques": [
+      {
+        "etiqueta": "Both sides",
+        "titulo": "I design in Figma and build in code.",
+        "texto": "Working across both sides lets me make design decisions with technical constraints in mind, and technical decisions with the original design intent in mind."
+      },
+      {
+        "etiqueta": "AI in the workflow",
+        "titulo": "I use AI assistants every day.",
+        "texto": "I use Claude Code, Claude, ChatGPT and Gemini to explore alternatives, write and review code, document decisions and reduce repetitive work. AI helps me iterate faster while product and design decisions remain mine."
+      },
+      {
+        "etiqueta": "AI in the product",
+        "titulo": "I also build AI features.",
+        "texto": "Inside the platform I work on. Using AI tools is one thing; designing features that incorporate models is another: what the user sees, how incorrect responses are handled, how long they wait and what the experience costs.",
+        "destacado": true
+      }
+    ]
   },
-  "bootcamp": {
-    "titleS": "Title: ",
-    "title": "Full Stack Web Developer",
-    "institutionS": "Institution: ",
-    "institution": "Henry",
-    "dateS": "Date: ",
-    "date": "from August 2022 to March 2023"
+  "sistema": {
+    "etiqueta": "The system behind this site",
+    "titulo": "A small system, built to scale.",
+    "intro": "This site doesn't use a CSS framework. It runs on its own system, using the same principles I apply when working with design systems.",
+    "chips": [
+      "Running now",
+      "Tokens",
+      "No CSS framework"
+    ],
+    "problemaEtiqueta": "The problem",
+    "problema": "A growing product or site faces the same challenge: when every section defines its own colors, spacing and behaviors, consistency starts to break as the system grows.",
+    "comoEtiqueta": "How it's built",
+    "como": [
+      "Tokens for color, typography, effects and motion.",
+      "Reusable components to keep the different sections consistent.",
+      "Visual states defined at the system level so their meaning stays consistent.",
+      "Shared rules for responsive behavior, instead of solving each section from scratch."
+    ],
+    "resultadoEtiqueta": "Result",
+    "resultado": "Adding a section means reusing the system instead of defining new styles from scratch. The site also serves as a practical example of how I think about and build systems.",
+    "muestraEtiqueta": "Sample",
+    "estados": [
+      "Current",
+      "Paused",
+      "Action"
+    ],
+    "cota": "tokens and components, across the site"
   },
-  "university": {
-    "titleS": "Title: ",
-    "title": "Industrial Designer",
-    "institutionS": "Institution: ",
-    "institution": "UNLP",
-    "dateS": "Date: ",
-    "date": "From March 2004 to December 2010"
+  "proyectos": {
+    "etiqueta": "Selected projects",
+    "titulo": "A selection of projects across product design, frontend development and visual design.",
+    "destacados": {
+      "metabaseq": {
+        "chips": [
+          "Ongoing",
+          "Under NDA"
+        ],
+        "texto": "Cybersecurity SaaS platform. I work on the frontend, defining experiences in Figma and building them with React and TypeScript. I also build and maintain the design system and develop AI features inside the product.",
+        "nota": "I can't show the product because of an NDA. I can walk you through how I work on a call."
+      },
+      "streetart": {
+        "chips": [
+          "E-commerce"
+        ],
+        "texto": "Online wine shop with a catalogue, memberships and an admin panel. I handled the visual development, home page, admin dashboard and overall interface consistency.",
+        "enlaceTexto": "Visit the shop"
+      },
+      "tms": {
+        "chips": [
+          "Brand and site"
+        ],
+        "texto": "Engineering consultancy. Designed and developed the visual identity and website, including the logo, email signatures, client presentation and responsive site.",
+        "enlaceTexto": "Visit the site"
+      }
+    },
+    "indice": {
+      "dalle": "Node.js · MongoDB · OpenAI · Tailwind",
+      "alura": "React · JavaScript · CSS",
+      "pokedex": "React · Redux · Express · PostgreSQL",
+      "altamira": "Identity · Graphic design",
+      "dewey": "Industrial design · Product",
+      "cardeuse": "Identity · Packaging",
+      "setentayseis": "Identity · Graphic design",
+      "nomade": "Industrial design"
+    },
+    "casos": {
+      "streetart": {
+        "contexto": "Design and develop a wine club website that includes: authentication, searches, combined filtering, sorting, user banning, email sending, etc., creation of memberships, reviews, wishlist, route protection, etc.",
+        "participacion": "I was in charge of the visual development, its interface, user behavior, the home page, and the administrator's dashboard"
+      },
+      "alura": {
+        "contexto": "Practice course, where you work on front responsive development, the behavior of pure DOM components",
+        "participacion": "Practical work of the course, I was in charge of the development of components, their behavior and rendering of properties."
+      },
+      "pokedex": {
+        "contexto": "Individual project in which we worked with APIs, databases, react, redux, etc.",
+        "participacion": "Design and develop a pokemons App that included: searches, combined filtering, ordering, creation and edition of pokemons."
+      },
+      "altamira": {
+        "contexto": "Redesign of the logo and page of the educational institution Escuela Argentino Danesa Altamira",
+        "participacion": "Current page analysis, improvement proposal, image cleanup, user behavior analysis, landing page proposal"
+      },
+      "dewey": {
+        "contexto": "Creation and development of an application to reserve extracurricular activities for children",
+        "participacion": "Development of the complete UX/UI design of the application, with integration of ux research, ui components, illustrations, story boards, wire frames, etc."
+      },
+      "cardeuse": {
+        "contexto": "First job as an industrial designer, within the productive system",
+        "participacion": "Redesign of all production lines and updating of the aesthetics of fabrics, patterns and combinations. Development of new products and implementation of new technologies"
+      },
+      "setentayseis": {
+        "contexto": "Local wine club, which promotes its services through social networks",
+        "participacion": "Creation of graphic pieces, logo and template redesign"
+      },
+      "nomade": {
+        "contexto": "University thesis, in which a device is developed to move people on the beach in cases of emergency",
+        "participacion": "Creation, development and realization of prototype of the developed product, together with its graphic pieces and its productive technical plans"
+      },
+      "dalle": {
+        "contexto": "A full-stack AI image generator: type a prompt and get an image. Built end-to-end to explore OpenAI's DALL·E model on a modern MERN stack.",
+        "desafio": "Wire a deep-learning image model into a responsive web app — handling generation, cloud storage and a clean create flow.",
+        "proceso": [
+          "Built the MERN stack from scratch: Node.js + Express API, MongoDB persistence, React front end",
+          "Integrated OpenAI's DALL·E model to generate images from text prompts",
+          "Stored generated images on Cloudinary; styled the interface with Tailwind",
+          "Split the deployment: backend on Render, frontend on Vercel"
+        ],
+        "resultado": "A working, deployed image generator — try it live.",
+        "captions": [
+          "Home / generated gallery",
+          "Create flow — prompt to image"
+        ]
+      },
+      "tms": {
+        "contexto": "A full brand and web redesign for an engineering consultancy — logo, typography and a responsive marketing site in both desktop and mobile formats.",
+        "desafio": "Refresh the company's identity and ship a fast, smooth site that feels as polished on mobile as on desktop.",
+        "proceso": [
+          "Redesigned the logo, mailing signatures and client presentation into one cohesive identity",
+          "Built the responsive site in React + Gatsby, styled with SCSS",
+          "Added Locomotive Scroll for smooth, interactive navigation; served media through Cloudinary",
+          "Deployed on Netlify"
+        ],
+        "resultado": "A live, responsive corporate site for TMS Ingeniería.",
+        "captions": [
+          "Landing / cover",
+          "Main section",
+          "Content section"
+        ]
+      },
+      "metabaseq": {
+        "contexto": "Batuta is the cybersecurity SaaS platform by Metabase Q. As Frontend Engineer & UX/UI Designer I own its end-to-end frontend experience — from defining the UX in Figma to shipping accessible, high-performance interfaces in production.",
+        "desafio": "Turn complex security workflows into interfaces that are fast, consistent and genuinely usable, while keeping a growing multi-module platform coherent.",
+        "proceso": [
+          "Define requirements, user flows and technical constraints together with product and engineering",
+          "Design and maintain a scalable UI / design system in Figma for consistency across the platform",
+          "Build high-performance, accessible interfaces in React, TypeScript, Tailwind and Material UI",
+          "Drive product discussions and feature prioritization, improving usability across modules"
+        ],
+        "resultado": "Owning both UX and implementation closed design-to-development gaps, standardized components for a more consistent UI, and sped up feature-delivery cycles."
+      }
+    },
+    "modal": {
+      "abrir": "View case",
+      "cerrar": "Close",
+      "contexto": "Context",
+      "desafio": "Challenge",
+      "proceso": "Process",
+      "participacion": "My role",
+      "resultado": "Result",
+      "tecnologias": "Tech",
+      "enlaces": "Links",
+      "verEnVivo": "View live",
+      "sinEnlaces": "This project has no public links.",
+      "captura": "{{name}} screenshot {{i}}",
+      "baja": "The database and AI tokens were decommissioned when the licences expired, so the live demo may not load data. The code is still published."
+    }
   },
-  "technical": {
-    "titleS": "Title: ",
-    "title": "Personal and professional computer technician",
-    "institutionS": "Institution: ",
-    "institution": "E.E.S.T Nº 3",
-    "dateS": "Date: ",
-    "date": "From March 2001 to December 2003"
+  "experiencia": {
+    "etiqueta": "Experience",
+    "titulo": "Experience across design, frontend and teaching.",
+    "intro": "The green dot marks what's still current. Tap any row for the detail.",
+    "items": [
+      {
+        "titular": "I work on the frontend of a cybersecurity platform.",
+        "meta": "Metabase Q · Design Engineer · 2023 → now",
+        "detalle": "I define the experience in Figma and build it with React and TypeScript. Working across both sides lets me make design decisions with implementation in mind from the start.",
+        "pruebas": [
+          "I build and maintain the platform's design system",
+          "I develop accessible, high-performance interfaces with React, Tailwind and Material UI",
+          "I design and build AI features inside the product",
+          "I define requirements and user flows with Product and Engineering"
+        ]
+      },
+      {
+        "titular": "I teach programming at a technical high school.",
+        "meta": "EEST N.º 1 · Teacher · 2015 → now",
+        "detalle": "Eleven years teaching programming and technical tools. Teaching has also strengthened how I communicate decisions, give feedback and explain technical concepts.",
+        "pruebas": [
+          "Programming, computational thinking and technical tools",
+          "Curriculum design and hands-on, project-based workshops",
+          "It's the basis for the mentoring role I later had at Henry"
+        ]
+      },
+      {
+        "titular": "I built the identity and website for an engineering consultancy.",
+        "meta": "TMS Ingeniería · Freelance · 2023",
+        "detalle": "A complete project, handled independently: logo, email signatures, client deck and a responsive site from scratch.",
+        "pruebas": [
+          "Responsive interface in React, Redux and Material UI",
+          "Smooth navigation with Locomotive Scroll, media served through Cloudinary",
+          "Live site, treated with the same care on mobile and desktop"
+        ]
+      },
+      {
+        "titular": "I mentored students through a full stack bootcamp.",
+        "meta": "Henry · Teaching Assistant · 2023",
+        "detalle": "Pair programming and group sessions on JavaScript, React, Node, Express and PostgreSQL, helping students move from following tutorials to building their own projects.",
+        "pruebas": [
+          "Technical guidance and code reviews throughout the course",
+          "Project support and technical problem solving"
+        ]
+      }
+    ]
   },
-  "spe": {
-    "titleS": "Title: ",
-    "title": " Pedagogical training section for medium and higher level",
-    "institutionS": "Institution: ",
-    "institution": "SUETRA",
-    "dateS": "Date: ",
-    "date": "From March 2015 to December 2017"
+  "formacion": {
+    "etiqueta": "Education",
+    "titulo": "Education & certifications.",
+    "titulos": [
+      {
+        "titulo": "Full Stack Web Developer",
+        "institucion": "Henry Bootcamp",
+        "periodo": "2022–2023"
+      },
+      {
+        "titulo": "Industrial Designer",
+        "institucion": "Universidad Nacional de La Plata",
+        "periodo": "2004–2010"
+      },
+      {
+        "titulo": "Teaching Qualification, Secondary and Higher Education",
+        "institucion": "SUETRA",
+        "periodo": "2015–2017"
+      },
+      {
+        "titulo": "Technical Degree in Computing",
+        "institucion": "E.E.S.T. N.º 3",
+        "periodo": "2001–2003"
+      }
+    ],
+    "cvEtiqueta": "Resume",
+    "cvEs": "CV in Spanish",
+    "cvEn": "Resume in English",
+    "idiomas": "Languages · Native Spanish · English B2/C1 · French A1",
+    "certificadosEtiqueta": "Certificates",
+    "certificados": {
+      "uxui": "UX/UI Design",
+      "figma": "Figma and interface design",
+      "fcc": "JavaScript Algorithms and Data Structures",
+      "udemy": "The Web Developer Bootcamp",
+      "scrum": "Scrum Fundamentals",
+      "efset": "EF SET · English"
+    }
   },
-  "certificates": {
-    "title": "Certificates"
+  "contacto": {
+    "etiqueta": "Contact",
+    "titulo": "Get in touch.",
+    "intro": "If you're hiring for a role or have a project in mind, tell me what you're working on and I'll get back to you as soon as I can.",
+    "campos": {
+      "nombre": "Name",
+      "nombrePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "Where I can reach you",
+      "motivo": "Reason",
+      "motivoPlaceholder": "Pick one",
+      "motivoOpciones": [
+        "A role on a team",
+        "A project",
+        "Something else"
+      ],
+      "mensaje": "Message",
+      "mensajePlaceholder": "Tell me what you're working on"
+    },
+    "enviar": "Send message",
+    "errores": {
+      "nombre": "Add your name.",
+      "email": "Check the email, it looks incomplete.",
+      "motivo": "Pick a reason.",
+      "mensaje": "Tell me a bit more, two lines is enough.",
+      "general": "Some fields are missing."
+    },
+    "estados": {
+      "enviando": "Sending…",
+      "exito": "Done, I'll get back to you soon.",
+      "error": "Couldn't send it. Try again or email me directly."
+    }
+  },
+  "footer": {
+    "copyright": "© {{anio}} Matías Rodríguez · Argentina"
   }
 }

@@ -1,168 +1,411 @@
 {
-  "navbar": {
-    "main": "Inicio",
-    "about": "Sobre mí",
-    "porjects": "Proyectos",
-    "works": "Experiencia",
-    "education": "Formación",
-    "certificates": "Certificados"
-  },
-  "main": {
-    "intro": "Construyo productos digitales que combinan tecnología, experiencia de usuario y visión de negocio. Como Frontend Engineer, me especializo en transformar problemas complejos en experiencias simples, escalables y centradas en las personas, participando en todo el proceso: desde la definición de la solución hasta su implementación.",
-    "headline": "Hola, soy Matías Rodríguez.",
-    "tagline": "Frontend Engineer | Producto | UX/UI",
-    "button-cv": "CV",
-    "about": "Sobre mí",
-    "projects": "Proyectos",
-    "work": "Experiencia",
-    "education": "Formación"
-  },
-  "about": {
-    "title": "Sobre mí",
-    "description1": "Disfruto resolver problemas donde convergen diseño, tecnología y negocio. Creo que los mejores productos nacen cuando la experiencia de usuario, el desarrollo y la estrategia trabajan en conjunto desde el primer día.",
-    "description2": "Actualmente formo parte del equipo de Metabase Q, donde desarrollo funcionalidades para una plataforma SaaS de ciberseguridad. Participo tanto en la definición de la experiencia de usuario como en la implementación de interfaces accesibles, escalables y de alto rendimiento con React.",
-    "description3": "Mi recorrido profesional comenzó como Diseñador Industrial y continuó durante varios años en la docencia técnica antes de dedicarme al desarrollo de software. Esa experiencia me dio una perspectiva diferente: entender a las personas, comunicar ideas con claridad y construir soluciones que equilibren las necesidades del usuario, el negocio y la tecnología.",
-    "description4": "Estas son algunas de las tecnologías y herramientas con las que trabajo habitualmente:",
-    "stack": {
-      "frontend": "Frontend",
-      "backend": "Backend · nivel intermedio",
-      "design": "Diseño y UX/UI",
-      "tools": "Herramientas",
-      "core": "Lo que aporto",
-      "coreItems": [
-        "Visión de producto",
-        "Diseño UX/UI",
-        "Design Systems",
-        "Arquitectura Frontend",
-        "Trabajo interdisciplinario",
-        "Resolución de problemas",
-        "Mentoría"
-      ]
-    }
-  },
-  "projects": {
-    "title": "Proyectos",
-    "cardLabel": "Ver detalles del proyecto {{name}}"
+  "meta": {
+    "title": "Matías Rodríguez · Design Engineer",
+    "description": "Design Engineer: diseño y desarrollo interfaces para productos complejos, con IA en el flujo de trabajo y adentro del producto."
   },
   "a11y": {
-    "linkedin": "Matias Rodriguez en LinkedIn",
-    "github": "Matias Rodriguez en GitHub",
-    "langEs": "Cambiar a español",
-    "langEn": "Switch to English",
-    "openMenu": "Abrir menú de navegación",
-    "profileAlt": "Retrato de Matias Rodriguez",
-    "logoAlt": "Logo de Matias Rodriguez",
-    "certImage": "Certificado de {{title}}",
-    "screenshot": "Captura de {{name}} {{index}}"
+    "skip": "Saltar al contenido",
+    "nav": "Principal",
+    "menu": "Menú",
+    "lang": "Idioma",
+    "langEs": "Español",
+    "langEn": "English",
+    "github": "Matías Rodríguez en GitHub",
+    "linkedin": "Matías Rodríguez en LinkedIn"
   },
-  "projectsModal": {
-    "description": "Descripción",
-    "whatIdo": "Mi participación",
-    "tech": "Tecnologías",
-    "date": "Fecha",
-    "linksTitle": "Enlaces",
-    "links": "Este proyecto no cuenta con enlaces públicos.",
-    "context": "Contexto",
-    "challenge": "Desafío",
-    "process": "Proceso de trabajo",
-    "result": "Resultados",
-    "viewLive": "Ver proyecto",
-    "close": "Cerrar"
+  "nav": {
+    "servicios": "lo que hago",
+    "comoTrabajo": "cómo trabajo",
+    "sistema": "sistema",
+    "proyectos": "proyectos",
+    "experiencia": "experiencia",
+    "formacion": "formación",
+    "contacto": "contacto"
   },
-  "works": {
-    "title": "Experiencia",
+  "hero": {
+    "chips": [
+      "Disponible",
+      "Argentina, remoto",
+      "Design Engineer"
+    ],
+    "titulo": "Diseño y desarrollo interfaces para productos complejos.",
+    "subtitulo": "Trabajo en el frontend de una plataforma SaaS de ciberseguridad. Defino experiencias en Figma y las implemento en React y TypeScript. También desarrollo funcionalidades con IA dentro del producto.",
+    "ctaPrimario": "Ver proyectos",
+    "ctaSecundario": "Escribime",
+    "ctaCv": "CV",
+    "cota": "diseño y desarrollo, de punta a punta",
+    "readouts": [
+      {
+        "valor": "3+",
+        "etiqueta": "años en ciberseguridad"
+      },
+      {
+        "valor": "11",
+        "etiqueta": "años enseñando"
+      },
+      {
+        "valor": "Design",
+        "etiqueta": "+ Engineering",
+        "palabra": true
+      },
+      {
+        "valor": "IA",
+        "etiqueta": "en el flujo y en el producto",
+        "palabra": true
+      }
+    ],
+    "pruebaSocialEtiqueta": "Trabajé con"
+  },
+  "servicios": {
+    "etiqueta": "Lo que hago",
+    "titulo": "Diseño y desarrollo productos digitales.",
+    "intro": "Trabajo entre producto, diseño y frontend. Puedo participar desde la definición de una funcionalidad hasta su implementación y evolución.",
     "items": [
       {
-        "position": "Frontend Engineer & UX/UI Designer",
-        "company": "Metabase Q · Plataforma SaaS de Ciberseguridad",
-        "date": "Ago 2023 - Actualidad",
-        "from": "Argentina · Remoto",
-        "description": "Participo en el diseño, desarrollo y evolución de las principales funcionalidades de una plataforma SaaS de ciberseguridad, colaborando con los equipos de Producto e Ingeniería para ofrecer una experiencia consistente y escalable.",
-        "tasks": [
-          "Diseño y mantengo el sistema de diseño en Figma, asegurando consistencia visual y reutilización de componentes.",
-          "Desarrollo interfaces rápidas, accesibles y adaptables utilizando React, Tailwind CSS y Material UI.",
-          "Trabajo junto a los equipos de Producto e Ingeniería para definir requerimientos, flujos de usuario y soluciones técnicas.",
-          "Participo activamente en la definición de nuevas funcionalidades, aportando mejoras desde la experiencia de usuario y la implementación técnica.",
-          "Actúo como nexo entre Diseño y Desarrollo para reducir tiempos de implementación y mejorar la calidad de las entregas."
+        "etiqueta": "Desarrollo frontend",
+        "titulo": "Tomo una funcionalidad desde la definición hasta producción.",
+        "texto": "Armo el flujo, lo diseño en Figma y lo implemento en React y TypeScript. Trabajar en ambos lados me permite tomar decisiones de diseño teniendo en cuenta desde el principio cómo se van a construir.",
+        "stack": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "Figma"
         ]
       },
       {
-        "position": "Frontend Developer (Freelance)",
-        "company": "TMS Ingeniería",
-        "date": "Abr 2023 - May 2023",
-        "from": "Argentina · Remoto",
-        "description": "Diseñé y desarrollé una plataforma corporativa para una consultora de ingeniería.",
-        "tasks": [
-          "Desarrollé una interfaz responsive utilizando React, Redux y Material UI.",
-          "Implementé una experiencia de navegación fluida e interfaces interactivas."
+        "etiqueta": "Sistemas de diseño",
+        "titulo": "Armo y mantengo sistemas de diseño.",
+        "texto": "Trabajo con tokens, componentes y documentación para mantener consistencia entre diseño e implementación.",
+        "stack": [
+          "Figma",
+          "Tailwind",
+          "Material UI",
+          "Tokens"
         ]
       },
       {
-        "position": "Teaching Assistant Full Stack",
-        "company": "Henry Bootcamp · Media jornada",
-        "date": "Feb 2023 - Jun 2023",
-        "from": "Argentina · Remoto",
-        "description": "Acompañé a estudiantes durante su formación como desarrolladores Full Stack.",
-        "tasks": [
-          "Guié a los estudiantes durante todo el proceso de aprendizaje y resolución de dudas.",
-          "Coordiné sesiones grupales de resolución de problemas y Pair Programming.",
-          "Contribuí a mejorar el rendimiento académico mediante acompañamiento técnico y trabajo colaborativo."
+        "etiqueta": "Funcionalidades con IA",
+        "titulo": "Diseño e implemento funcionalidades con IA dentro del producto.",
+        "texto": "Trabajo tanto en la experiencia que ve el usuario como en la integración de la funcionalidad con el modelo.",
+        "stack": [
+          "OpenAI",
+          "Claude",
+          "Prompting",
+          "UX de IA"
         ]
       },
       {
-        "position": "Profesor de Educación Técnica",
-        "company": "EEST N.º 1",
-        "date": "2015 - Actualidad",
-        "from": "Necochea, Buenos Aires · Presencial",
-        "description": "Docente en escuelas secundarias técnicas.",
-        "tasks": [
-          "Enseño programación, pensamiento computacional y herramientas tecnológicas.",
-          "Diseño contenidos educativos y talleres prácticos.",
-          "Promuevo el pensamiento analítico y la resolución de problemas."
+        "etiqueta": "Interfaces con mucha información",
+        "titulo": "Trabajo con dashboards, tablas y flujos densos.",
+        "texto": "En estas interfaces, la jerarquía de información, los estados y la claridad de las acciones son especialmente importantes.",
+        "stack": [
+          "Accesibilidad AA",
+          "Performance",
+          "Data-dense UI"
         ]
       }
     ]
   },
-  "education": {
-    "title": "Formación",
-    "boot": "Bootcamp",
-    "uni": "Universidad",
-    "tech": "Secundaria Técnica",
-    "spe": "Formación Pedagógica"
+  "comoTrabajo": {
+    "etiqueta": "Cómo trabajo",
+    "titulo": "Diseño y código, con IA en el proceso.",
+    "intro": "Design Engineer es el nombre que mejor describe lo que hago: trabajo entre diseño y frontend, desde la definición de una experiencia hasta su implementación. La IA también forma parte de mi proceso de trabajo.",
+    "bloques": [
+      {
+        "etiqueta": "Las dos puntas",
+        "titulo": "Diseño en Figma e implemento en código.",
+        "texto": "Trabajar en ambos lados me permite tomar decisiones de diseño considerando desde el inicio las restricciones técnicas, y decisiones técnicas teniendo presente la intención del diseño."
+      },
+      {
+        "etiqueta": "IA en el flujo",
+        "titulo": "Uso asistentes de IA todos los días.",
+        "texto": "Uso Claude Code, Claude, ChatGPT y Gemini para explorar alternativas, escribir y revisar código, documentar decisiones y acelerar tareas repetitivas. La IA me permite iterar más rápido, mientras las decisiones de producto y diseño siguen siendo mías."
+      },
+      {
+        "etiqueta": "IA en el producto",
+        "titulo": "También construyo funcionalidades con IA.",
+        "texto": "Dentro de la plataforma en la que trabajo. Una cosa es usar herramientas de IA y otra es diseñar funcionalidades que incorporan modelos: qué ve el usuario, cómo manejamos respuestas incorrectas, tiempos de espera y costos.",
+        "destacado": true
+      }
+    ]
   },
-  "bootcamp": {
-    "titleS": "Título: ",
-    "title": "Desarrollador Web Full Stack",
-    "institutionS": "Institución: ",
-    "institution": "Henry",
-    "dateS": "Período: ",
-    "date": "Agosto 2022 — Marzo 2023"
+  "sistema": {
+    "etiqueta": "El sistema de este sitio",
+    "titulo": "Un sistema pequeño, pensado para crecer.",
+    "intro": "Este sitio no usa un framework de estilos. Corre sobre un sistema propio, con la misma lógica que aplico al trabajar con sistemas de diseño.",
+    "chips": [
+      "Andando ahora",
+      "Tokens",
+      "Sin framework de estilos"
+    ],
+    "problemaEtiqueta": "El problema",
+    "problema": "Un sitio tiene el mismo problema que un producto que crece: si cada sección define sus propios colores, espaciados y comportamientos, el sistema pierde consistencia a medida que aumenta.",
+    "comoEtiqueta": "Cómo está armado",
+    "como": [
+      "Tokens para color, tipografía, efectos y movimiento.",
+      "Componentes reutilizables para mantener consistencia entre las distintas secciones.",
+      "Estados visuales definidos desde el sistema para mantener significados consistentes.",
+      "Reglas compartidas para responsive y comportamiento, evitando resolver cada sección desde cero."
+    ],
+    "resultadoEtiqueta": "Resultado",
+    "resultado": "Agregar una sección implica reutilizar el sistema en lugar de definir estilos nuevos desde cero. El sitio también funciona como muestra de cómo pienso y construyo sistemas.",
+    "muestraEtiqueta": "Muestra",
+    "estados": [
+      "Vigente",
+      "Pausado",
+      "Acción"
+    ],
+    "cota": "tokens y componentes, todo el sitio"
   },
-  "university": {
-    "titleS": "Título: ",
-    "title": "Diseñador Industrial",
-    "institutionS": "Institución: ",
-    "institution": "Universidad Nacional de La Plata",
-    "dateS": "Período: ",
-    "date": "Marzo 2004 — Diciembre 2010"
+  "proyectos": {
+    "etiqueta": "Proyectos seleccionados",
+    "titulo": "Una selección de proyectos donde diseño, desarrollo y producto se cruzan.",
+    "destacados": {
+      "metabaseq": {
+        "chips": [
+          "En curso",
+          "Bajo NDA"
+        ],
+        "texto": "Plataforma SaaS de ciberseguridad. Trabajo en el frontend: defino la experiencia en Figma y la implemento en React y TypeScript. También armo y mantengo el sistema de diseño, y desarrollo funcionalidades con IA dentro del producto.",
+        "nota": "No puedo mostrar el producto por NDA. Sí puedo contar cómo trabajo, en una llamada."
+      },
+      "streetart": {
+        "chips": [
+          "E-commerce"
+        ],
+        "texto": "Tienda online de vinos con catálogo, membresías y panel de administración. Me encargué del desarrollo visual, la home, el perfil de administrador con su dashboard y la coherencia de la interfaz.",
+        "enlaceTexto": "Ver la tienda"
+      },
+      "tms": {
+        "chips": [
+          "Marca y sitio"
+        ],
+        "texto": "Consultora de ingeniería. Diseño y desarrollo de identidad y sitio web: logo, firmas de mail, presentación a clientes y web responsive.",
+        "enlaceTexto": "Ver el sitio"
+      }
+    },
+    "indice": {
+      "dalle": "Node.js · MongoDB · OpenAI · Tailwind",
+      "alura": "React · JavaScript · CSS",
+      "pokedex": "React · Redux · Express · PostgreSQL",
+      "altamira": "Identidad · Diseño gráfico",
+      "dewey": "Diseño industrial · Producto",
+      "cardeuse": "Identidad · Packaging",
+      "setentayseis": "Identidad · Diseño gráfico",
+      "nomade": "Diseño industrial"
+    },
+    "casos": {
+      "streetart": {
+        "contexto": "Diseñar y desarrollar una página para club de vinos que incluía: autenticación, búsquedas, filtrados combinados, ordenamientos, baneo de usuarios, envío de emails, etc, creación de membresías, reviews, wishlist, protección de rutas, etc",
+        "participacion": "Estuve a cargo del desarrollo visual de la pagina, el ananlisis del comportamiento del usuario, los elementos visuales, su coherencia y cohesión, la pagina de inicio y el perfil del administrador con su dashboard"
+      },
+      "alura": {
+        "contexto": "Curso práctico donde se desarrollaron proyectos responsivos, y se controlaba el comportamiento de los elementos HTML desde el DOM",
+        "participacion": "Se desarrollaron integralmente los comportamientos y el renderizado de los mismo en los diferentes proyectos"
+      },
+      "pokedex": {
+        "contexto": "Proyecto Individual de Henry donde se trabajó con APIs, databases, react, redux, etc.",
+        "participacion": "Diseñar y desarrollar una App de pokemons que incluía: búsquedas, filtrados combinados,ordenamientos, creación y edición de pokemones"
+      },
+      "altamira": {
+        "contexto": "Rediseño de pagina y logo Escuela Argentino Danesa Altamira",
+        "participacion": "Se realizó el ananlisis del comportamiento del usuario, los elementos visuales, su coherencia y cohesión, la pagina de inicio y la historia de la institución"
+      },
+      "dewey": {
+        "contexto": "Aplicación para reserva de turno para actividades extracurriculares de niños",
+        "participacion": "Desarrollo completo de diseño UX/UI para toda la aplicación, donde se utilizó ux research, generación de ui components, ilustraciones, story boards, wire frames, etc."
+      },
+      "cardeuse": {
+        "contexto": "Primer trabajo profesional como diseñador Industrial",
+        "participacion": "Rediseño de todas las líneas de producción y actualización de la estética de telas, estampados y combinaciones. Desarrollo de nuevos productos e implementación de nuevas tecnologías"
+      },
+      "setentayseis": {
+        "contexto": "Club de vinos local",
+        "participacion": "Creación de Marca, diseño de banners, publicaciones y reels para redes sociales"
+      },
+      "nomade": {
+        "contexto": "Tesis universitaria: Sistema de traslado de personas en emergencia en terrenos arenosos",
+        "participacion": "Creación, desarrollo y realización de prototipo del producto, junto con sus piezas gráficas y sus planos técnicos productivos"
+      },
+      "dalle": {
+        "contexto": "Un generador de imágenes con IA full-stack: escribís un prompt y obtenés una imagen. Hecho de punta a punta para explorar el modelo DALL·E de OpenAI sobre un stack MERN moderno.",
+        "desafio": "Integrar un modelo de imágenes de deep learning en una web responsive — manejando generación, almacenamiento en la nube y un flujo de creación claro.",
+        "proceso": [
+          "Construí el stack MERN desde cero: API Node.js + Express, persistencia en MongoDB, front en React",
+          "Integré el modelo DALL·E de OpenAI para generar imágenes a partir de texto",
+          "Guardé las imágenes generadas en Cloudinary; estilé la interfaz con Tailwind",
+          "Separé el deploy: backend en Render, frontend en Vercel"
+        ],
+        "resultado": "Un generador de imágenes funcional y desplegado — probalo en vivo.",
+        "captions": [
+          "Inicio / galería generada",
+          "Flujo de creación — texto a imagen"
+        ]
+      },
+      "tms": {
+        "contexto": "Rediseño integral de marca y web para una consultora de ingeniería — logo, tipografía y un sitio responsive en formato escritorio y mobile.",
+        "desafio": "Renovar la identidad de la empresa y entregar un sitio rápido y fluido, tan cuidado en mobile como en desktop.",
+        "proceso": [
+          "Rediseñé el logo, las firmas de mailing y la presentación a clientes en una identidad coherente",
+          "Construí el sitio responsive en React + Gatsby, con estilos en SCSS",
+          "Sumé Locomotive Scroll para una navegación suave e interactiva; serví la media con Cloudinary",
+          "Deploy en Netlify"
+        ],
+        "resultado": "Un sitio corporativo en vivo y responsive para TMS Ingeniería.",
+        "captions": [
+          "Portada",
+          "Sección principal",
+          "Cuerpo del sitio"
+        ]
+      },
+      "metabaseq": {
+        "contexto": "Batuta es la plataforma SaaS de ciberseguridad de Metabase Q. Como Frontend Engineer & UX/UI Designer soy responsable de su experiencia frontend de extremo a extremo — desde definir la UX en Figma hasta entregar interfaces accesibles y de alto rendimiento en producción.",
+        "desafio": "Convertir flujos complejos de ciberseguridad en interfaces rápidas, consistentes y realmente usables, manteniendo coherente una plataforma que crece a través de muchos módulos.",
+        "proceso": [
+          "Defino requerimientos, flujos de usuario y restricciones técnicas junto a producto e ingeniería",
+          "Diseño y mantengo un sistema de UI / diseño escalable en Figma para dar consistencia a toda la plataforma",
+          "Construyo interfaces accesibles y de alto rendimiento en React, TypeScript, Tailwind y Material UI",
+          "Impulso las discusiones de producto y la priorización de features, mejorando la usabilidad en todos los módulos"
+        ],
+        "resultado": "Ser dueño tanto de la UX como de la implementación cerró las brechas entre diseño y desarrollo, estandarizó componentes para una UI más consistente y aceleró los ciclos de entrega de features."
+      }
+    },
+    "modal": {
+      "abrir": "Ver el caso",
+      "cerrar": "Cerrar",
+      "contexto": "Contexto",
+      "desafio": "Desafío",
+      "proceso": "Proceso",
+      "participacion": "Mi participación",
+      "resultado": "Resultado",
+      "tecnologias": "Tecnologías",
+      "enlaces": "Enlaces",
+      "verEnVivo": "Ver en vivo",
+      "sinEnlaces": "Este proyecto no tiene enlaces públicos.",
+      "captura": "Captura de {{name}}, {{i}}",
+      "baja": "La base de datos y los tokens de IA se dieron de baja al vencer las licencias, así que la demo puede no cargar datos. El código sigue publicado."
+    }
   },
-  "technical": {
-    "titleS": "Título: ",
-    "title": "Técnico en Computación Personal y Profesional",
-    "institutionS": "Institución: ",
-    "institution": "E.E.S.T. N.º 3",
-    "dateS": "Período: ",
-    "date": "Marzo 2001 — Diciembre 2003"
+  "experiencia": {
+    "etiqueta": "Experiencia",
+    "titulo": "Experiencia en diseño, frontend y enseñanza.",
+    "intro": "El punto verde marca lo que sigue vigente. Tocá cualquier fila para ver el detalle.",
+    "items": [
+      {
+        "titular": "Trabajo en el frontend de una plataforma de ciberseguridad.",
+        "meta": "Metabase Q · Design Engineer · 2023 → hoy",
+        "detalle": "Defino la experiencia en Figma y la implemento en React y TypeScript. Trabajar en ambos lados me permite tomar decisiones de diseño considerando desde el inicio cómo se van a construir.",
+        "pruebas": [
+          "Armo y mantengo el sistema de diseño de la plataforma",
+          "Desarrollo interfaces accesibles y rápidas con React, Tailwind y Material UI",
+          "Diseño e implemento funcionalidades con IA dentro del producto",
+          "Defino requerimientos y flujos junto a Producto e Ingeniería"
+        ]
+      },
+      {
+        "titular": "Doy clases de programación en una escuela técnica.",
+        "meta": "EEST N.º 1 · Profesor · 2015 → hoy",
+        "detalle": "Once años enseñando programación y herramientas técnicas. La docencia también fortaleció mi forma de comunicar decisiones, dar feedback y explicar conceptos técnicos.",
+        "pruebas": [
+          "Programación, pensamiento computacional y herramientas técnicas",
+          "Diseño de contenidos y talleres prácticos por proyectos",
+          "Es la base del rol de mentoría que después tuve en Henry"
+        ]
+      },
+      {
+        "titular": "Hice la identidad y el sitio de una consultora de ingeniería.",
+        "meta": "TMS Ingeniería · Freelance · 2023",
+        "detalle": "Proyecto completo y solo: logo, firmas de mail, presentación a clientes y sitio responsive desde cero.",
+        "pruebas": [
+          "Interfaz responsive en React, Redux y Material UI",
+          "Navegación fluida con Locomotive Scroll, media servida por Cloudinary",
+          "Sitio en producción, cuidado igual en celular que en escritorio"
+        ]
+      },
+      {
+        "titular": "Acompañé a estudiantes de un bootcamp full stack.",
+        "meta": "Henry · Teaching Assistant · 2023",
+        "detalle": "Pair programming y sesiones grupales sobre JavaScript, React, Node, Express y PostgreSQL, acompañando a estudiantes en el paso de seguir un tutorial a construir proyectos propios.",
+        "pruebas": [
+          "Guía técnica y code reviews durante toda la cursada",
+          "Acompañamiento en proyectos y resolución de problemas técnicos"
+        ]
+      }
+    ]
   },
-  "spe": {
-    "titleS": "Título: ",
-    "title": "Tramo de Formación Pedagógica para Nivel Medio y Superior",
-    "institutionS": "Institución: ",
-    "institution": "SUETRA",
-    "dateS": "Período: ",
-    "date": "Marzo 2015 — Diciembre 2017"
+  "formacion": {
+    "etiqueta": "Formación",
+    "titulo": "Títulos y certificados.",
+    "titulos": [
+      {
+        "titulo": "Desarrollador Web Full Stack",
+        "institucion": "Henry Bootcamp",
+        "periodo": "2022–2023"
+      },
+      {
+        "titulo": "Diseñador Industrial",
+        "institucion": "Universidad Nacional de La Plata",
+        "periodo": "2004–2010"
+      },
+      {
+        "titulo": "Formación Pedagógica para Nivel Medio y Superior",
+        "institucion": "SUETRA",
+        "periodo": "2015–2017"
+      },
+      {
+        "titulo": "Técnico en Computación Personal y Profesional",
+        "institucion": "E.E.S.T. N.º 3",
+        "periodo": "2001–2003"
+      }
+    ],
+    "cvEtiqueta": "Currículum",
+    "cvEs": "CV en español",
+    "cvEn": "Resume in English",
+    "idiomas": "Idiomas · Español nativo · Inglés B2/C1 · Francés A1",
+    "certificadosEtiqueta": "Certificados",
+    "certificados": {
+      "uxui": "Diseño UX/UI",
+      "figma": "Figma y diseño de interfaces",
+      "fcc": "JavaScript Algorithms and Data Structures",
+      "udemy": "The Web Developer Bootcamp",
+      "scrum": "Fundamentos de Scrum",
+      "efset": "EF SET · Inglés"
+    }
   },
-  "certificates": {
-    "title": "Certificados"
+  "contacto": {
+    "etiqueta": "Contacto",
+    "titulo": "Escribime.",
+    "intro": "Si estás buscando a alguien para un puesto, o tenés un proyecto en mente, contame de qué se trata y te respondo lo antes posible.",
+    "campos": {
+      "nombre": "Nombre",
+      "nombrePlaceholder": "Cómo te llamás",
+      "email": "Email",
+      "emailPlaceholder": "Dónde te respondo",
+      "motivo": "Motivo",
+      "motivoPlaceholder": "Elegí una opción",
+      "motivoOpciones": [
+        "Una posición en un equipo",
+        "Un proyecto puntual",
+        "Otra cosa"
+      ],
+      "mensaje": "Mensaje",
+      "mensajePlaceholder": "Contame en qué estás trabajando"
+    },
+    "enviar": "Enviar mensaje",
+    "errores": {
+      "nombre": "Poné tu nombre.",
+      "email": "Revisá el email, parece incompleto.",
+      "motivo": "Elegí un motivo.",
+      "mensaje": "Contame un poco más, con dos líneas alcanza.",
+      "general": "Faltan datos."
+    },
+    "estados": {
+      "enviando": "Enviando…",
+      "exito": "Listo, te respondo lo antes posible.",
+      "error": "No se pudo enviar. Probá de nuevo o escribime por mail."
+    }
+  },
+  "footer": {
+    "copyright": "© {{anio}} Matías Rodríguez · Argentina"
   }
 }
