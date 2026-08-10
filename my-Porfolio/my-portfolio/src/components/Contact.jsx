@@ -26,13 +26,12 @@ export default function Contact() {
             <h2 className="contact__title">{t('contacto.titulo')}</h2>
             <p className="prose">{t('contacto.intro')}</p>
 
-            {/* La dirección es la etiqueta del botón: se ve antes de hacer
-                clic y sirve para copiarla sin abrir el cliente de mail. */}
-            <a className="btn btn--primary contact__mail" href={`mailto:${EMAIL}`}>
-              {EMAIL}
-            </a>
-
             <div className="contact__direct">
+              {/* El mail va como texto, no como botón. Antes era un botón
+                  primario con mailto: para quien no tiene cliente de correo
+                  configurado, hacer clic no producía nada, y un botón que no
+                  responde es peor que un dato que se puede copiar. */}
+              <span className="contact__mail">{EMAIL}</span>
               <a href="https://www.linkedin.com/in/matias-g-rodriguez/" target="_blank" rel="noreferrer">
                 linkedin.com/in/matias-g-rodriguez<span aria-hidden="true"> ↗</span>
               </a>

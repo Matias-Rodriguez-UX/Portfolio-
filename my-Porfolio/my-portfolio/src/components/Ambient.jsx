@@ -60,16 +60,30 @@ export default function Ambient() {
       if (!raf) raf = requestAnimationFrame(loop);
     };
 
-    const onLeave = () => { el.dataset.cursor = 'false'; };
+    // Al salir de la ventana se apaga el halo y además se resetea `started`.
+    // Sin ese reset, al volver el cursor `onMove` veía started === true, no
+    // reponía data-cursor y la luz no aparecía nunca más. De paso, arrancar
+    // de cero hace que el halo renazca donde entró el puntero en vez de
+    // cruzar toda la pantalla desde donde se había ido.
+    const onLeave = () => {
+      el.dataset.cursor = 'false';
+      started = false;
+    };
+
+    // pointerout con relatedTarget nulo es el que dispara de verdad al salir
+    // por el borde de la ventana; pointerleave sobre <html> cubre el resto.
+    const onOut = (e) => { if (!e.relatedTarget) onLeave(); };
 
     window.addEventListener('pointermove', onMove, { passive: true });
-    document.addEventListener('pointerleave', onLeave);
+    document.documentElement.addEventListener('pointerleave', onLeave);
+    document.addEventListener('pointerout', onOut);
     window.addEventListener('blur', onLeave);
 
     return () => {
       if (raf) cancelAnimationFrame(raf);
       window.removeEventListener('pointermove', onMove);
-      document.removeEventListener('pointerleave', onLeave);
+      document.documentElement.removeEventListener('pointerleave', onLeave);
+      document.removeEventListener('pointerout', onOut);
       window.removeEventListener('blur', onLeave);
     };
   }, []);
