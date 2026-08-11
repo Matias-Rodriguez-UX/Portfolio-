@@ -51,6 +51,9 @@ body {
 h1, h2, h3, h4 { margin: 0; font-family: var(--font-display); font-weight: 700; text-wrap: balance; }
 p { margin: 0; text-wrap: pretty; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
+/* La ficha técnica es una <dl> de verdad. Sin esto se lleva el margen de 1em
+   del navegador y la sangría de 40px que el dd trae por defecto. */
+dl, dd { margin: 0; }
 img { max-width: 100%; height: auto; }
 a { color: var(--accent-text); text-decoration: none; }
 button { font: inherit; color: inherit; }
@@ -116,7 +119,9 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
 .ambient__glow {
   position: absolute; inset: 0;
   background: radial-gradient(var(--dot-lit) 1px, transparent 1.4px) 0 0 / 23px 23px;
-  --glow-r: 250px;
+  /* Apenas más corto que antes (era 250px): una pileta de luz definida se lee
+     como intencional. A 210px el halo se perdía. */
+  --glow-r: 240px;
   /* El centro se lee con var(--mx, 50%): el valor lo escribe el JS sobre
      .ambient y baja por herencia. Declarar --mx acá con un valor propio lo
      dejaba clavado en el medio de la pantalla, porque una declaración en el
@@ -138,7 +143,9 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
    El encendido es más rápido que el apagado, que es como se comporta
    cualquier luz que uno espera que responda al entrar. */
 .ambient[data-cursor="true"] .ambient__glow {
-  opacity: 1;
+  /* No llega a 1: multiplicado por el .36 del token, el punto más brillante
+     queda en ~.31 de alfa, contra el .5 del arranque. */
+  opacity: .86;
   transition-duration: .32s;
 }
 .orb { position: absolute; will-change: transform; }
@@ -190,6 +197,9 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
 }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .panel, .card, .nav, .drawer { background: var(--noise), var(--glass-solid); }
+  /* Sin desenfoque el vidrio de la nav no alcanza: es lo único que se
+     superpone al contenido y necesita tapar de verdad. */
+  .nav, .nav-shell--condensed .nav { background-color: var(--bg); }
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -253,6 +263,9 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
 .btn--ghost { border-color: var(--border-field); color: var(--text-1); background: var(--field); }
 .btn--sm { padding: .55rem .85rem; font-size: 12px; }
 .btn[disabled] { opacity: .55; cursor: default; }
+/* Copiado: el botón pasa al verde de "vigente" del sistema. El color es la
+   confirmación, no un texto suelto al costado. 7.5:1 con la tinta de acento. */
+.btn[data-copied="true"] { background: var(--ok); color: var(--accent-ink); }
 
 /* Línea de cota: el injerto de plano técnico sobre la consola. */
 .dimline { position: relative; height: 1px; background: var(--signal-line); }
@@ -287,12 +300,20 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
   position: relative; max-width: var(--col); margin: 0 auto;
   display: flex; align-items: center; gap: 1rem; padding: 7px 8px 7px 16px;
   border-radius: var(--radius-pill); border: 1px solid var(--border);
-  background: radial-gradient(135% 120% at 100% -20%, var(--inner-glow), transparent 55%), var(--noise), var(--glass-2);
-  backdrop-filter: var(--blur-panel); -webkit-backdrop-filter: var(--blur-panel);
+  background: radial-gradient(135% 120% at 100% -20%, var(--inner-glow), transparent 55%), var(--noise), var(--nav-glass);
+  backdrop-filter: var(--blur-nav); -webkit-backdrop-filter: var(--blur-nav);
   box-shadow: inset 0 1px 0 var(--highlight);
-  transition: box-shadow var(--dur-state) var(--ease-quart);
+  transition: box-shadow var(--dur-state) var(--ease-quart),
+              background-color var(--dur-state) var(--ease-quart);
 }
-.nav-shell--condensed .nav { box-shadow: inset 0 1px 0 var(--highlight), var(--shadow-card); }
+/* Con el scroll arrancado la nav pasa a vidrio cerrado: gana el borde y la
+   sombra que la despegan del contenido, y los links dejan de competir con lo
+   que pasa por debajo. */
+.nav-shell--condensed .nav {
+  background-color: var(--nav-glass-scrolled);
+  border-color: var(--border-field);
+  box-shadow: inset 0 1px 0 var(--highlight), var(--shadow-card);
+}
 
 .brand {
   display: inline-flex; align-items: center; gap: .55rem;
@@ -362,6 +383,11 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
   content: ""; position: absolute; top: -3px; width: 1px; height: 7px; background: var(--signal-line);
 }
 .sec-mark .dim::before { left: 0; } .sec-mark .dim::after { right: 0; }
+/* Número de hoja. Va antes de la cota, como en el rótulo de un plano. */
+.sec-n {
+  font-family: var(--font-mono); font-weight: 500; font-size: 11px; line-height: 1;
+  color: var(--accent-text); font-variant-numeric: tabular-nums; flex: none;
+}
 .sec-title { font: var(--text-h2); letter-spacing: var(--track-h2); max-width: 22ch; }
 .sec-title--wide { max-width: 30ch; }
 .sec-intro { font: var(--text-body); color: var(--text-2); max-width: 62ch; }
@@ -380,31 +406,60 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
   -webkit-mask-image: radial-gradient(circle at 50% 100%, #000 30%, transparent 72%);
   mask-image: radial-gradient(circle at 50% 100%, #000 30%, transparent 72%);
 }
-.hero__inner { position: relative; display: flex; flex-direction: column; gap: 2rem; }
-.hero__status { display: flex; flex-wrap: wrap; gap: .45rem; }
+/* El hero es el rótulo de un plano: a la izquierda qué es y para qué sirve, a
+   la derecha la ficha con los datos duros. La línea de "trabajé con" cruza las
+   dos columnas abajo, como el pie de una hoja técnica.
+
+   minmax(0, …) en las dos columnas: sin eso el mínimo es auto y un valor largo
+   de la ficha (el alcance, el stack) infla su columna y le come el ancho al
+   titular en vez de partirse en dos líneas. */
+.hero__inner {
+  position: relative;
+  display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  gap: clamp(2rem, 4vw, 3.25rem);
+  align-items: start;
+}
+.hero__pitch { display: flex; flex-direction: column; gap: 2rem; }
 .hero__title { font: var(--text-hero); letter-spacing: var(--track-hero); max-width: 18ch; }
 .hero__sub { font: var(--text-lead); color: var(--text-2); max-width: 58ch; }
 .hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
 .hero__dim { max-width: 22rem; }
 
-.readouts { display: grid; grid-template-columns: repeat(4, 1fr); gap: .7rem; }
-.readout { padding: .95rem 1rem 1.05rem; display: flex; flex-direction: column; gap: .3rem; }
-.readout__n {
-  font: var(--num-xl); letter-spacing: var(--num-tracking);
-  color: var(--text-1); font-variant-numeric: tabular-nums;
-  /* Caja de alto fijo con el valor apoyado abajo: los readouts de palabra van
-     un escalón más chicos que los numéricos, así que sin esto cada tarjeta
-     apoyaba su valor en una línea base distinta y las etiquetas de la fila
-     quedaban desalineadas entre sí. */
-  display: flex; align-items: flex-end;
-  min-height: clamp(1.5rem, 3.2vw, 2rem);
+/* ── Ficha técnica ────────────────────────────────────────────────────
+   Tabla de línea fina adentro de un panel de vidrio. La línea fina es el
+   único lugar del sitio donde el lenguaje del plano manda sobre el de la
+   consola, y se lo gana porque acá lo que hay es literalmente una tabla de
+   especificación. Fuera de este panel las tablas siguen siendo vidrio.
+   ──────────────────────────────────────────────────────────────────── */
+.spec { overflow: hidden; }
+.spec__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .8rem clamp(1rem, 2vw, 1.25rem); border-bottom: 1px solid var(--line);
 }
-/* Readout con palabra en vez de número: baja un escalón para que una palabra
-   larga no desborde la tarjeta. La línea base la iguala la regla de arriba. */
-.readout__n--word { font-size: clamp(1.15rem, 2.3vw, 1.5rem); letter-spacing: -.02em; }
-.readout__k { font: var(--text-label); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--text-3); }
+.spec__row {
+  display: grid; grid-template-columns: 5.25rem minmax(0, 1fr); gap: .2rem 1rem;
+  padding: .7rem clamp(1rem, 2vw, 1.25rem); border-bottom: 1px solid var(--line);
+}
+.spec__row:last-child { border-bottom: 0; }
+.spec__k {
+  font: var(--text-label); letter-spacing: var(--label-tracking);
+  text-transform: uppercase; color: var(--text-3);
+  /* Empujado a la línea base del valor, que es un punto más grande. */
+  padding-top: .2rem;
+}
+.spec__v {
+  margin: 0; font: var(--text-sm); font-size: .89rem; color: var(--text-1);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .45rem;
+}
+/* El stack va en mono y en acento: es una lista de nombres propios técnicos,
+   no una frase, y en mono se escanea en vez de leerse. */
+.spec__v--mono { font: var(--text-mono); font-size: 11.5px; color: var(--accent-text); }
 
+/* Las métricas en tarjeta (años, disciplinas) salieron del hero: cuatro cajas
+   de números arriba de todo leían como landing de empresa, no como portfolio.
+   Lo que queda es la línea de con quién trabajó, que es prueba real. */
 .proof {
+  grid-column: 1 / -1;
   display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.75rem;
   padding-top: 1.5rem; border-top: 1px solid var(--line);
 }
@@ -412,38 +467,89 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
 .proof__item { font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: -.01em; color: var(--text-2); }
 
 /* ══════════════════════════════════════════════════════════════════════
-   LO QUE HAGO · CÓMO TRABAJO
+   PROCESO
+   Las etapas NO son tarjetas. Cuatro cajas de vidrio en fila es exactamente
+   la grilla de features de cualquier landing de empresa; columnas desnudas
+   colgadas de un riel son un plano, que es de donde viene esta dirección.
+
+   El riel se arma por tramos: cada etapa dibuja el suyo y su nodo. Así la
+   línea sobrevive a cualquier reflow de la grilla sin medir nada en JS, y
+   además se dibuja sola a medida que las etapas entran al viewport.
    ══════════════════════════════════════════════════════════════════════ */
-.svc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-.how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.svc, .how {
-  padding: 1.5rem 1.5rem 1.6rem; display: flex; flex-direction: column; gap: .6rem;
-  transition: transform var(--dur-state) var(--ease-quart), border-color var(--dur-state) var(--ease-quart);
+.proc {
+  --proc-gap: clamp(1.25rem, 2.6vw, 2.25rem);
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--proc-gap);
 }
-.svc h3, .how h3 { font: var(--text-h3); letter-spacing: var(--track-h3); }
-.svc p, .how p { font: var(--text-sm); color: var(--text-2); }
-.svc__stack { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .3rem; }
+.proc__step {
+  position: relative; padding-top: 1.9rem;
+  display: flex; flex-direction: column; gap: .5rem;
+}
+/* El tramo cruza el gap para engancharse con el nodo de la etapa siguiente. */
+.proc__step::before {
+  content: ""; position: absolute; top: 5px; left: 0;
+  right: calc(-1 * var(--proc-gap)); height: 1px; background: var(--line);
+}
+/* La última cierra con la marca de cota en vez de seguir al vacío. */
+.proc__step:last-child::before { right: 0; }
+.proc__step:last-child::after {
+  content: ""; position: absolute; top: 1px; right: 0;
+  width: 1px; height: 9px; background: var(--signal-line);
+}
+
+/* El nodo se enciende cuando su etapa entra: el retardo lo hereda de --d, que
+   es el mismo que escalona la entrada, así el riel se lee de izquierda a
+   derecha en vez de prenderse entero de golpe. */
+.proc__node {
+  position: absolute; top: 0; left: 0; box-sizing: border-box;
+  width: 11px; height: 11px; border-radius: 50%;
+  border: 1px solid var(--border-field); background: var(--bg); color: var(--accent);
+  transition: background var(--dur-state) var(--ease-quart),
+              border-color var(--dur-state) var(--ease-quart),
+              box-shadow var(--dur-state) var(--ease-quart);
+  transition-delay: var(--d, 0ms);
+}
+.proc__step.in .proc__node {
+  background: currentColor; border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-fill), 0 0 8px 0 currentColor;
+}
+
+.proc__mark { display: flex; align-items: baseline; gap: .55rem; }
+.proc__n {
+  font-family: var(--font-mono); font-weight: 500; font-size: 13px; line-height: 1;
+  color: var(--accent-text); font-variant-numeric: tabular-nums;
+}
+.proc__fase {
+  font: var(--text-label); letter-spacing: var(--label-tracking);
+  text-transform: uppercase; color: var(--text-3);
+}
+.proc__t { font: var(--text-h3); letter-spacing: var(--track-h3); margin-top: .1rem; }
+.proc__p { font: var(--text-sm); color: var(--text-2); }
+
+/* Lo que sale de cada etapa, apoyado abajo: como las columnas de la grilla se
+   estiran a la fila más alta, las cuatro listas arrancan en la misma línea aunque
+   los textos midan distinto. Es la diferencia entre cuatro bloques sueltos y
+   una tabla. */
+.proc__out {
+  margin-top: auto; padding-top: 1rem;
+  display: flex; flex-direction: column; gap: .3rem;
+}
+.proc__out li {
+  position: relative; padding-left: 1.05rem;
+  font: var(--text-mono); color: var(--text-3);
+}
+.proc__out li::before {
+  content: ""; position: absolute; left: 0; top: .62em;
+  width: .55rem; height: 1px; background: var(--accent); opacity: .5;
+}
+
+/* La IA adentro del producto pesa más que la IA en el flujo: cambia el bloom
+   de la esquina al magenta de la firma y es el único LED que late acá. */
 
 /* ══════════════════════════════════════════════════════════════════════
    SISTEMA
    ══════════════════════════════════════════════════════════════════════ */
-.case { padding: clamp(1.5rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(1.5rem, 3vw, 3rem); }
-.case__body { display: flex; flex-direction: column; gap: 1.2rem; }
-.case__block h3 {
-  font: var(--text-label); letter-spacing: var(--label-tracking);
-  text-transform: uppercase; color: var(--accent-text); margin-bottom: .4rem;
-}
-.case__block p { font: var(--text-sm); color: var(--text-2); }
 .case__steps li { position: relative; padding-left: 1.3rem; font: var(--text-sm); color: var(--text-2); margin-bottom: .5rem; }
 .case__steps li::before { content: ""; position: absolute; left: 0; top: .68em; width: .55rem; height: 1px; background: var(--accent); }
-
-.sysdemo { display: flex; flex-direction: column; gap: .8rem; }
-.sysdemo__strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: .35rem; }
-.sysdemo__strip i { height: 2.6rem; border-radius: var(--radius-sm); border: 1px solid var(--border-field); }
-.sysdemo__row { display: flex; flex-wrap: wrap; gap: .35rem; }
-.sysdemo__panel { padding: .9rem 1rem; display: flex; flex-direction: column; gap: .55rem; }
-.sysdemo__kv { display: flex; justify-content: space-between; gap: 1rem; font: var(--text-mono); color: var(--text-3); }
-.sysdemo__kv b { color: var(--accent-text); font-weight: 400; }
 
 /* ══════════════════════════════════════════════════════════════════════
    PROYECTOS
@@ -454,10 +560,11 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
   display: flex; flex-direction: column; gap: .75rem; padding: 1.4rem 1.4rem 1.5rem;
   transition: transform var(--dur-state) var(--ease-quart), border-color var(--dur-state) var(--ease-quart);
 }
-/* Marcas de corte, del plano técnico. */
-.work__crop { position: absolute; width: 10px; height: 10px; pointer-events: none; opacity: .55; }
-.work__crop--tl { top: 8px; left: 8px; border-top: 1px solid var(--signal-line); border-left: 1px solid var(--signal-line); }
-.work__crop--br { bottom: 8px; right: 8px; border-bottom: 1px solid var(--signal-line); border-right: 1px solid var(--signal-line); }
+/* Marcas de corte, del plano técnico. Primitivo suelto y no .work__crop: lo
+   usan las tarjetas y también el marco de la prueba visual de apertura. */
+.crop { position: absolute; width: 10px; height: 10px; pointer-events: none; opacity: .55; z-index: 1; }
+.crop--tl { top: 8px; left: 8px; border-top: 1px solid var(--signal-line); border-left: 1px solid var(--signal-line); }
+.crop--br { bottom: 8px; right: 8px; border-bottom: 1px solid var(--signal-line); border-right: 1px solid var(--signal-line); }
 
 .work__thumb {
   height: 8.5rem; border-radius: var(--radius-md); border: 1px solid var(--border);
@@ -468,6 +575,21 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
   content: ""; position: absolute; inset: 0;
   background: repeating-radial-gradient(circle at 50% 130%, transparent 0 22px, var(--arc) 22px 23px);
 }
+/* contain y no cover: un logo se escala entero, nunca se recorta. Los máximos
+   son porcentuales para que un logo apaisado y uno cuadrado pesen parecido. */
+.work__logo {
+  position: absolute; inset: 0; margin: auto;
+  max-width: 58%; max-height: 46%;
+  object-fit: contain;
+}
+.work__logo[data-failed="true"] { display: none; }
+
+/* El monograma se apaga en cuanto hay un logo. No alcanzaba con poner el logo
+   encima: los tres tienen fondo transparente, así que las iniciales se leían a
+   través de la marca. El :not() es lo que mantiene vivo el respaldo: si el
+   archivo no llega, onError marca la imagen, este selector deja de aplicar y
+   las iniciales vuelven solas. */
+.work__thumb:has(.work__logo:not([data-failed])) .work__glyph { visibility: hidden; }
 .work__thumb--a { background: radial-gradient(120% 90% at 20% 0%, var(--accent-fill), transparent 60%), var(--field); }
 .work__thumb--b { background: radial-gradient(120% 90% at 80% 0%, var(--signal-fill), transparent 60%), var(--field); }
 .work__thumb--c { background: radial-gradient(120% 90% at 50% 100%, var(--ok-fill), transparent 60%), var(--field); }
@@ -486,7 +608,12 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
 /* Es un <button>: hay que apagar el estilo nativo y dejar solo la línea. */
 .index__row {
   width: 100%; background: transparent; border: 0;
-  display: grid; grid-template-columns: 1.2fr 1.6fr auto; gap: .4rem 1.5rem;
+  /* La última columna va con ancho fijo y no auto. Cada fila es su propio
+     <button>, o sea su propia grilla: con auto, la fila que suma la nota de
+     contexto ensancha esa columna y empuja a las otras dos, y las filas dejan
+     de alinearse entre sí. Antes coincidían de casualidad, porque todos los
+     años medían cuatro caracteres. */
+  display: grid; grid-template-columns: 1.2fr 1.6fr 11.5rem; gap: .4rem 1.5rem;
   align-items: center; padding: .95rem .25rem; border-bottom: 1px solid var(--line);
   transition: background var(--dur-micro) var(--ease-quart);
 }
@@ -497,7 +624,15 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
   transition: transform var(--dur-state) var(--ease-quart);
 }
 .index__tech { font: var(--text-mono); color: var(--text-3); }
-.index__yr { font: var(--text-mono); color: var(--text-3); font-variant-numeric: tabular-nums; text-align: right; }
+.index__yr {
+  display: flex; align-items: baseline; justify-content: flex-end; gap: .6rem;
+  font: var(--text-mono); color: var(--text-3);
+  font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap;
+}
+/* El contexto de las fechas viejas. En magenta y en cursiva porque es una
+   acotación al margen, no un dato de la fila: se lee después del año, no en
+   lugar del año. */
+.index__nota { color: var(--signal); font-style: italic; opacity: .85; }
 
 /* ══════════════════════════════════════════════════════════════════════
    MODAL DE CASO
@@ -673,15 +808,50 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
    quedan respirando a la derecha en vez de leerse como un hueco. */
 .contact--direct { grid-template-columns: 1fr; }
 .contact--direct .contact__aside { max-width: 56ch; }
-/* El mail comparte tratamiento con LinkedIn y GitHub: mismo tamaño y misma
-   familia. Se distingue solo en que no es un enlace, y por eso no toma el
-   color de acento al pasar el mouse. user-select lo deja copiable de un
-   doble clic, que es lo que se hace con una dirección. */
-.contact__mail { font: var(--text-mono); font-size: 12px; color: var(--text-2); user-select: all; }
+/* El mail suelto salió de acá: ahora vive en .cta__addr, abajo de los botones
+   que lo copian y lo abren. */
 .contact--direct .contact__direct { border-top: 1px solid var(--line); }
 .contact__title { font: var(--text-h2); font-size: clamp(1.7rem, 3.6vw, 2.5rem); letter-spacing: var(--track-h2); }
 .contact__direct { display: flex; flex-direction: column; gap: .5rem; padding-top: 1rem; border-top: 1px solid var(--line); }
 .contact__direct a { font: var(--text-mono); font-size: 12px; color: var(--text-2); }
+/* El pedido concreto. Va un punto más grande que el intro y en texto primario:
+   es la única línea de la sección que le dice a la persona qué escribir. */
+.contact__ask {
+  font: var(--text-body); font-size: 1rem; color: var(--text-1);
+  max-width: 44ch; padding-left: .9rem; border-left: 1px solid var(--signal-line);
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   ACCIONES DE CONTACTO
+   Tres botones en orden de fricción, el mail a la vista abajo. El mismo
+   bloque en Contacto y en el pie, en dos tamaños.
+   ══════════════════════════════════════════════════════════════════════ */
+.cta { display: flex; flex-direction: column; gap: .7rem; }
+.cta__row { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.cta__mail {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .9rem;
+  /* Alto reservado: el aviso de error aparece y desaparece sin mover la
+     página, que es lo último que quiere alguien que acaba de tocar un botón. */
+  min-height: 1.15rem;
+}
+/* Copiable de un doble clic, que es lo que se hace con una dirección cuando el
+   botón no está a mano. */
+.cta__addr { font: var(--text-mono); font-size: 12px; color: var(--text-2); user-select: all; }
+.cta__status {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font: var(--text-mono); color: var(--warn);
+}
+/* Los redactores web. Van en mono y al tamaño de un pie de nota: son la salida
+   de emergencia del botón de arriba, no una cuarta acción que compita con él. */
+.cta__web {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .8rem;
+  font: var(--text-mono);
+}
+.cta__web-lbl { color: var(--text-3); }
+.cta__web a {
+  color: var(--text-2);
+  transition: color var(--dur-micro) var(--ease-quart);
+}
 
 /* ── Formulario: aparcado ─────────────────────────────────────────────
    El formulario salió de la UI hasta que exista la clave de Resend. Los
@@ -738,22 +908,26 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
    ══════════════════════════════════════════════════════════════════════ */
 @media (hover: hover) and (pointer: fine) {
   .btn:hover { transform: translateY(-2px); }
-  .btn--primary:hover { background: var(--accent-text); }
+  /* El :not() es necesario: esta regla va después que .btn[data-copied] y con
+     la misma especificidad, así que sin excluir el estado copiado el botón
+     volvía al cyan justo mientras el mouse seguía encima, que es exactamente
+     cuando la persona está mirando la confirmación. */
+  .btn--primary:not([data-copied="true"]):hover { background: var(--accent-text); }
   .btn--ghost:hover { border-color: var(--accent); color: var(--accent-text); }
   .nav-links a:hover { color: var(--text-1); }
   .icon-btn:hover { color: var(--accent-text); border-color: var(--accent); }
-  /* Servicios y Cómo trabajo NO se levantan al pasar el mouse: no tienen
-     ninguna acción detrás. Levantar una tarjeta es prometer que al hacer
-     clic pasa algo, y ahí no pasa nada. El único hover que se permiten es
-     el borde, que se lee como "estás acá", no como "tocame". */
-  .svc:hover, .how:hover { border-color: var(--border-field); }
-  /* Proyectos sí se levanta, porque la tarjeta entera abre el caso. */
+  /* Los bloques de IA NO se levantan al pasar el mouse: no tienen ninguna
+     acción detrás. Levantar una tarjeta es prometer que al hacer clic pasa
+     algo, y ahí no pasa nada. El único hover que se permiten es el borde,
+     que se lee como "estás acá", no como "tocame". */
+    /* Proyectos sí se levanta, porque la tarjeta entera abre el caso. */
   .work:hover { transform: translateY(-4px); border-color: var(--border-field); }
   .index__row:hover { background: var(--accent-fill); }
   .index__row:hover .index__name { transform: translateX(.4rem); }
   .exp__btn:hover > span:first-child { transform: translateX(.5rem); }
   .cert:hover { border-color: var(--accent); transform: translateX(3px); }
-  .contact__direct a:hover, .foot a:hover, .work__link:hover { color: var(--accent-text); }
+  .contact__direct a:hover, .foot a:hover, .work__link:hover,
+  .cta__web a:hover { color: var(--accent-text); }
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -790,27 +964,65 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
 
 /* ══════════════════════════════════════════════════════════════════════
    REFLOW
-   980 nav a drawer · 900 grillas de 3 a 2 · 760 de 2 a 1 · 620 teléfono
+   1080 proceso de 4 a 2 · 980 nav a drawer y hero a una columna ·
+   900 grillas de 3 a 2 · 760 de 2 a 1 · 620 teléfono
    ══════════════════════════════════════════════════════════════════════ */
-@media (max-width: 900px) {
-  .how-grid, .work-grid { grid-template-columns: repeat(2, 1fr); }
-  .case { grid-template-columns: 1fr; }
+
+/* El proceso es la única grilla de cuatro del sitio, así que quiebra antes que
+   el resto: a 1000px de ancho sus columnas quedaban en 206px y un título de
+   tres palabras salía en cuatro renglones. 1080 es donde la columna todavía
+   mide 225px, que es el mínimo con el que el titular de etapa respira.
+
+   Nunca pasa por tres columnas: cuatro etapas en tres deja una huérfana. */
+@media (max-width: 1080px) {
+  /* El riel se sigue enganchando dentro de cada fila, pero la etapa de la
+     derecha corta: si siguiera, apuntaría al borde de la página en vez de a la
+     etapa que viene abajo. */
+  .proc { grid-template-columns: repeat(2, 1fr); row-gap: clamp(2rem, 4vw, 2.75rem); }
+  .proc__step:nth-child(even)::before { right: 0; }
 }
+@media (max-width: 980px) {
+  /* La ficha baja debajo del pitch. A todo el ancho las filas respiran mejor
+     que en una columna angosta, así que no hay nada que compensar. */
+  .hero__inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .work-grid { grid-template-columns: repeat(2, 1fr); }
+  }
 @media (max-width: 860px) {
   .back, .contact { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
-  .svc-grid { grid-template-columns: 1fr; }
-  .readouts { grid-template-columns: repeat(2, 1fr); }
   .index__row { grid-template-columns: 1fr auto; }
   .index__tech { grid-column: 1 / -1; }
-}
+  }
 @media (max-width: 620px) {
-  .how-grid, .work-grid { grid-template-columns: 1fr; }
+  .work-grid { grid-template-columns: 1fr; }
+  /* En una columna el riel se para: pasa a ser vertical, con el nodo a la
+     izquierda y la línea bajando hasta el nodo siguiente. Es el mismo dibujo
+     rotado, no otro componente. */
+  .proc { grid-template-columns: 1fr; gap: 0; }
+  .proc__step { padding-top: 0; padding-left: 1.7rem; padding-bottom: 1.9rem; }
+  /* Los tres selectores repiten a propósito: las reglas horizontales de 1080px
+     siguen activas acá y le ganan por especificidad a un .proc__step suelto.
+     Este bloque va después en el archivo, así que empata y gana por orden. */
+  .proc__step::before,
+  .proc__step:nth-child(even)::before,
+  .proc__step:last-child::before {
+    top: 5px; bottom: 0; left: 5px; right: auto; width: 1px; height: auto;
+  }
+  .proc__step:last-child { padding-bottom: 0; }
+  .proc__step:last-child::after {
+    top: auto; bottom: 0; left: 1px; right: auto; width: 9px; height: 1px;
+  }
+  .proc__out { margin-top: .35rem; padding-top: 0; }
   .orb--a { width: 110vw; height: 110vw; left: -18vw; }
   .orb--b { width: 105vw; height: 105vw; right: -22vw; }
   .orb--c { width: 92vw; height: 92vw; }
   .orb--d { width: 78vw; height: 78vw; }
+  /* En teléfono la etiqueta se para arriba del valor: dos columnas dejaban el
+     valor en 15 caracteres por línea y el alcance salía en cinco renglones. */
+  .spec__row { grid-template-columns: 1fr; }
   .proof { gap: .5rem 1.1rem; }
   .exp__item--lead .exp__btn { padding: 1.35rem 0; }
 }
@@ -824,7 +1036,6 @@ main, .foot-outer { position: relative; z-index: var(--z-content); }
   .hero__inner { gap: 1.15rem; }
   .hero__title { font-size: clamp(1.6rem, 5vw, 2.4rem); max-width: 26ch; }
   .section { padding: 3rem 0; }
-  .readouts { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (prefers-reduced-motion: reduce) {

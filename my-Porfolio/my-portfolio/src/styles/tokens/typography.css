@@ -12,14 +12,14 @@
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", "SF Mono", monospace;
 
   /* Escala de display — fluida, para no necesitar un breakpoint por título */
-  --text-hero: 700 clamp(2.3rem, 6.2vw, 4.3rem)/1 var(--font-display);
+  /* El titular bajó de 6.2vw/4.3rem a 4.6vw/3.6rem cuando la ficha técnica
+     pasó a ocupar la mitad derecha del hero: en una columna del 56% el tamaño
+     anterior dejaba ocho caracteres por línea. Además un titular más contenido
+     se lee como portfolio y no como portada de producto. */
+  --text-hero: 700 clamp(2.3rem, 4.6vw, 3.6rem)/1.02 var(--font-display);
   --text-h2: 700 clamp(1.85rem, 4vw, 2.9rem)/1.03 var(--font-display);
   --text-h3: 700 1.12rem/1.28 var(--font-display);
   --text-h4: 700 .98rem/1.2 var(--font-display);
-
-  /* Lecturas numéricas: peso medio y tracking negativo */
-  --num-xl: 500 clamp(1.5rem, 3.2vw, 2rem)/1 var(--font-display);
-  --num-tracking: -.5px;
 
   /* Cuerpo */
   --text-body: 400 15px/1.65 var(--font-body);

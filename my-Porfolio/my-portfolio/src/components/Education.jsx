@@ -15,7 +15,7 @@ export default function Education() {
   return (
     <section className="section" id="formacion">
       <div className="wrap">
-        <SectionHead label={t('formacion.etiqueta')} title={t('formacion.titulo')} />
+        <SectionHead n="04" label={t('formacion.etiqueta')} title={t('formacion.titulo')} />
 
         <Reveal className="back">
           <div>

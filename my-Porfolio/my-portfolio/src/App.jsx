@@ -6,10 +6,8 @@ import { setLenis } from './lib/scrollLock';
 import Ambient from './components/Ambient';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
-import Services from './components/Services';
-import HowIWork from './components/HowIWork';
-import SystemCase from './components/SystemCase';
 import Projects from './components/Projects';
+import Process from './components/Process';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Contact from './components/Contact';
@@ -90,11 +88,11 @@ export default function App() {
 
       <main id="top">
         <div id="contenido" tabIndex={-1} />
+        {/* La prueba antes del método: Proyectos abre. El proceso es lo que se
+            confirma después de creerte, no lo que convence. */}
         <Hero />
-        <Services />
-        <HowIWork />
-        <SystemCase />
         <Projects />
+        <Process />
         <Experience />
         <Education />
         <Contact />

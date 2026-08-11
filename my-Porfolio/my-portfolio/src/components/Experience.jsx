@@ -16,6 +16,7 @@ export default function Experience() {
     <section className="section" id="experiencia">
       <div className="wrap">
         <SectionHead
+          n="03"
           label={t('experiencia.etiqueta')}
           title={t('experiencia.titulo')}
           intro={t('experiencia.intro')}

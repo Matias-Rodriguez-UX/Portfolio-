@@ -11,18 +11,34 @@ export default function Projects() {
   return (
     <section className="section" id="proyectos">
       <div className="wrap">
-        <SectionHead label={t('proyectos.etiqueta')} title={t('proyectos.titulo')} wide />
+        <SectionHead n="01" label={t('proyectos.etiqueta')} title={t('proyectos.titulo')} wide />
 
         <div className="work-grid">
           {featured.map((p, i) => {
             const copy = t(`proyectos.destacados.${p.id}`, { returnObjects: true });
             return (
               <Reveal as="article" className="card work" delay={i * 70} key={p.id}>
-                <span className="work__crop work__crop--tl" aria-hidden="true" />
-                <span className="work__crop work__crop--br" aria-hidden="true" />
+                <span className="crop crop--tl" aria-hidden="true" />
+                <span className="crop crop--br" aria-hidden="true" />
 
+                {/* El monograma queda abajo del logo: se ve mientras la imagen
+                    carga, y vuelve a verse si el archivo no llega. Sin
+                    placeholder aparte ni estado en React. El logo es
+                    decorativo: el nombre del proyecto ya está en el <h3> de
+                    abajo y repetirlo en el alt lo haría sonar dos veces. */}
                 <div className={`work__thumb work__thumb--${p.thumb}`}>
                   <span className="work__glyph" aria-hidden="true">{p.glyph}</span>
+                  {p.logo && (
+                    <img
+                      className="work__logo"
+                      src={p.logo}
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      decoding="async"
+                      onError={(e) => { e.currentTarget.dataset.failed = 'true'; }}
+                    />
+                  )}
                 </div>
 
                 <div style={{ display: 'flex', gap: '.35rem', flexWrap: 'wrap' }}>
@@ -55,7 +71,12 @@ export default function Projects() {
             <button type="button" className="index__row" key={p.id} onClick={() => setOpen(p)}>
               <span className="index__name"><Led tone="muted" /> {p.name}</span>
               <span className="index__tech">{t(`proyectos.indice.${p.id}`)}</span>
-              <span className="index__yr">{p.year}</span>
+              {/* La nota explica las fechas viejas. Un 2010 suelto se lee como
+                  un hueco; "tesis de grado" al lado lo convierte en recorrido. */}
+              <span className="index__yr">
+                {p.nota && <em className="index__nota">{t(`proyectos.notas.${p.nota}`)}</em>}
+                {p.year}
+              </span>
             </button>
           ))}
         </Reveal>

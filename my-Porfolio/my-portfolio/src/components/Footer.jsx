@@ -2,15 +2,18 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const LINKS = [
-  { id: 'servicios', key: 'nav.servicios' },
-  { id: 'como-trabajo', key: 'nav.comoTrabajo' },
-  { id: 'sistema', key: 'nav.sistema' },
   { id: 'proyectos', key: 'nav.proyectos' },
+  { id: 'proceso', key: 'nav.proceso' },
+  { id: 'experiencia', key: 'nav.experiencia' },
   { id: 'contacto', key: 'nav.contacto' },
 ];
 
 /* Va fuera de <main> a propósito: un footer dentro de main no cuenta como
-   landmark y se pierde para quien navega por regiones. */
+   landmark y se pierde para quien navega por regiones.
+
+   Sin bloque de contacto: la sección 06 es la última del sitio y queda
+   inmediatamente arriba, así que repetir los botones acá era pedir dos veces
+   lo mismo en la misma pantalla. */
 export default function Footer() {
   const [t] = useTranslation('global');
 

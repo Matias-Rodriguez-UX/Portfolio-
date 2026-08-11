@@ -14,160 +14,115 @@
     "linkedin": "Matías Rodríguez en LinkedIn"
   },
   "nav": {
-    "servicios": "lo que hago",
-    "comoTrabajo": "cómo trabajo",
-    "sistema": "sistema",
+    "proceso": "cómo trabajo",
     "proyectos": "proyectos",
     "experiencia": "experiencia",
     "formacion": "formación",
     "contacto": "contacto"
   },
   "hero": {
-    "chips": [
-      "Disponible",
-      "Argentina, remoto",
-      "Design Engineer"
-    ],
     "titulo": "Diseño y desarrollo interfaces para productos complejos.",
     "subtitulo": "Trabajo en el frontend de una plataforma SaaS de ciberseguridad. Defino experiencias en Figma y las implemento en React y TypeScript. También desarrollo funcionalidades con IA dentro del producto.",
     "ctaPrimario": "Ver proyectos",
     "ctaSecundario": "Escribime",
     "ctaCv": "CV",
-    "cota": "diseño y desarrollo, de punta a punta",
-    "readouts": [
-      {
-        "valor": "3+",
-        "etiqueta": "años en ciberseguridad"
-      },
-      {
-        "valor": "11",
-        "etiqueta": "años enseñando"
-      },
-      {
-        "valor": "Design",
-        "etiqueta": "+ Engineering",
-        "palabra": true
-      },
-      {
-        "valor": "IA",
-        "etiqueta": "en el flujo y en el producto",
-        "palabra": true
-      }
-    ],
+    "cota": "del plano al deploy",
+    "ficha": {
+      "titulo": "Ficha técnica",
+      "hoja": "hoja 1 de 1",
+      "filas": [
+        {
+          "k": "Estado",
+          "v": "Disponible · full-time o por proyecto",
+          "led": true
+        },
+        {
+          "k": "Base",
+          "v": "Argentina · remoto · GMT−3"
+        },
+        {
+          "k": "Rol",
+          "v": "Design Engineer · diseño y front-end"
+        },
+        {
+          "k": "Alcance",
+          "v": "De la definición al deploy: producto, sistema de diseño e implementación"
+        },
+        {
+          "k": "Stack",
+          "v": "React · TypeScript · Next.js · Tailwind · Figma",
+          "mono": true
+        },
+        {
+          "k": "Idiomas",
+          "v": "Español nativo · inglés B2/C1 · francés A2"
+        },
+        {
+          "k": "Origen",
+          "v": "Diseño industrial (UNLP) · once años de docencia técnica"
+        }
+      ]
+    },
     "pruebaSocialEtiqueta": "Trabajé con"
   },
-  "servicios": {
-    "etiqueta": "Lo que hago",
-    "titulo": "Diseño y desarrollo productos digitales.",
-    "intro": "Trabajo entre producto, diseño y frontend. Puedo participar desde la definición de una funcionalidad hasta su implementación y evolución.",
-    "items": [
-      {
-        "etiqueta": "Desarrollo frontend",
-        "titulo": "Tomo una funcionalidad desde la definición hasta producción.",
-        "texto": "Armo el flujo, lo diseño en Figma y lo implemento en React y TypeScript. Trabajar en ambos lados me permite tomar decisiones de diseño teniendo en cuenta desde el principio cómo se van a construir.",
-        "stack": [
-          "React",
-          "TypeScript",
-          "Next.js",
-          "Figma"
-        ]
-      },
-      {
-        "etiqueta": "Sistemas de diseño",
-        "titulo": "Armo y mantengo sistemas de diseño.",
-        "texto": "Trabajo con tokens, componentes y documentación para mantener consistencia entre diseño e implementación.",
-        "stack": [
-          "Figma",
-          "Tailwind",
-          "Material UI",
-          "Tokens"
-        ]
-      },
-      {
-        "etiqueta": "Funcionalidades con IA",
-        "titulo": "Diseño e implemento funcionalidades con IA dentro del producto.",
-        "texto": "Trabajo tanto en la experiencia que ve el usuario como en la integración de la funcionalidad con el modelo.",
-        "stack": [
-          "OpenAI",
-          "Claude",
-          "Prompting",
-          "UX de IA"
-        ]
-      },
-      {
-        "etiqueta": "Interfaces con mucha información",
-        "titulo": "Trabajo con dashboards, tablas y flujos densos.",
-        "texto": "En estas interfaces, la jerarquía de información, los estados y la claridad de las acciones son especialmente importantes.",
-        "stack": [
-          "Accesibilidad AA",
-          "Performance",
-          "Data-dense UI"
-        ]
-      }
-    ]
-  },
-  "comoTrabajo": {
+  "proceso": {
     "etiqueta": "Cómo trabajo",
-    "titulo": "Diseño y código, con IA en el proceso.",
-    "intro": "Design Engineer es el nombre que mejor describe lo que hago: trabajo entre diseño y frontend, desde la definición de una experiencia hasta su implementación. La IA también forma parte de mi proceso de trabajo.",
-    "bloques": [
+    "titulo": "Un proceso de cuatro etapas, de la definición a producción.",
+    "intro": "Soy Design Engineer: trabajo entre diseño y frontend, y puedo tomar una funcionalidad desde que se define hasta que está andando. Estas son las cuatro etapas y lo que sale de cada una.",
+    "etapas": [
       {
-        "etiqueta": "Las dos puntas",
-        "titulo": "Diseño en Figma e implemento en código.",
-        "texto": "Trabajar en ambos lados me permite tomar decisiones de diseño considerando desde el inicio las restricciones técnicas, y decisiones técnicas teniendo presente la intención del diseño."
+        "fase": "Definición",
+        "titulo": "Primero entiendo el problema.",
+        "texto": "Me siento con producto e ingeniería a ver qué hay que resolver, para quién y con qué restricciones. De ahí salen el alcance y los flujos, antes de abrir Figma.",
+        "salidas": [
+          "Requerimientos",
+          "Flujos de usuario",
+          "Alcance acordado"
+        ]
       },
       {
-        "etiqueta": "IA en el flujo",
-        "titulo": "Uso asistentes de IA todos los días.",
-        "texto": "Uso Claude Code, Claude, ChatGPT y Gemini para explorar alternativas, escribir y revisar código, documentar decisiones y acelerar tareas repetitivas. La IA me permite iterar más rápido, mientras las decisiones de producto y diseño siguen siendo mías."
+        "fase": "Análisis",
+        "titulo": "Ordeno la información.",
+        "texto": "En productos densos el problema casi nunca es visual: es qué se muestra primero, qué estados existen y qué pasa cuando algo falla. Reviso lo que ya hay antes de sumar algo nuevo.",
+        "salidas": [
+          "Jerarquía de información",
+          "Estados y casos borde",
+          "Decisiones documentadas"
+        ]
       },
       {
-        "etiqueta": "IA en el producto",
-        "titulo": "También construyo funcionalidades con IA.",
-        "texto": "Dentro de la plataforma en la que trabajo. Una cosa es usar herramientas de IA y otra es diseñar funcionalidades que incorporan modelos: qué ve el usuario, cómo manejamos respuestas incorrectas, tiempos de espera y costos.",
-        "destacado": true
+        "fase": "Preparación",
+        "titulo": "Diseño sobre el sistema.",
+        "texto": "Diseño en Figma con los componentes y tokens que ya existen, y si falta algo lo agrego al sistema. Así lo que entrego se puede construir sin traducciones.",
+        "salidas": [
+          "Diseño en Figma",
+          "Tokens y componentes",
+          "Especificación para desarrollo"
+        ]
+      },
+      {
+        "fase": "Ejecución",
+        "titulo": "Lo construyo yo mismo.",
+        "texto": "Lo llevo a React y TypeScript, cuidando accesibilidad y performance. Trabajar en las dos puntas me deja ajustar el diseño mientras lo construyo, en vez de defender un archivo.",
+        "salidas": [
+          "React y TypeScript",
+          "Accesibilidad AA",
+          "Ajustes con el equipo"
+        ]
       }
     ]
-  },
-  "sistema": {
-    "etiqueta": "El sistema de este sitio",
-    "titulo": "Un sistema pequeño, pensado para crecer.",
-    "intro": "Este sitio no usa un framework de estilos. Corre sobre un sistema propio, con la misma lógica que aplico al trabajar con sistemas de diseño.",
-    "chips": [
-      "Andando ahora",
-      "Tokens",
-      "Sin framework de estilos"
-    ],
-    "problemaEtiqueta": "El problema",
-    "problema": "Un sitio tiene el mismo problema que un producto que crece: si cada sección define sus propios colores, espaciados y comportamientos, el sistema pierde consistencia a medida que aumenta.",
-    "comoEtiqueta": "Cómo está armado",
-    "como": [
-      "Tokens para color, tipografía, efectos y movimiento.",
-      "Componentes reutilizables para mantener consistencia entre las distintas secciones.",
-      "Estados visuales definidos desde el sistema para mantener significados consistentes.",
-      "Reglas compartidas para responsive y comportamiento, evitando resolver cada sección desde cero."
-    ],
-    "resultadoEtiqueta": "Resultado",
-    "resultado": "Agregar una sección implica reutilizar el sistema en lugar de definir estilos nuevos desde cero. El sitio también funciona como muestra de cómo pienso y construyo sistemas.",
-    "muestraEtiqueta": "Muestra",
-    "estados": [
-      "Vigente",
-      "Pausado",
-      "Acción"
-    ],
-    "cota": "tokens y componentes, todo el sitio"
   },
   "proyectos": {
     "etiqueta": "Proyectos seleccionados",
     "titulo": "Una selección de proyectos donde diseño, desarrollo y producto se cruzan.",
     "destacados": {
-      "metabaseq": {
+      "batuta": {
         "chips": [
           "En curso",
-          "Bajo NDA"
+          "Datos de ejemplo"
         ],
         "texto": "Plataforma SaaS de ciberseguridad. Trabajo en el frontend: defino la experiencia en Figma y la implemento en React y TypeScript. También armo y mantengo el sistema de diseño, y desarrollo funcionalidades con IA dentro del producto.",
-        "nota": "No puedo mostrar el producto por NDA. Sí puedo contar cómo trabajo, en una llamada."
+        "nota": "Las capturas son de la plataforma con datos de ejemplo: no hay información de clientes. El resto del producto no lo puedo mostrar por NDA."
       },
       "streetart": {
         "chips": [
@@ -185,47 +140,28 @@
       }
     },
     "indice": {
+      "sitio": "Sistema propio de tokens y componentes · sin framework de estilos",
       "dalle": "Node.js · MongoDB · OpenAI · Tailwind",
-      "alura": "React · JavaScript · CSS",
-      "pokedex": "React · Redux · Express · PostgreSQL",
-      "altamira": "Identidad · Diseño gráfico",
-      "dewey": "Diseño industrial · Producto",
-      "cardeuse": "Identidad · Packaging",
-      "setentayseis": "Identidad · Diseño gráfico",
+      "dewey": "Diseño de aplicaciones · UX/UI",
+      "cardeuse": "Diseño industrial · Producto",
       "nomade": "Diseño industrial"
     },
     "casos": {
       "streetart": {
-        "contexto": "Diseñar y desarrollar una página para club de vinos que incluía: autenticación, búsquedas, filtrados combinados, ordenamientos, baneo de usuarios, envío de emails, etc, creación de membresías, reviews, wishlist, protección de rutas, etc",
-        "participacion": "Estuve a cargo del desarrollo visual de la pagina, el ananlisis del comportamiento del usuario, los elementos visuales, su coherencia y cohesión, la pagina de inicio y el perfil del administrador con su dashboard"
-      },
-      "alura": {
-        "contexto": "Curso práctico donde se desarrollaron proyectos responsivos, y se controlaba el comportamiento de los elementos HTML desde el DOM",
-        "participacion": "Se desarrollaron integralmente los comportamientos y el renderizado de los mismo en los diferentes proyectos"
-      },
-      "pokedex": {
-        "contexto": "Proyecto Individual de Henry donde se trabajó con APIs, databases, react, redux, etc.",
-        "participacion": "Diseñar y desarrollar una App de pokemons que incluía: búsquedas, filtrados combinados,ordenamientos, creación y edición de pokemones"
-      },
-      "altamira": {
-        "contexto": "Rediseño de pagina y logo Escuela Argentino Danesa Altamira",
-        "participacion": "Se realizó el ananlisis del comportamiento del usuario, los elementos visuales, su coherencia y cohesión, la pagina de inicio y la historia de la institución"
+        "contexto": "Tienda online para un club de vinos: autenticación, búsquedas, filtros combinados, ordenamientos, membresías, reviews, wishlist, envío de mails, baneo de usuarios y protección de rutas.",
+        "participacion": "Estuve a cargo del desarrollo visual: el análisis del comportamiento del usuario, la coherencia de los elementos de interfaz, la página de inicio y el perfil de administrador con su dashboard."
       },
       "dewey": {
-        "contexto": "Aplicación para reserva de turno para actividades extracurriculares de niños",
-        "participacion": "Desarrollo completo de diseño UX/UI para toda la aplicación, donde se utilizó ux research, generación de ui components, ilustraciones, story boards, wire frames, etc."
+        "contexto": "Aplicación para reservar turnos de actividades extracurriculares para chicos.",
+        "participacion": "Diseñé la UX/UI completa: research, componentes de interfaz, ilustraciones, storyboards y wireframes."
       },
       "cardeuse": {
-        "contexto": "Primer trabajo profesional como diseñador Industrial",
-        "participacion": "Rediseño de todas las líneas de producción y actualización de la estética de telas, estampados y combinaciones. Desarrollo de nuevos productos e implementación de nuevas tecnologías"
-      },
-      "setentayseis": {
-        "contexto": "Club de vinos local",
-        "participacion": "Creación de Marca, diseño de banners, publicaciones y reels para redes sociales"
+        "contexto": "Mi primer trabajo profesional como diseñador industrial.",
+        "participacion": "Rediseñé todas las líneas de producción y actualicé la estética de telas, estampados y combinaciones. Desarrollé productos nuevos e implementé tecnologías que la fábrica todavía no usaba."
       },
       "nomade": {
-        "contexto": "Tesis universitaria: Sistema de traslado de personas en emergencia en terrenos arenosos",
-        "participacion": "Creación, desarrollo y realización de prototipo del producto, junto con sus piezas gráficas y sus planos técnicos productivos"
+        "contexto": "Tesis de grado: un sistema para trasladar personas en emergencia sobre terreno arenoso.",
+        "participacion": "Hice la creación, el desarrollo y el prototipo del producto, con sus piezas gráficas y sus planos técnicos de producción."
       },
       "dalle": {
         "contexto": "Un generador de imágenes con IA full-stack: escribís un prompt y obtenés una imagen. Hecho de punta a punta para explorar el modelo DALL·E de OpenAI sobre un stack MERN moderno.",
@@ -258,8 +194,8 @@
           "Cuerpo del sitio"
         ]
       },
-      "metabaseq": {
-        "contexto": "Batuta es la plataforma SaaS de ciberseguridad de Metabase Q. Como Frontend Engineer & UX/UI Designer soy responsable de su experiencia frontend de extremo a extremo — desde definir la UX en Figma hasta entregar interfaces accesibles y de alto rendimiento en producción.",
+      "batuta": {
+        "contexto": "Batuta es una plataforma SaaS de ciberseguridad, antes Metabase Q. Como Design Engineer soy responsable de su experiencia frontend de punta a punta: desde definir la UX en Figma hasta entregar interfaces accesibles y rápidas en producción.",
         "desafio": "Convertir flujos complejos de ciberseguridad en interfaces rápidas, consistentes y realmente usables, manteniendo coherente una plataforma que crece a través de muchos módulos.",
         "proceso": [
           "Defino requerimientos, flujos de usuario y restricciones técnicas junto a producto e ingeniería",
@@ -267,7 +203,24 @@
           "Construyo interfaces accesibles y de alto rendimiento en React, TypeScript, Tailwind y Material UI",
           "Impulso las discusiones de producto y la priorización de features, mejorando la usabilidad en todos los módulos"
         ],
-        "resultado": "Ser dueño tanto de la UX como de la implementación cerró las brechas entre diseño y desarrollo, estandarizó componentes para una UI más consistente y aceleró los ciclos de entrega de features."
+        "resultado": "Ser dueño tanto de la UX como de la implementación cerró las brechas entre diseño y desarrollo, estandarizó componentes para una UI más consistente y aceleró los ciclos de entrega de features.",
+        "captions": [
+          "Panorama de postura de endpoints: puntaje de hardening, distribución de hosts y vulnerabilidades por severidad.",
+          "Bitácora de actividad: filtros por faceta con sus contadores, rango de fechas y quién hizo qué sobre qué objeto.",
+          "Creación de contraseña: medidor de fuerza y las cuatro reglas validándose en vivo.",
+          "Fundamentos del sistema de diseño: superficies, jerarquía de texto, escala de severidad y acentos de estado, cada token con su regla de uso."
+        ]
+      },
+      "sitio": {
+        "contexto": "Este sitio no usa un framework de estilos. Corre sobre un sistema propio, con la misma lógica que aplico al trabajar con sistemas de diseño.",
+        "desafio": "Un sitio tiene el mismo problema que un producto que crece: si cada sección define sus propios colores, espaciados y comportamientos, el sistema pierde consistencia a medida que aumenta.",
+        "proceso": [
+          "Tokens para color, tipografía, efectos y movimiento.",
+          "Componentes reutilizables para mantener consistencia entre las distintas secciones.",
+          "Estados visuales definidos desde el sistema para mantener significados consistentes.",
+          "Reglas compartidas para responsive y comportamiento, evitando resolver cada sección desde cero."
+        ],
+        "resultado": "Agregar una sección implica reutilizar el sistema en lugar de definir estilos nuevos desde cero. El código está publicado."
       }
     },
     "modal": {
@@ -284,6 +237,10 @@
       "sinEnlaces": "Este proyecto no tiene enlaces públicos.",
       "captura": "Captura de {{name}}, {{i}}",
       "baja": "La base de datos y los tokens de IA se dieron de baja al vencer las licencias, así que la demo puede no cargar datos. El código sigue publicado."
+    },
+    "notas": {
+      "tesis": "tesis de grado",
+      "primerTrabajo": "primer trabajo"
     }
   },
   "experiencia": {
@@ -293,7 +250,7 @@
     "items": [
       {
         "titular": "Trabajo en el frontend de una plataforma de ciberseguridad.",
-        "meta": "Metabase Q · Design Engineer · 2023 → hoy",
+        "meta": "Batuta (antes Metabase Q) · Design Engineer · 2023 → hoy",
         "detalle": "Defino la experiencia en Figma y la implemento en React y TypeScript. Trabajar en ambos lados me permite tomar decisiones de diseño considerando desde el inicio cómo se van a construir.",
         "pruebas": [
           "Armo y mantengo el sistema de diseño de la plataforma",
@@ -303,12 +260,12 @@
         ]
       },
       {
-        "titular": "Doy clases de programación en una escuela técnica.",
+        "titular": "Doy clases de diseño y programación en una escuela técnica.",
         "meta": "EEST N.º 1 · Profesor · 2015 → hoy",
-        "detalle": "Once años enseñando programación y herramientas técnicas. La docencia también fortaleció mi forma de comunicar decisiones, dar feedback y explicar conceptos técnicos.",
+        "detalle": "Once años enseñando diseño y programación. La docencia también fortaleció mi forma de comunicar decisiones, dar feedback y explicar conceptos técnicos.",
         "pruebas": [
-          "Programación, pensamiento computacional y herramientas técnicas",
-          "Diseño de contenidos y talleres prácticos por proyectos",
+          "Diseño, programación y pensamiento computacional",
+          "Contenidos y talleres prácticos, organizados por proyectos",
           "Es la base del rol de mentoría que después tuve en Henry"
         ]
       },
@@ -317,7 +274,7 @@
         "meta": "TMS Ingeniería · Freelance · 2023",
         "detalle": "Proyecto completo y solo: logo, firmas de mail, presentación a clientes y sitio responsive desde cero.",
         "pruebas": [
-          "Interfaz responsive en React, Redux y Material UI",
+          "Sitio responsive en React y Gatsby, con estilos en SCSS",
           "Navegación fluida con Locomotive Scroll, media servida por Cloudinary",
           "Sitio en producción, cuidado igual en celular que en escritorio"
         ]
@@ -361,7 +318,7 @@
     "cvEtiqueta": "Currículum",
     "cvEs": "CV en español",
     "cvEn": "Resume in English",
-    "idiomas": "Idiomas · Español nativo · Inglés B2/C1 · Francés A1",
+    "idiomas": "Idiomas · Español nativo · Inglés B2/C1 · Francés A2",
     "certificadosEtiqueta": "Certificados",
     "certificados": {
       "uxui": "Diseño UX/UI",
@@ -375,7 +332,15 @@
   "contacto": {
     "etiqueta": "Contacto",
     "titulo": "Escribime.",
-    "intro": "Si estás buscando a alguien para un puesto, o tenés un proyecto en mente, contame de qué se trata y te respondo lo antes posible.",
+    "intro": "Si estás buscando a alguien para un puesto, o tenés un proyecto en mente, escribime.",
+    "pedido": "Contame en dos líneas qué estás construyendo y te respondo lo antes posible.",
+    "copiar": "Copiar mail",
+    "copiado": "Copiado",
+    "copiarError": "No se pudo copiar. Seleccioná el mail y copialo a mano.",
+    "mailto": "Abrir en el correo",
+    "webmail": "¿No se abrió? Escribime desde",
+    "asunto": "Contacto desde tu portfolio",
+    "agenda": "Agendar 20 minutos",
     "campos": {
       "nombre": "Nombre",
       "nombrePlaceholder": "Cómo te llamás",

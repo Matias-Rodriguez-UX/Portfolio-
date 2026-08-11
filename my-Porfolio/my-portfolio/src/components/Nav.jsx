@@ -3,10 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { Led, IconGitHub, IconLinkedIn, IconMenu } from './ui';
 
 const SECTIONS = [
-  { id: 'servicios', key: 'nav.servicios' },
-  { id: 'como-trabajo', key: 'nav.comoTrabajo' },
-  { id: 'sistema', key: 'nav.sistema' },
   { id: 'proyectos', key: 'nav.proyectos' },
+  { id: 'proceso', key: 'nav.proceso' },
   { id: 'experiencia', key: 'nav.experiencia' },
   { id: 'formacion', key: 'nav.formacion' },
   { id: 'contacto', key: 'nav.contacto' },

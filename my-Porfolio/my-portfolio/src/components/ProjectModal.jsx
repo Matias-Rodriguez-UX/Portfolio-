@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Chip, Led, Ext } from './ui';
+import { cld } from '../data/projects';
 import { lockScroll, unlockScroll } from '../lib/scrollLock';
 
 const host = (url) => {
@@ -107,9 +108,12 @@ export default function ProjectModal({ project, onClose }) {
             <div className="modal__gallery">
               {project.images.map((src, i) => (
                 <figure className="modal__shot" key={src + i}>
+                  {/* El enlace apunta al original y la miniatura a la versión
+                      servida a 1200 px: en la galería nunca se pinta más grande
+                      que eso, y bajar el original era hasta diez veces el peso. */}
                   <a href={src} target="_blank" rel="noreferrer">
                     <img
-                      src={src}
+                      src={cld(src, 1200)}
                       alt={captions[i] || t('proyectos.modal.captura', { name: project.name, i: i + 1 })}
                       loading="lazy"
                       decoding="async"
