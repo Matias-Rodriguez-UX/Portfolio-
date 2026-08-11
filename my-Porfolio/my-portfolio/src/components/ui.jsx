@@ -41,12 +41,17 @@ export function Chip({ tone, led, live, children }) {
 }
 
 /* ── Cabecera de sección ──────────────────────────────────────────────
-   Cota en magenta + label mono + título. La cota es el injerto de plano
-   técnico que separa esto de cualquier otro portfolio oscuro. */
-export function SectionHead({ label, title, intro, wide = false }) {
+   Número de hoja + cota en magenta + label mono + título. La cota es el
+   injerto de plano técnico que separa esto de cualquier otro portfolio
+   oscuro; el número lo completa, porque un plano viene numerado.
+
+   El número es decorativo: las secciones ya están en orden en el DOM y un
+   lector de pantalla no gana nada oyendo "cero uno" antes de cada título. */
+export function SectionHead({ n, label, title, intro, wide = false }) {
   return (
     <Reveal className="sec-head">
       <div className="sec-mark">
+        {n && <span className="sec-n" aria-hidden="true">{n}</span>}
         <span className="dim" aria-hidden="true" />
         <span className="lbl">{label}</span>
       </div>
@@ -103,6 +108,37 @@ export const IconDownload = ({ size = 13 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor"
     strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <path d="M12 3v13M18 11l-6 6-6-6M4 21h16" />
+  </svg>
+);
+
+export const IconCopy = ({ size = 13 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="9" y="9" width="12" height="12" rx="2" />
+    <path d="M5 15V5a2 2 0 0 1 2-2h10" />
+  </svg>
+);
+
+export const IconCheck = ({ size = 13 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M4 12.5l5.5 5.5L20 6.5" />
+  </svg>
+);
+
+export const IconMail = ({ size = 13 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="2.5" y="5" width="19" height="14" rx="2" />
+    <path d="M3.5 7.5l8.5 6 8.5-6" />
+  </svg>
+);
+
+export const IconCalendar = ({ size = 13 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="3" y="5.5" width="18" height="15.5" rx="2" />
+    <path d="M8 2.5v4M16 2.5v4M3 11h18" />
   </svg>
 );
 

@@ -14,160 +14,115 @@
     "linkedin": "Matías Rodríguez on LinkedIn"
   },
   "nav": {
-    "servicios": "what i do",
-    "comoTrabajo": "how i work",
-    "sistema": "system",
+    "proceso": "how i work",
     "proyectos": "projects",
     "experiencia": "experience",
     "formacion": "education",
     "contacto": "contact"
   },
   "hero": {
-    "chips": [
-      "Available",
-      "Argentina, remote",
-      "Design Engineer"
-    ],
     "titulo": "I design and build interfaces for complex products.",
     "subtitulo": "I work on the frontend of a cybersecurity SaaS platform. I define experiences in Figma and build them with React and TypeScript. I also develop AI features within the product.",
     "ctaPrimario": "See the projects",
     "ctaSecundario": "Get in touch",
     "ctaCv": "Resume",
-    "cota": "design and development, end to end",
-    "readouts": [
-      {
-        "valor": "3+",
-        "etiqueta": "years in cybersecurity"
-      },
-      {
-        "valor": "11",
-        "etiqueta": "years teaching"
-      },
-      {
-        "valor": "Design",
-        "etiqueta": "+ Engineering",
-        "palabra": true
-      },
-      {
-        "valor": "AI",
-        "etiqueta": "in workflow and product",
-        "palabra": true
-      }
-    ],
+    "cota": "from blueprint to deploy",
+    "ficha": {
+      "titulo": "Spec sheet",
+      "hoja": "sheet 1 of 1",
+      "filas": [
+        {
+          "k": "Status",
+          "v": "Available · full-time or per project",
+          "led": true
+        },
+        {
+          "k": "Based in",
+          "v": "Argentina · remote · GMT−3"
+        },
+        {
+          "k": "Role",
+          "v": "Design Engineer · design and frontend"
+        },
+        {
+          "k": "Scope",
+          "v": "From definition to deploy: product, design system and implementation"
+        },
+        {
+          "k": "Stack",
+          "v": "React · TypeScript · Next.js · Tailwind · Figma",
+          "mono": true
+        },
+        {
+          "k": "Languages",
+          "v": "Native Spanish · English B2/C1 · French A2"
+        },
+        {
+          "k": "Origin",
+          "v": "Industrial design (UNLP) · eleven years teaching"
+        }
+      ]
+    },
     "pruebaSocialEtiqueta": "Worked with"
   },
-  "servicios": {
-    "etiqueta": "What I do",
-    "titulo": "I design and build digital products.",
-    "intro": "I work across product, design and frontend. I can take a feature from definition through implementation and iteration.",
-    "items": [
-      {
-        "etiqueta": "Frontend development",
-        "titulo": "I take features from definition to production.",
-        "texto": "I map the flow, design it in Figma and build it with React and TypeScript. Working across both sides lets me make design decisions with implementation in mind from the start.",
-        "stack": [
-          "React",
-          "TypeScript",
-          "Next.js",
-          "Figma"
-        ]
-      },
-      {
-        "etiqueta": "Design systems",
-        "titulo": "I build and maintain design systems.",
-        "texto": "I work with tokens, components and documentation to keep design and implementation consistent.",
-        "stack": [
-          "Figma",
-          "Tailwind",
-          "Material UI",
-          "Tokens"
-        ]
-      },
-      {
-        "etiqueta": "AI features",
-        "titulo": "I design and build AI features inside products.",
-        "texto": "I work on both the user experience and the integration of the feature with the model.",
-        "stack": [
-          "OpenAI",
-          "Claude",
-          "Prompting",
-          "AI UX"
-        ]
-      },
-      {
-        "etiqueta": "Information-dense interfaces",
-        "titulo": "I work with dashboards, tables and dense workflows.",
-        "texto": "In these interfaces, information hierarchy, states and clear actions are especially important.",
-        "stack": [
-          "AA accessibility",
-          "Performance",
-          "Data-dense UI"
-        ]
-      }
-    ]
-  },
-  "comoTrabajo": {
+  "proceso": {
     "etiqueta": "How I work",
-    "titulo": "Design and code, with AI in the process.",
-    "intro": "Design Engineer is the title that fits my work best. I work across design and frontend, from defining an experience to implementing it. AI is also part of my day-to-day workflow.",
-    "bloques": [
+    "titulo": "A four-stage process, from definition to production.",
+    "intro": "I'm a Design Engineer: I work across design and frontend, and I can take a feature from the moment it's defined to the moment it ships. These are the four stages and what comes out of each one.",
+    "etapas": [
       {
-        "etiqueta": "Both sides",
-        "titulo": "I design in Figma and build in code.",
-        "texto": "Working across both sides lets me make design decisions with technical constraints in mind, and technical decisions with the original design intent in mind."
+        "fase": "Definition",
+        "titulo": "I start with the problem.",
+        "texto": "I sit down with product and engineering to work out what needs solving, for whom and under what constraints. Scope and flows come out of that, before I open Figma.",
+        "salidas": [
+          "Requirements",
+          "User flows",
+          "Agreed scope"
+        ]
       },
       {
-        "etiqueta": "AI in the workflow",
-        "titulo": "I use AI assistants every day.",
-        "texto": "I use Claude Code, Claude, ChatGPT and Gemini to explore alternatives, write and review code, document decisions and reduce repetitive work. AI helps me iterate faster while product and design decisions remain mine."
+        "fase": "Analysis",
+        "titulo": "I sort out the information.",
+        "texto": "In dense products the problem is rarely visual: it's what gets shown first, what states exist and what happens when something fails. I review what's already there before adding anything new.",
+        "salidas": [
+          "Information hierarchy",
+          "States and edge cases",
+          "Documented decisions"
+        ]
       },
       {
-        "etiqueta": "AI in the product",
-        "titulo": "I also build AI features.",
-        "texto": "Inside the platform I work on. Using AI tools is one thing; designing features that incorporate models is another: what the user sees, how incorrect responses are handled, how long they wait and what the experience costs.",
-        "destacado": true
+        "fase": "Preparation",
+        "titulo": "I design on the system.",
+        "texto": "I design in Figma with the components and tokens that already exist, and if something's missing I add it to the system. What I hand over can be built without translation.",
+        "salidas": [
+          "Figma design",
+          "Tokens and components",
+          "Handoff spec"
+        ]
+      },
+      {
+        "fase": "Execution",
+        "titulo": "I build it myself.",
+        "texto": "I take it to React and TypeScript, watching accessibility and performance. Working on both sides lets me adjust the design while building it, instead of defending a file.",
+        "salidas": [
+          "React and TypeScript",
+          "AA accessibility",
+          "Iteration with the team"
+        ]
       }
     ]
-  },
-  "sistema": {
-    "etiqueta": "The system behind this site",
-    "titulo": "A small system, built to scale.",
-    "intro": "This site doesn't use a CSS framework. It runs on its own system, using the same principles I apply when working with design systems.",
-    "chips": [
-      "Running now",
-      "Tokens",
-      "No CSS framework"
-    ],
-    "problemaEtiqueta": "The problem",
-    "problema": "A growing product or site faces the same challenge: when every section defines its own colors, spacing and behaviors, consistency starts to break as the system grows.",
-    "comoEtiqueta": "How it's built",
-    "como": [
-      "Tokens for color, typography, effects and motion.",
-      "Reusable components to keep the different sections consistent.",
-      "Visual states defined at the system level so their meaning stays consistent.",
-      "Shared rules for responsive behavior, instead of solving each section from scratch."
-    ],
-    "resultadoEtiqueta": "Result",
-    "resultado": "Adding a section means reusing the system instead of defining new styles from scratch. The site also serves as a practical example of how I think about and build systems.",
-    "muestraEtiqueta": "Sample",
-    "estados": [
-      "Current",
-      "Paused",
-      "Action"
-    ],
-    "cota": "tokens and components, across the site"
   },
   "proyectos": {
     "etiqueta": "Selected projects",
     "titulo": "A selection of projects across product design, frontend development and visual design.",
     "destacados": {
-      "metabaseq": {
+      "batuta": {
         "chips": [
           "Ongoing",
-          "Under NDA"
+          "Sample data"
         ],
         "texto": "Cybersecurity SaaS platform. I work on the frontend, defining experiences in Figma and building them with React and TypeScript. I also build and maintain the design system and develop AI features inside the product.",
-        "nota": "I can't show the product because of an NDA. I can walk you through how I work on a call."
+        "nota": "These screenshots are of the platform with sample data, so there is no customer information in them. The rest of the product is under NDA."
       },
       "streetart": {
         "chips": [
@@ -185,47 +140,28 @@
       }
     },
     "indice": {
+      "sitio": "Its own system of tokens and components · no CSS framework",
       "dalle": "Node.js · MongoDB · OpenAI · Tailwind",
-      "alura": "React · JavaScript · CSS",
-      "pokedex": "React · Redux · Express · PostgreSQL",
-      "altamira": "Identity · Graphic design",
-      "dewey": "Industrial design · Product",
-      "cardeuse": "Identity · Packaging",
-      "setentayseis": "Identity · Graphic design",
+      "dewey": "App design · UX/UI",
+      "cardeuse": "Industrial design · Product",
       "nomade": "Industrial design"
     },
     "casos": {
       "streetart": {
-        "contexto": "Design and develop a wine club website that includes: authentication, searches, combined filtering, sorting, user banning, email sending, etc., creation of memberships, reviews, wishlist, route protection, etc.",
-        "participacion": "I was in charge of the visual development, its interface, user behavior, the home page, and the administrator's dashboard"
-      },
-      "alura": {
-        "contexto": "Practice course, where you work on front responsive development, the behavior of pure DOM components",
-        "participacion": "Practical work of the course, I was in charge of the development of components, their behavior and rendering of properties."
-      },
-      "pokedex": {
-        "contexto": "Individual project in which we worked with APIs, databases, react, redux, etc.",
-        "participacion": "Design and develop a pokemons App that included: searches, combined filtering, ordering, creation and edition of pokemons."
-      },
-      "altamira": {
-        "contexto": "Redesign of the logo and page of the educational institution Escuela Argentino Danesa Altamira",
-        "participacion": "Current page analysis, improvement proposal, image cleanup, user behavior analysis, landing page proposal"
+        "contexto": "Online shop for a wine club: authentication, search, combined filters, sorting, memberships, reviews, wishlist, transactional email, user banning and route protection.",
+        "participacion": "I handled the visual development: user behaviour analysis, consistency across interface elements, the home page, and the admin profile with its dashboard."
       },
       "dewey": {
-        "contexto": "Creation and development of an application to reserve extracurricular activities for children",
-        "participacion": "Development of the complete UX/UI design of the application, with integration of ux research, ui components, illustrations, story boards, wire frames, etc."
+        "contexto": "App for booking after-school activity slots for kids.",
+        "participacion": "I designed the full UX/UI: research, interface components, illustrations, storyboards and wireframes."
       },
       "cardeuse": {
-        "contexto": "First job as an industrial designer, within the productive system",
-        "participacion": "Redesign of all production lines and updating of the aesthetics of fabrics, patterns and combinations. Development of new products and implementation of new technologies"
-      },
-      "setentayseis": {
-        "contexto": "Local wine club, which promotes its services through social networks",
-        "participacion": "Creation of graphic pieces, logo and template redesign"
+        "contexto": "My first professional job as an industrial designer.",
+        "participacion": "I redesigned every production line and updated the look of fabrics, prints and combinations. I developed new products and brought in manufacturing techniques the factory was not using yet."
       },
       "nomade": {
-        "contexto": "University thesis, in which a device is developed to move people on the beach in cases of emergency",
-        "participacion": "Creation, development and realization of prototype of the developed product, together with its graphic pieces and its productive technical plans"
+        "contexto": "Degree thesis: a system for moving people in an emergency across sandy terrain.",
+        "participacion": "I handled the concept, the development and the working prototype, along with its graphics and its production drawings."
       },
       "dalle": {
         "contexto": "A full-stack AI image generator: type a prompt and get an image. Built end-to-end to explore OpenAI's DALL·E model on a modern MERN stack.",
@@ -258,8 +194,8 @@
           "Content section"
         ]
       },
-      "metabaseq": {
-        "contexto": "Batuta is the cybersecurity SaaS platform by Metabase Q. As Frontend Engineer & UX/UI Designer I own its end-to-end frontend experience — from defining the UX in Figma to shipping accessible, high-performance interfaces in production.",
+      "batuta": {
+        "contexto": "Batuta is a cybersecurity SaaS platform, formerly Metabase Q. As a Design Engineer I own its end-to-end frontend experience: from defining the UX in Figma to shipping accessible, high-performance interfaces in production.",
         "desafio": "Turn complex security workflows into interfaces that are fast, consistent and genuinely usable, while keeping a growing multi-module platform coherent.",
         "proceso": [
           "Define requirements, user flows and technical constraints together with product and engineering",
@@ -267,7 +203,24 @@
           "Build high-performance, accessible interfaces in React, TypeScript, Tailwind and Material UI",
           "Drive product discussions and feature prioritization, improving usability across modules"
         ],
-        "resultado": "Owning both UX and implementation closed design-to-development gaps, standardized components for a more consistent UI, and sped up feature-delivery cycles."
+        "resultado": "Owning both UX and implementation closed design-to-development gaps, standardized components for a more consistent UI, and sped up feature-delivery cycles.",
+        "captions": [
+          "Endpoint posture overview: hardening score, host distribution and vulnerabilities by severity.",
+          "Activity log: faceted filters with their counts, date range, and who did what to which object.",
+          "Password creation: strength meter and the four rules validating live.",
+          "Design system foundations: surfaces, text hierarchy, severity scale and state accents, each token with its usage rule."
+        ]
+      },
+      "sitio": {
+        "contexto": "This site doesn't use a CSS framework. It runs on its own system, using the same principles I apply when working with design systems.",
+        "desafio": "A growing product or site faces the same challenge: when every section defines its own colors, spacing and behaviors, consistency starts to break as the system grows.",
+        "proceso": [
+          "Tokens for color, typography, effects and motion.",
+          "Reusable components to keep the different sections consistent.",
+          "Visual states defined at the system level so their meaning stays consistent.",
+          "Shared rules for responsive behavior, instead of solving each section from scratch."
+        ],
+        "resultado": "Adding a section means reusing the system instead of defining new styles from scratch. The code is public."
       }
     },
     "modal": {
@@ -284,6 +237,10 @@
       "sinEnlaces": "This project has no public links.",
       "captura": "{{name}} screenshot {{i}}",
       "baja": "The database and AI tokens were decommissioned when the licences expired, so the live demo may not load data. The code is still published."
+    },
+    "notas": {
+      "tesis": "degree thesis",
+      "primerTrabajo": "first job"
     }
   },
   "experiencia": {
@@ -293,7 +250,7 @@
     "items": [
       {
         "titular": "I work on the frontend of a cybersecurity platform.",
-        "meta": "Metabase Q · Design Engineer · 2023 → now",
+        "meta": "Batuta (formerly Metabase Q) · Design Engineer · 2023 → now",
         "detalle": "I define the experience in Figma and build it with React and TypeScript. Working across both sides lets me make design decisions with implementation in mind from the start.",
         "pruebas": [
           "I build and maintain the platform's design system",
@@ -303,12 +260,12 @@
         ]
       },
       {
-        "titular": "I teach programming at a technical high school.",
+        "titular": "I teach design and programming at a technical high school.",
         "meta": "EEST N.º 1 · Teacher · 2015 → now",
-        "detalle": "Eleven years teaching programming and technical tools. Teaching has also strengthened how I communicate decisions, give feedback and explain technical concepts.",
+        "detalle": "Eleven years teaching design and programming. Teaching has also strengthened how I communicate decisions, give feedback and explain technical concepts.",
         "pruebas": [
-          "Programming, computational thinking and technical tools",
-          "Curriculum design and hands-on, project-based workshops",
+          "Design, programming and computational thinking",
+          "Course content and hands-on, project-based workshops",
           "It's the basis for the mentoring role I later had at Henry"
         ]
       },
@@ -317,7 +274,7 @@
         "meta": "TMS Ingeniería · Freelance · 2023",
         "detalle": "A complete project, handled independently: logo, email signatures, client deck and a responsive site from scratch.",
         "pruebas": [
-          "Responsive interface in React, Redux and Material UI",
+          "Responsive site in React and Gatsby, styled with SCSS",
           "Smooth navigation with Locomotive Scroll, media served through Cloudinary",
           "Live site, treated with the same care on mobile and desktop"
         ]
@@ -361,7 +318,7 @@
     "cvEtiqueta": "Resume",
     "cvEs": "CV in Spanish",
     "cvEn": "Resume in English",
-    "idiomas": "Languages · Native Spanish · English B2/C1 · French A1",
+    "idiomas": "Languages · Native Spanish · English B2/C1 · French A2",
     "certificadosEtiqueta": "Certificates",
     "certificados": {
       "uxui": "UX/UI Design",
@@ -375,7 +332,15 @@
   "contacto": {
     "etiqueta": "Contact",
     "titulo": "Get in touch.",
-    "intro": "If you're hiring for a role or have a project in mind, tell me what you're working on and I'll get back to you as soon as I can.",
+    "intro": "If you're hiring for a role or have a project in mind, drop me a line.",
+    "pedido": "Tell me in two lines what you're building and I'll get back to you as soon as I can.",
+    "copiar": "Copy email",
+    "copiado": "Copied",
+    "copiarError": "Couldn't copy. Select the address and copy it manually.",
+    "mailto": "Open in mail",
+    "webmail": "Didn't open? Write from",
+    "asunto": "Reaching out from your portfolio",
+    "agenda": "Book 20 minutes",
     "campos": {
       "nombre": "Name",
       "nombrePlaceholder": "Your name",

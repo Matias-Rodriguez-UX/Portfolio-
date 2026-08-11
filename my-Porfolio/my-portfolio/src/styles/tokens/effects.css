@@ -18,6 +18,9 @@
   --blur-panel: blur(24px) saturate(115%);
   --blur-card: blur(10px);
   --blur-field: blur(7px);
+  /* La nav lleva el desenfoque más fuerte de la escala: es la única superficie
+     que pasa por encima de un titular de 4rem mientras se scrollea. */
+  --blur-nav: blur(30px) saturate(125%);
 
   /* Luz y sombra */
   --inner-glow: rgba(120, 210, 225, .06);   /* bloom en la esquina superior */
@@ -59,5 +62,7 @@
     --blur-panel: blur(14px) saturate(112%);
     --blur-card: blur(7px);
     --blur-field: blur(5px);
+    /* La nav baja menos que el resto: es donde el desenfoque más se necesita. */
+    --blur-nav: blur(20px) saturate(118%);
   }
 }

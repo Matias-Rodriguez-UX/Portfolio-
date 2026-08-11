@@ -10,7 +10,12 @@
   /* Canvas */
   --bg: #06090B;                          /* fondo de la app */
   --dot: rgba(255, 255, 255, .055);       /* retícula de puntos, en reposo */
-  --dot-lit: rgba(141, 232, 243, .5);     /* el mismo punto, encendido */
+  /* El punto encendido bajó de .5 a .36. A .5 quedaba en 1.5:1 contra el texto
+     secundario: donde el punto caía sobre una línea de párrafo, la línea se
+     perdía, y como el halo sigue al cursor encendía justo la zona que se está
+     leyendo. A .22 el efecto directamente se apagaba. .36 es el punto donde el
+     halo todavía se lee como halo sin comerse el texto. */
+  --dot-lit: rgba(141, 232, 243, .36);    /* el mismo punto, encendido */
   --arc: rgba(97, 222, 237, .06);         /* arcos de radar */
 
   /* Superficies de vidrio */
@@ -18,6 +23,14 @@
   --glass-2: rgba(19, 24, 28, .62);       /* tarjetas */
   --glass-solid: rgba(18, 23, 27, .95);   /* opaco: drawer, fallback */
   --field: rgba(31, 38, 44, .55);         /* inputs, chips, superficie hundida */
+
+  /* La nav flotante tiene su propio vidrio, bastante más cerrado que el de una
+     tarjeta: es lo único que se superpone al contenido mientras scrollea, y
+     con el vidrio de tarjeta el titular del hero se leía a través de los
+     links. Arriba de todo no hay nada detrás y puede ser más liviana; una vez
+     que arranca el scroll se cierra. */
+  --nav-glass: rgba(10, 14, 17, .72);
+  --nav-glass-scrolled: rgba(9, 13, 16, .88);
 
   /* Barra de scroll */
   --scroll-thumb: rgba(255, 255, 255, .13);
@@ -64,5 +77,8 @@
     --line: rgba(255, 255, 255, .22);
     --text-2: #B9C1C4;
     --text-3: #A7AFB3;
+    /* Quien pide más contraste no quiere adorno compitiendo con el texto: el
+       halo del puntero queda apenas insinuado. */
+    --dot-lit: rgba(141, 232, 243, .16);
   }
 }
